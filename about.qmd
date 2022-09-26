@@ -2,8 +2,20 @@
 title: "About"
 ---
 
-About this site
+This repository contains the code, data and analysis of the manuscript submitted to Drones.
 
-```{r}
-1 + 1
-```
+CRediT[^1] Statment (Contributor Roles Taxonomy)[^2]:
+
+[^1]: [CRedIT](https://credit.niso.org/) is a high-level taxonomy, including 14 roles, that indicate some of the roles played by contributors to scientific scholarly output. The roles describe each contributor's specific contribution to the scholarly output.
+
+[^2]: We used the package [`tenzing`](https://rollercoaster.shinyapps.io/tenzing/) to generate the CRediT taxonomy.
+
+-   [**Antonio J. Pérez-Luque**](https://github.com/ajpelu) <a href="https://orcid.org/0000-0002-1747-0469" target="orcid.widget"> <img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" alt="ORCID logo" width="16" height="16"/></a>: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Validation, Visualization, Writing - original draft, and Writing - review & editing.
+
+-   **Maria Eugenia Ramos Font** <a href="https://orcid.org/0000-0002-4888-0401" target="orcid.widget"> <img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" alt="ORCID logo" width="16" height="16"/></a>:: Conceptualization, Investigation, Methodology, and Writing - review & editing.
+
+-   **Mauro J. Tognetti Barbieri**: Data curation, Methodology, Validation, and Writing - review & editing.
+
+-   **Carlos Tarragona**: Data curation, Methodology, and Validation.
+
+-   **Ana Belén Robles Cruz**: Conceptualization, Funding acquisition, Methodology, Project administration, Resources, Supervision, and Writing - review & editing.
