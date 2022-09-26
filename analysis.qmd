@@ -1,0 +1,444 @@
+---
+title: "Analysis"
+editor_options: 
+  chunk_output_type: console
+execute: 
+  warning: false
+bibliography: grateful-refs.bib
+---
+
+```{r}
+source('scripts/99-pkgs.R')
+```
+
+```{r}
+df <- read_excel(path=here::here("data/rpasfield_alcontar.xlsx"),
+                 sheet = "alcontar") 
+```
+
+## Aims
+
+## General correlation
+
+-   Explore the correlation between plant cover estimated by RPAS (RPAS-estimated vegetation cover) and estimated by field measures (Field-estimated vegetation cover)
+
+
+- Compute the RMSE (Root Mean Squared Error) and the normalized RMSE 
+
+```{r}
+#| label: rmse-global
+df.rmse_global <- df %>% 
+  summarise(rmse = round(
+    Metrics::rmse(plant_coverage_field, plant_coverage_rpas),4),
+    min = min(plant_coverage_field), 
+    max = max(plant_coverage_field),
+    rmsen.minmax = rmse / (max(plant_coverage_field) - min(plant_coverage_field))*100)
+```
+
+```{r}
+#| label: tab-rmse-global
+#| tbl-cap: RMSE and normalized RMSE values for the correlation between the vegetation coverage estimates using RPAS *vs* Field measures
+df.rmse_global %>% kbl(
+  col.names = c("RMSE","min","max","norm. RMSE (%)"),
+  digits = 2) %>% 
+  kable_material()
+```
+
+```{r}
+# https://stackoverflow.com/questions/17022553/adding-r2-on-graph-with-facets
+lm_eqn = function(df){
+  m = lm(plant_coverage_rpas ~ plant_coverage_field, df);
+  eq <- substitute(r2,
+                   list(r2 = format(summary(m)$r.squared, digits = 3)))
+  as.character(as.expression(eq));                 
+}
+```
+
+```{r}
+verde_claro <- "#c6ddb3"
+verde_oscuro <- "#3e6c62"
+ylab <- "RPAS-estimated"
+xlab <- "Field-estimated"
+
+# See https://stackoverflow.com/questions/65076492/ggplot-size-of-annotate-vs-size-of-element-text 
+
+
+# Custom theme
+theme_rpas <- function(){
+  theme_bw() %+replace% 
+  theme(
+    plot.title = element_text(size=14, 
+                              margin = margin(0,0,10,0)), 
+    panel.grid = element_blank(),
+    axis.title = element_text(size = 12),
+    # For panels
+    strip.background = element_rect(fill="white"), 
+    strip.text = element_text(size = 10, 
+                              margin = margin(5,0,5,0))
+    )
+}
+```
+
+
+```{r}
+general_plot <- df %>% 
+  ggplot(aes(x=plant_coverage_field, y = plant_coverage_rpas)) + 
+  geom_point(size=3, alpha=.5, colour=verde_oscuro) + 
+  geom_abline(slope=1, colour=verde_oscuro) +
+  labs(x = xlab, y = ylab, 
+       title = "Vegetation cover (%)") + 
+  xlim(0,100) + ylim(0,100) + 
+  annotate("text", x= 5, y = 95, 
+           label =paste0("R^2 == ", lm_eqn(df)), 
+           parse = TRUE, 
+           colour = "black", 
+           size = 14/.pt,
+           hjust = 0) +
+  annotate("text", x= 5, y = 85, 
+           label = paste0("RMSE = ", round(df.rmse_global$rmse, 2)),
+           colour = "black", 
+           size = 14/.pt, 
+           hjust = 0) +
+  theme_rpas() 
+general_plot
+```
+
+
+
+## Comparison by treatments 
+
+- Is the estimation different between treatments? 
+
+```{r}
+#| label: rmse-treatment
+df.rmse_treatment <- df %>% 
+  group_by(treatment) %>% 
+  summarise(rmse = round(
+    Metrics::rmse(plant_coverage_field, plant_coverage_rpas),4),
+    min = min(plant_coverage_field), 
+    max = max(plant_coverage_field),
+    rmsen.minmax = rmse / (max(plant_coverage_field) - min(plant_coverage_field))*100)
+```
+
+
+```{r}
+#| label: tab-rmse-treatment
+#| tbl-cap: RMSE and normalized RMSE values for the correlation between the vegetation coverage estimates using RPAS *vs* Field measures. Values by treatment
+df.rmse_treatment %>% kbl(
+  col.names = c("Treatment", "RMSE","min","max","norm. RMSE (%)"),
+  digits = c(0,2,0,0,2)) %>% 
+  kable_material()
+```
+
+
+```{r}
+eqns <- by(df, df$treatment, lm_eqn)
+df.label <- data.frame(eq = unclass(eqns), treatment = names(eqns))
+df.label$lab = paste(df.label$treatment, "R^2 =", df.label$eq, sep=" ")
+
+r2_labeller <- function(variable,value){
+  return(df.label$lab)
+}
+```
+
+
+```{r}
+treatment_plot <- df %>% 
+  ggplot(aes(x=plant_coverage_field, y=plant_coverage_rpas)) + 
+  geom_point(size=3, alpha=.5, colour=verde_oscuro) + 
+  geom_abline(slope=1, colour=verde_oscuro) +
+  facet_wrap(~treatment, labeller = label_value) +
+  labs(x = xlab, y = ylab, title = "Vegetation cover (%)") + 
+  xlim(0,100) + ylim(0,100) +
+  theme_rpas() + 
+  theme(legend.position = "none") +
+   geom_richtext(data = df.rmse_treatment, size=10/.pt,
+            aes(x = 30, y = 90, 
+                label = paste0(
+                  "RMSE<sub>norm.</sub> = ",
+                  round(rmsen.minmax,2), " %")),
+            fill = NA, label.color = NA)
+treatment_plot
+```
+
+
+## Comparison by cover types 
+
+```{r}
+#| label: rmse-groups
+df.rmse_groups <- df %>% 
+  group_by(cover_type) %>% 
+  summarise(rmse = round(
+    Metrics::rmse(plant_coverage_field, plant_coverage_rpas),4),
+    min = min(plant_coverage_field), 
+    max = max(plant_coverage_field),
+    rmsen.minmax = rmse / (max(plant_coverage_field) - min(plant_coverage_field))*100)
+```
+
+
+```{r}
+#| label: tab-rmse-groups
+#| tbl-cap: RMSE and normalized RMSE values for the correlation between the vegetation coverage estimates using RPAS *vs* Field measures. Values by cover types
+df.rmse_groups %>% kbl(
+  col.names = c("Cover type", "RMSE","min","max","norm. RMSE (%)"),
+  digits = c(0,2,0,0,2)) %>% 
+  kable_material()
+```
+
+
+```{r}
+eqns <- by(df, df$cover_type, lm_eqn)
+df.label <- data.frame(eq = unclass(eqns), treatment = names(eqns))
+df.label$lab = paste(df.label$cover_type, "R^2 =", df.label$eq, sep=" ")
+
+r2_labeller <- function(variable,value){
+  return(df.label$lab)
+}
+```
+
+
+```{r}
+custom_order <- c("Low scrubland", "Medium scrubland", 
+                  "Dense scrubland", "Stipa dense steppes")
+
+covertype_plot <- df %>%
+  ggplot(aes(x=plant_coverage_field, y=plant_coverage_rpas)) + 
+  geom_point(size=3, alpha=.5, colour=verde_oscuro) + 
+  geom_abline(slope=1, colour=verde_oscuro) +
+  facet_wrap(~factor(cover_type, custom_order), 
+             labeller = label_value) + 
+  labs(x = xlab, y = ylab, title = "Vegetation cover (%)") + 
+  xlim(0,100) + ylim(0,100) +
+  theme_rpas() + 
+  theme(legend.position = "none") +
+   geom_richtext(data = df.rmse_groups, size=10/.pt,
+            aes(x = 30, y = 90, 
+                label = paste0(
+                  "RMSE<sub>norm.</sub> = ",
+                  round(rmsen.minmax,2), " %")),
+            fill = NA, label.color = NA)
+covertype_plot
+```
+
+
+```{r}
+combined_plot <- covertype_plot / treatment_plot   + 
+  plot_layout(heights = c(2,1)) + 
+  plot_annotation(tag_levels = 'a') &
+  theme(plot.tag = element_text(face= 'bold'))
+```
+
+
+
+```{r}
+#| echo: false
+#| label: generate-jpg 
+
+ggsave(general_plot,
+       filename = here::here("output/correla_general.jpg"),
+       device = "jpg", height = 10, width = 10, unit="cm", dpi = "print")
+
+ggsave(treatment_plot,
+       filename = here::here("output/correla_treatment.jpg"),
+       device = "jpg", height = 10, width = 15, unit="cm", dpi = "print")
+
+ggsave(covertype_plot,
+       filename = here::here("output/correla_covertype.jpg"),
+       device = "jpg", height = 15, width = 15, unit="cm", dpi = "print")
+
+ggsave(combined_plot,
+       filename = here::here("output/correla_combined.jpg"),
+       device = "jpg", height = 20, width = 14, unit="cm", dpi = "print")
+
+
+
+# PNG devices 
+ggsave(general_plot,
+       filename = here::here("output/correla_general_transp.png"),
+       device = "png", height = 10, width = 10, unit="cm", dpi = "print",
+       bg = "transparent")
+
+ggsave(treatment_plot,
+       filename = here::here("output/correla_treatment_transp.png"),
+       device = "png", height = 10, width = 15, unit="cm", dpi = "print",
+       bg = "transparent")
+
+ggsave(covertype_plot,
+       filename = here::here("output/correla_covertype_transp.png"),
+       device = "png", height = 15, width = 15, unit="cm", dpi = "print",
+        bg = "transparent")
+
+```
+
+## Variance partitioning 
+
+Is the relationship between the vegetation coverage estimated by RPAS and by field measurement uniform across all coverage values? or is the correlation between those two approach homogeneous across all coverage values? 
+
+```{r}
+ct <- partykit::ctree(plant_coverage_rpas ~ plant_coverage_field, data=df)
+ct
+sctest(ct) 
+```
+
+There are 5 terminal nodes. 
+
+```{r}
+
+ggparty(ct) + 
+  geom_edge() +
+  geom_edge_label(colour = "grey", size = 4) +
+  geom_node_plot(gglist = list(
+    geom_point(aes(x =plant_coverage_field,y = plant_coverage_rpas)),
+    geom_smooth(aes(x=plant_coverage_field, y=plant_coverage_rpas), method = lm, se = FALSE),
+    geom_abline(slope = 1, colour = "gray"),
+    theme_bw(base_size = 10),
+    xlab(xlab),
+    ylab(ylab) 
+    ),
+                scales = "fixed", 
+                shared_axis_labels = TRUE,
+                shared_legend = TRUE,
+                legend_separator = TRUE, 
+                id = "terminal") +
+   geom_node_label(aes(col = splitvar),
+                  line_list = list(aes(label = paste("Node", id)),
+                                   aes(label = splitvar),
+                                   aes(label = scales::pvalue(p.value, accuracy = 0.001, 
+                                                              decimal.mark = ".", 
+                                                              add_p = TRUE))), 
+                                                     
+          line_gpar = list(list(size = 8, col = "black", fontface = "bold"),
+                                   list(size = 8),
+                                   list(size = 8)),
+                  ids = "inner") + 
+  geom_node_label(aes(label = paste0("Node ", id, ", (n= ", nodesize, ")")),
+                  fontface = "bold",
+                  ids = "terminal",
+                  size = 2, 
+                  nudge_y = 0.01) +
+  theme(legend.position = "none")
+```
+
+What about the overfitting? 
+
+```{r}
+ggplot(df, aes(x=plant_coverage_field, y = plant_coverage_rpas)) +
+  geom_point() + 
+  geom_abline(yintercept = 1) + 
+  geom_smooth(
+    data = (df %>% filter(plant_coverage_field <=  13)),
+    aes(x=plant_coverage_field, y = plant_coverage_rpas),
+    method = "lm") + 
+  geom_smooth(
+    data = (df %>% filter(plant_coverage_field > 13 & plant_coverage_field <= 23)),
+    aes(x=plant_coverage_field, y = plant_coverage_rpas),
+    method = "lm") + 
+  geom_smooth(
+    data = (df %>% filter(plant_coverage_field > 23 & plant_coverage_field <= 36)),
+    aes(x=plant_coverage_field, y = plant_coverage_rpas),
+    method = "lm") + 
+  geom_smooth(
+    data = (df %>% filter(plant_coverage_field > 36 & plant_coverage_field <= 50)),
+    aes(x=plant_coverage_field, y = plant_coverage_rpas),
+    method = "lm") +
+  geom_smooth(
+    data = (df %>% filter(plant_coverage_field >50)),
+    aes(x=plant_coverage_field, y = plant_coverage_rpas),
+    method = "lm")
+```
+
+### Find the optimous complexity parameter
+```{r}
+set.seed(123)
+ctrpart <- rpart(plant_coverage_rpas ~ plant_coverage_field, data=df)
+ctrpart
+printcp(ctrpart)
+plotcp(ctrpart)
+```
+
+```{r}
+set.seed(123)
+ctrpart2 <- rpart(plant_coverage_rpas ~ plant_coverage_field, data=df, control = 
+               rpart.control(minsplit = 2, cp = .075))
+ctrpart2
+printcp(ctrpart2)
+plotcp(ctrpart2)
+```
+
+
+
+```{r}
+set.seed(123)
+ct_ok <- partykit::ctree(plant_coverage_rpas ~ plant_coverage_field,
+  data = df,
+  control =
+    ctree_control(minsplit = 1, alpha = 0.05, maxdepth = 1)
+)
+plot(ct_ok)
+
+plot_party <- ggparty(ct_ok) +
+  geom_edge() +
+  geom_edge_label(colour = verde_oscuro, size = 5) +
+  geom_node_plot(
+    gglist = list(
+      geom_point(aes(
+        x = plant_coverage_field,
+        y = plant_coverage_rpas
+      ),
+      size = 3, alpha = .5, colour = verde_oscuro
+      ),
+      geom_smooth(aes(x = plant_coverage_field, y = plant_coverage_rpas),
+        method = lm, se = FALSE, colour = "gray"
+      ),
+      geom_abline(slope = 1, colour = verde_oscuro),
+      theme_bw(base_size = 10),
+      xlab(xlab),
+      ylab(ylab),
+      theme(
+        panel.grid = element_blank()
+      )
+    ),
+    scales = "fixed",
+    shared_axis_labels = TRUE,
+    shared_legend = TRUE,
+    legend_separator = TRUE,
+    id = "terminal"
+  ) +
+  geom_node_label(aes(col = splitvar),
+    line_list = list(
+      aes(id),
+      aes(label = "Vegetation cover"),
+      aes(label = scales::pvalue(p.value,
+        accuracy = 0.001,
+        decimal.mark = ".",
+        add_p = TRUE
+      ))
+    ),
+
+    line_gpar = list(
+      list(size = 10, col = "black"),
+      list(size = 10, col = "black"),
+      list(size = 10, col = "black")
+    ),
+    ids = "inner",
+    label.col = verde_oscuro
+  ) +
+  geom_node_label(aes(label = paste0("n = ", nodesize)),
+    ids = "terminal",
+    size = 3,
+    nudge_y = 0.01
+  ) +
+  theme(legend.position = "none")
+
+
+ggsave(plot_party,
+       filename = here::here("output/correla_partitioning.jpg"),
+       device = "jpg", height = 12, width = 12, unit="cm", dpi = "print", bg = "white")
+
+
+```
+
+
+
+
+

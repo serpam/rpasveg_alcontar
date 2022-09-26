@@ -1,5 +1,6 @@
 ---
 title: "About"
+bibliography: grateful-refs.bib
 ---
 
 This repository contains the code, data and analysis of the manuscript submitted to Drones.
@@ -19,3 +20,20 @@ CRediT[^1] Statment (Contributor Roles Taxonomy)[^2]:
 -   **Carlos Tarragona**: Data curation, Methodology, and Validation.
 
 -   **Ana Belén Robles Cruz**: Conceptualization, Funding acquisition, Methodology, Project administration, Resources, Supervision, and Writing - review & editing.
+
+
+```{r}
+#| echo: false
+source('scripts/99-pkgs.R')
+pkgs <- (.packages())
+```
+
+```{r}
+#| echo: false
+#| results: asis
+cite_packages(pkgs = pkgs, output = "paragraph")
+```
+
+
+
+
