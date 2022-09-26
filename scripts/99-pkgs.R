@@ -14,7 +14,8 @@ pkg <- c('grateful',
          'rpart',
          'ggparty',
          'partykit',
-         'tenzing'
+         'tenzing',
+         'plotrix'
          )
 
 eval(
