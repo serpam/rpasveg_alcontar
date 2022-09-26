@@ -11,6 +11,6 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "CRediT1 Statment (Contributor Roles Taxonomy)2:\n\nAntonio J. Pérez-Luque  : Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Validation, Visualization, Writing - original draft, and Writing - review & editing.\nMaria Eugenia Ramos Font  :: Conceptualization, Investigation, Methodology, and Writing - review & editing.\nMauro J. Tognetti Barbieri: Data curation, Methodology, Validation, and Writing - review & editing.\nCarlos Tarragona: Data curation, Methodology, and Validation.\nAna Belén Robles Cruz: Conceptualization, Funding acquisition, Methodology, Project administration, Resources, Supervision, and Writing - review & editing.\n\n\n\n\n\nFootnotes\n\n\nCRedIT is a high-level taxonomy, including 14 roles, that indicate some of the roles played by contributors to scientific scholarly output. The roles describe each contributor’s specific contribution to the scholarly output.↩︎\nWe used the package tenzing to generate the CRediT taxonomy.↩︎"
   }
 ]
