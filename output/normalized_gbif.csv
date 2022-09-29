@@ -1,0 +1,161 @@
+species_name,treatment,mean,se,min,max,n,scientificName
+Alyssum granatense,PH,0.17,0.03,0.1,0.2,3,Alyssum granatense Boiss. & Reut.
+Androsace maxima,PH,0.15,0.05,0.1,0.2,2,Androsace maxima L.
+Andryala ragusina,PB,0.3,NA,0.3,0.3,1,Andryala ragusina L.
+Andryala ragusina,PH,0.2,0.1,0.1,0.3,2,Andryala ragusina L.
+Anthyllis vulneraria,PB,0.4,NA,0.4,0.4,1,Anthyllis vulneraria L.
+Anthyllis vulneraria,PH,0.27,0.09,0.1,0.4,3,Anthyllis vulneraria L.
+Arabidopsis thaliana,PB,0.1,0,0.1,0.1,3,Arabidopsis thaliana (L.) Heynh.
+Arabidopsis thaliana,PH,0.78,0.49,0.1,5,10,Arabidopsis thaliana (L.) Heynh.
+Arabis auriculata,PH,0.27,0.12,0.1,0.5,3,Arabis auriculata Lam.
+Arabis parvula,PH,0.1,0,0.1,0.1,2,Arabis parvula Dufour
+Arenaria leptoclados,PH,0.31,0.1,0.1,1,9,Arenaria leptoclados (Rchb.) Guss.
+Argyrolobium zanonii,PH,0.5,NA,0.5,0.5,1,Argyrolobium zanonii (Turra) P.W.Ball
+Arrhenatherum album,PH,0.1,NA,0.1,0.1,1,Arrhenatherum album (Vahl) Clayton
+Artemisia campestris,PH,0.1,NA,0.1,0.1,1,Artemisia campestris L.
+Asperula hirsuta,PB,0.2,NA,0.2,0.2,1,Asperula hirsuta Desf.
+Asperula hirsuta,PH,1.9,1.68,0.2,12,7,Asperula hirsuta Desf.
+Asphodelus albus,PB,1.42,0.46,0.1,5,11,Asphodelus albus Mill.
+Asphodelus albus,PH,1.82,0.81,0.1,6,8,Asphodelus albus Mill.
+Asteraceae,PH,0.2,NA,0.2,0.2,1,Asteraceae
+Asterolinon linum-stellatum,PB,0.1,0,0.1,0.1,4,Asterolinon linum-stellatum (L.) Duby
+Asterolinon linum-stellatum,PH,0.16,0.02,0.1,0.3,11,Asterolinon linum-stellatum (L.) Duby
+Astragalus alopecuroides,PB,5,1,4,6,2,Astragalus alopecuroides L.
+Astragalus monspessulanus subsp. monspessulanus,PB,1.05,0.45,0.6,1.5,2,Astragalus monspessulanus subsp. monspessulanus
+Astragalus sesameus,PH,0.1,NA,0.1,0.1,1,Astragalus sesameus L.
+Avenula bromoides subsp. pauneroi,PB,0.36,0.05,0.3,0.5,4,Avenula bromoides subsp. pauneroi Romero Zarco
+Avenula bromoides subsp. pauneroi,PH,0.27,0.08,0.1,0.8,8,Avenula bromoides subsp. pauneroi Romero Zarco
+Biscutella laxa,PH,0.27,0.06,0.1,0.7,13,Biscutella laxa Boiss. & Reut.
+Bombycilaena,PH,1,NA,1,1,1,Bombycilaena (DC.) Smoljan.
+Bromus hordeaceus,PH,0.5,NA,0.5,0.5,1,Bromus hordeaceus L.
+Bromus rubens,PB,0.1,NA,0.1,0.1,1,Bromus rubens L.
+Bromus rubens,PH,0.36,0.15,0.1,1.5,9,Bromus rubens L.
+Bromus tectorum,PH,0.17,0.03,0.1,0.2,3,Bromus tectorum L.
+Bufonia tenuifolia,PH,0.15,0.05,0.1,0.2,2,Bufonia tenuifolia L.
+Bupleurum spinosum,PB,3.53,0.83,0.1,15,21,Bupleurum spinosum Gouan & Ill.Observ.Bot.
+Bupleurum spinosum,PH,1.13,0.19,0.1,5.5,39,Bupleurum spinosum Gouan & Ill.Observ.Bot.
+Carex hallerana,PB,4.78,3.78,0.2,16,4,Carex halleriana Asso
+Carex hallerana,PH,1.18,0.3,0.2,4,12,Carex halleriana Asso
+Carlina,PB,0.1,NA,0.1,0.1,1,Carlina L.
+Centaurea gabrielis-blancae,PH,0.2,NA,0.2,0.2,1,Centaurea gabrielis-blancae Fern.Casas
+Cerastium brachypetalum,PH,0.21,0.04,0.1,0.5,10,Cerastium brachypetalum Desf. ex Pers.
+Cerastium gracile,PH,0.1,NA,0.1,0.1,1,Cerastium gracile Dufour
+Chaenorhinum grandiflorum,PH,0.5,0.2,0.1,1,5,Chaenorhinum grandiflorum (Coss.) Willk.
+Chaenorhinum macropodum subsp. macropodum,PH,0.8,0.4,0.4,1.2,2,Chaenorhinum macropodum subsp. macropodum
+Chaenorhinum minus,PH,1,NA,1,1,1,Chaenorhinum minus (L.) Lange
+Clypeola jonthlaspi subsp. microcarpa,PB,0.1,NA,0.1,0.1,1,Clypeola jonthlaspi subsp. microcarpa (Boiss.) Breistr.
+Clypeola jonthlaspi subsp. microcarpa,PH,0.2,0.08,0.1,0.5,5,Clypeola jonthlaspi subsp. microcarpa (Boiss.) Breistr.
+Colutea hispanica,PH,0.8,NA,0.8,0.8,1,Colutea hispanica Talavera & Arista
+Crepis albida subsp. grosii,PH,0.72,0.2,0.1,1.3,5,Crepis albida subsp. grosii (Pau) Babc.
+Crupina,PB,0.2,NA,0.2,0.2,1,Crupina (Pers.) DC.
+Crupina,PH,0.13,0.03,0.1,0.2,3,Crupina (Pers.) DC.
+Dactylis glomerata,PB,0.27,0.12,0.1,0.5,3,Dactylis glomerata L.
+Dactylis glomerata,PH,0.1,NA,0.1,0.1,1,Dactylis glomerata L.
+Desconocida,PH,0.3,NA,0.3,0.3,2,NA
+Digitalis obscura subsp. obscura,PH,0.3,NA,0.3,0.3,1,Digitalis obscura subsp. obscura
+Dipcadi serotinum,PB,0.2,NA,0.2,0.2,1,Dipcadi serotinum (L.) Medik.
+Eryngium campestre,PB,0.37,0.13,0.1,0.5,3,Eryngium campestre L.
+Eryngium campestre,PH,0.56,0.36,0.1,2,5,Eryngium campestre L.
+Euphorbia segetalis,PH,1.7,NA,1.7,1.7,1,Euphorbia segetalis L.
+Euphorbia serrata,PH,3.8,NA,3.8,3.8,1,Euphorbia serrata L.
+Festuca capillifolia,PB,3,NA,3,3,1,Festuca capillifolia Dufour ex Roem. & Schult.
+Festuca capillifolia,PH,3.48,1.84,0.2,25,13,Festuca capillifolia Dufour ex Roem. & Schult.
+Filago fuscescens,PB,0.2,NA,0.2,0.2,1,Filago fuscescens Pomel
+Filago fuscescens,PH,0.12,0.03,0.1,0.2,4,Filago fuscescens Pomel
+Fumaria officinalis subsp. officinalis,PH,0.2,NA,0.2,0.2,1,Fumaria officinalis subsp. officinalis
+Galium parissiense subsp. parissiense,PH,0.2,0.1,0.1,0.5,4,Galium parisiense subsp. parisiense
+Galium verticillatum,PB,0.3,0.2,0.1,0.5,2,Galium verticillatum Danthoine ex Lam.
+Galium verticillatum,PH,0.3,NA,0.3,0.3,1,Galium verticillatum Danthoine ex Lam.
+Genista scorpius,PB,6.45,1.29,0.2,20,21,Genista scorpius (L.) DC.
+Genista scorpius,PH,6.45,1.4,0.2,55,49,Genista scorpius (L.) DC.
+Helianthemum almeriense,PB,6.17,0.55,1,12,32,Helianthemum almeriense Pau
+Helianthemum almeriense,PH,4.13,0.66,0.2,16,40,Helianthemum almeriense Pau
+Helianthemum appenninum,PH,2.19,0.71,0.1,8,11,Helianthemum apenninum (L.) Mill.
+Helianthemum cinereum subsp. cinereum,PB,0.5,0.17,0.1,1.6,8,Helianthemum cinereum subsp. cinereum
+Helianthemum cinereum subsp. cinereum,PH,1.14,0.34,0.1,7,22,Helianthemum cinereum subsp. cinereum
+Helianthemum ledifolium,PB,0.16,0.06,0.1,0.4,5,Helianthemum ledifolium (L.) Mill.
+Helianthemum ledifolium,PH,1.06,0.39,0.1,2.5,7,Helianthemum ledifolium (L.) Mill.
+Helianthemum salicifolium,PB,0.1,0,0.1,0.1,2,Helianthemum salicifolium (L.) Mill.
+Helianthemum salicifolium,PH,0.37,0.19,0.1,2,10,Helianthemum salicifolium (L.) Mill.
+Helictotrichon filifolium,PB,3.58,1.14,0.3,14,11,Helictotrichon filifolium (Lag.) Henrard
+Helictotrichon filifolium,PH,5.24,1.04,0.1,24,31,Helictotrichon filifolium (Lag.) Henrard
+Hippocrepis bourgaei,PB,0.97,0.26,0.1,6,27,Hippocrepis bourgaei (Nyman) Hervier
+Hippocrepis bourgaei,PH,0.5,0.09,0.1,1.2,16,Hippocrepis bourgaei (Nyman) Hervier
+Hippocrepis ciliata,PH,0.2,0,0.2,0.2,3,Hippocrepis ciliata Willd.
+Hornungia petraea,PB,0.1,0,0.1,0.1,2,Hornungia petraea (L.) Rchb.
+Hornungia petraea,PH,0.27,0.06,0.1,1.5,22,Hornungia petraea (L.) Rchb.
+Inula montana,PH,1,NA,1,1,1,Inula montana Lucé
+Koeleria vallesiana,PB,1.16,0.34,0.1,2.5,8,Koeleria vallesiana (Honck.) Bertol. ex Schult.
+Koeleria vallesiana,PH,1.29,0.23,0.1,4,24,Koeleria vallesiana (Honck.) Bertol. ex Schult.
+Lavandula lanata,PH,2.03,0.96,0.1,8,9,Lavandula lanata Boiss.
+Leontodon longirrostris,PH,0.1,NA,0.1,0.1,1,Leontodon longirostris (Finch & P.D.Sell) Talavera
+Linaria aeruginea subsp. aeruginea,PH,0.33,0.19,0.1,0.7,3,Linaria aeruginea subsp. aeruginea
+Linaria arvensis,PH,0.1,0,0.1,0.1,2,Linaria arvensis (L.) Desf.
+Linaria simplex,PH,0.28,0.15,0.1,1,6,Linaria simplex (Willd.) DC.
+Linum strictum,PB,0.1,0,0.1,0.1,2,Linum strictum L.
+Linum suffruticosum,PB,1.03,0.2,0.2,3.5,16,Linum suffruticosum L.
+Linum suffruticosum,PH,0.78,0.1,0.1,4.2,48,Linum suffruticosum L.
+Lithodora fruticosa,PH,0.8,NA,0.8,0.8,1,Lithodora fruticosa (L.) Griseb.
+Logfia arvensis,PH,0.5,NA,0.5,0.5,1,Logfia arvensis (L.) Holub
+Lomelosia stellata,PH,0.5,NA,0.5,0.5,1,Lomelosia stellata (L.) Raf.
+Macrochloa tenacissima,PB,16.69,3.92,0.1,60,23,"Macrochloa tenacissima Linnaeus, 1755"
+Macrochloa tenacissima,PH,26.05,5.25,0.1,80,28,"Macrochloa tenacissima Linnaeus, 1755"
+Malcolmia africana,PH,0.3,0.06,0.2,0.4,3,Malcolmia africana (L.) R.Br.
+Medicago minima,PB,0.1,NA,0.1,0.1,1,Medicago minima (L.) Bartal.
+Medicago minima,PH,0.1,NA,0.1,0.1,1,Medicago minima (L.) Bartal.
+Minuartia campestris,PH,0.1,NA,0.1,0.1,1,Minuartia campestris L.
+Minuartia hybrida,PB,0.1,0,0.1,0.1,2,Minuartia hybrida Vill.
+Minuartia hybrida,PH,0.4,0.22,0.1,3,13,Minuartia hybrida Vill.
+Odontites,PB,0.5,NA,0.5,0.5,1,Odontites Ludw.
+Odontites,PH,0.27,0.04,0.1,0.5,12,Odontites Ludw.
+Ononis natrix,PH,0.85,0.23,0.2,1.5,6,Ononis natrix L.
+Ononis pusilla,PB,0.1,NA,0.1,0.1,1,Ononis pusilla L.
+Ononis pusilla,PH,0.35,0.15,0.1,0.7,4,Ononis pusilla L.
+Ononis reclinata subsp. Mollis,PB,0.1,NA,0.1,0.1,1,Ononis reclinata L.
+Ononis reclinata subsp. Mollis,PH,0.2,NA,0.2,0.2,1,Ononis reclinata L.
+Onopordum acaulon,PB,0.3,NA,0.3,0.3,1,Onopordum acaulon L.
+Onopordum acaulon,PH,2.5,NA,2.5,2.5,1,Onopordum acaulon L.
+Papaver dubium,PH,0.2,NA,0.2,0.2,1,Papaver dubium L.
+Paronychia argentea,PH,0.1,0,0.1,0.1,2,Paronychia argentea Lam.
+Petrorhagia nanteuilii,PB,0.1,NA,0.1,0.1,1,Petrorhagia nanteuilii (Burnat) P.W.Ball & Heywood
+Petrorhagia nanteuilii,PH,0.1,0,0.1,0.1,2,Petrorhagia nanteuilii (Burnat) P.W.Ball & Heywood
+Picris hispanica,PB,0.1,0,0.1,0.1,2,Picris hispanica (Willd.) P.D.Sell
+Picris hispanica,PH,3.2,2.02,0.1,7,3,Picris hispanica (Willd.) P.D.Sell
+Plantago albicans,PB,6,NA,6,6,1,Plantago albicans L.
+Poa bulbosa,PB,0.3,NA,0.3,0.3,1,Poa bulbosa L.
+Poa bulbosa,PH,1.21,0.55,0.1,8,14,Poa bulbosa L.
+Polygala rupestris,PB,0.2,NA,0.2,0.2,1,Polygala rupestris Pourr.
+Polygala rupestris,PH,0.32,0.1,0.1,0.8,8,Polygala rupestris Pourr.
+Reseda alba,PB,1,NA,1,1,1,Reseda alba L.
+Reseda alba,PH,1,0,1,1,2,Reseda alba L.
+Reseda lutea,PB,0.35,0.05,0.3,0.4,2,Reseda lutea L.
+Reseda lutea,PH,0.98,0.24,0.1,5,23,Reseda lutea L.
+Reseda undata subsp. Undata,PH,0.25,0.15,0.1,0.4,2,Reseda undata L.
+Retama sphaerocarpa,PH,4,NA,4,4,1,Retama sphaerocarpa (L.) Boiss.
+Rhaponticum coniferum,PB,0.4,NA,0.4,0.4,1,Rhaponticum coniferum (L.) Greuter
+Rhaponticum coniferum,PH,0.4,0.3,0.1,0.7,2,Rhaponticum coniferum (L.) Greuter
+Rosmarinus officinalis,PH,0.23,0.09,0.1,0.4,3,Rosmarinus officinalis L.
+Salvia lavandulifolia subsp. vellerea,PB,1,0,1,1,2,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.
+Salvia lavandulifolia subsp. vellerea,PH,9.97,3.92,0.1,50,16,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.
+Sanguisorba,PH,0.48,0.19,0.2,1,4,Sanguisorba L.
+Scabiosa turolensis,PH,0.8,0.7,0.1,1.5,2,Scabiosa turolensis Pau
+Scorzonera angustifolia,PB,0.58,0.36,0.1,2,5,Scorzonera angustifolia L.
+Scorzonera angustifolia,PH,0.27,0.09,0.1,0.4,3,Scorzonera angustifolia L.
+Sideritis pusilla,PH,0.88,0.38,0.1,3,9,Sideritis pusilla (Lange) Pau
+Silene conica,PH,0.1,NA,0.1,0.1,1,Silene conica L.
+Silene mellifera,PH,0.32,0.1,0.1,0.5,4,Silene mellifera Boiss. & Reut.
+Staehelina dubia,PH,0.71,0.43,0.25,2,4,Staehelina dubia L.
+Stipa almeriense,PH,1.5,NA,1.5,1.5,1,Stipa almeriensis F.M.Vázquez
+Stipa bufensis,PB,17,16,1,33,2,"Stipa bufensis F.M.Vázquez, H.Scholz & Sonnentag"
+Stipa bufensis,PH,0.7,0.26,0.1,2,7,"Stipa bufensis F.M.Vázquez, H.Scholz & Sonnentag"
+Teucrium capitatum subsp. gracillimum,PB,1.49,0.68,0.1,5,8,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.
+Teucrium capitatum subsp. gracillimum,PH,0.74,0.13,0.1,2,27,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.
+Thymelaea,PB,0.4,NA,0.4,0.4,1,Thymelaea Mill.
+Thymus zygis subsp. gracilis,PB,0.1,NA,0.1,0.1,1,Thymus zygis subsp. gracilis (Boiss.) R.Morales
+Thymus zygis subsp. gracilis,PH,0.5,NA,0.5,0.5,1,Thymus zygis subsp. gracilis (Boiss.) R.Morales
+Trachynia distachya,PB,0.2,NA,0.2,0.2,1,Trachynia distachya (L.) Link
+Trifolium arvense,PH,0.3,NA,0.3,0.3,1,Trifolium arvense L.
+Trigonella polyceratia,PB,0.1,NA,0.1,0.1,1,Trigonella polyceratia L.
+Valerianella,PH,0.1,0,0.1,0.1,4,Valerianella Mill.
+Velezia rigida,PH,0.1,NA,0.1,0.1,1,Velezia rigida L.
+Xeranthemum inapertum,PH,0.1,NA,0.1,0.1,1,Xeranthemum inapertum (L.) Mill.

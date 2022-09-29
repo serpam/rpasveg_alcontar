@@ -1,0 +1,97 @@
+﻿date,quadrat_name,cover_type_infoca,plant_coverage_field,plant_coverage_rpas,shannon,richness,slope,treatment,cover_type
+2021-05-19,NP13Q1,1,20,17.44,-1.689193598,11,6.75853,Prescribed Burn,Low scrubland
+2021-05-19,NP13Q2,1,22,19.08,-1.367214515,7,7.26292,Prescribed Burn,Low scrubland
+2021-05-19,NP13Q3,2,30,32.84,-1.301930416,10,21.90293,Prescribed Burn,Medium scrubland
+2021-05-19,NP13Q4,2,20,9.84,-1.021360326,4,13.58083,Prescribed Burn,Medium scrubland
+2021-05-19,NP13Q5,4,36,32.56,-1.162510477,5,4.19623,Prescribed Burn,Dense scrubland
+2021-05-19,NP13Q6,3,66,68.12,-0.42926565,5,7.00261,Prescribed Burn,Stipa dense steppes
+2021-05-19,NP13Q7,3,60,59.52,-0.694463818,8,8.3976,Prescribed Burn,Stipa dense steppes
+2021-05-19,NP13Q8,4,37,46.48,-1.65742875,10,18.26796,Prescribed Burn,Dense scrubland
+2021-05-19,NP7Q1,1,12,13.24,-1.949022745,10,12.26783,Prescribed Burn,Low scrubland
+2021-05-19,NP7Q2,2,31,44,-1.490284274,10,16.54607,Prescribed Burn,Medium scrubland
+2021-05-19,NP7Q3,2,28,12,-1.655341361,9,9.60659,Prescribed Burn,Medium scrubland
+2021-05-19,NP7Q4,1,17,14.12,-1.955492681,11,16.00978,Prescribed Burn,Low scrubland
+2021-05-19,NP7Q5,4,27,23.48,-1.781598022,9,14.42579,Prescribed Burn,Dense scrubland
+2021-05-19,NP7Q6,4,29,26.92,-0.967003883,7,4.41814,Prescribed Burn,Dense scrubland
+2021-05-19,NP7Q7,3,9,6.28,-1.567814695,9,17.12441,Prescribed Burn,Stipa dense steppes
+2021-05-19,NP7Q8,3,21,23,-0.589038948,4,24.68117,Prescribed Burn,Stipa dense steppes
+2021-05-19,NP8Q1,4,27,19.36,-1.449010459,9,21.20593,Prescribed Burn,Dense scrubland
+2021-05-19,NP8Q2,4,52,51.44,-0.544612422,5,12.75371,Prescribed Burn,Dense scrubland
+2021-05-19,NP8Q3,2,47,19.84,-0.998677939,7,5.14943,Prescribed Burn,Medium scrubland
+2021-05-19,NP8Q4,2,28,22.88,-1.272857819,10,19.22652,Prescribed Burn,Medium scrubland
+2021-05-19,NP8Q5,1,9,7.12,-0.729899089,5,15.5588,Prescribed Burn,Low scrubland
+2021-05-19,NP8Q6,1,15,13.64,-1.447408388,8,16.77761,Prescribed Burn,Low scrubland
+2021-05-19,NP8Q7,3,21,26.4,-0.716273072,8,9.69958,Prescribed Burn,Stipa dense steppes
+2021-05-19,NP8Q8,3,65,59.36,-0.769940277,12,9.98621,Prescribed Burn,Stipa dense steppes
+2021-05-19,NP9Q1,3,43,48.2,-0.496852412,6,6.84236,Prescribed Burn,Stipa dense steppes
+2021-05-19,NP9Q2,2,37,48.44,-1.123975652,5,3.33678,Prescribed Burn,Medium scrubland
+2021-05-19,NP9Q3,4,37,39.4,-1.692500177,7,15.68623,Prescribed Burn,Dense scrubland
+2021-05-19,NP9Q4,1,16,15.48,-1.835653325,12,13.45387,Prescribed Burn,Low scrubland
+2021-05-19,NP9Q5,4,25,33.88,-1.765371853,11,19.25106,Prescribed Burn,Dense scrubland
+2021-05-19,NP9Q6,3,27,24.96,-0.930582004,7,28.09895,Prescribed Burn,Stipa dense steppes
+2021-05-19,NP9Q7,2,33,46.2,-1.819569074,13,30.82529,Prescribed Burn,Medium scrubland
+2021-05-19,NP9Q8,1,21,16.72,-1.462716876,11,17.6116,Prescribed Burn,Low scrubland
+2021-05-19,P11Q1,1,7,9.76,-1.152760513,9,24.39389,Pyric Herbivorism,Low scrubland
+2021-05-19,P11Q2,2,15,34.12,-1.558631986,10,19.57165,Pyric Herbivorism,Medium scrubland
+2021-05-19,P11Q3,3,10,12.92,-2.142028565,14,24.43191,Pyric Herbivorism,Stipa dense steppes
+2021-05-19,P11Q4,4,18,25.64,-1.051878843,8,25.13164,Pyric Herbivorism,Dense scrubland
+2021-05-19,P11Q5,1,28,4.68,-1.968114735,15,12.54547,Pyric Herbivorism,Low scrubland
+2021-05-19,P11Q6,2,31,22.88,-0.951159731,9,15.24008,Pyric Herbivorism,Medium scrubland
+2021-05-19,P11Q7,4,61,74.96,-0.662197937,10,30.55269,Pyric Herbivorism,Dense scrubland
+2021-05-19,P11Q8,3,29,26.88,-1.479701337,12,22.27713,Pyric Herbivorism,Stipa dense steppes
+2021-05-19,P12Q1,3,31,20.36,-0.912091704,8,21.8875,Pyric Herbivorism,Stipa dense steppes
+2021-05-19,P12Q2,3,40,50.56,-1.52189382,13,26.91578,Pyric Herbivorism,Stipa dense steppes
+2021-05-19,P12Q3,4,21,22.36,-2.301521957,15,22.80625,Pyric Herbivorism,Dense scrubland
+2021-05-19,P12Q4,4,26,24.88,-1.556164249,13,28.19897,Pyric Herbivorism,Dense scrubland
+2021-05-19,P12Q5,1,11,20.6,-2.066283445,12,29.64145,Pyric Herbivorism,Low scrubland
+2021-05-19,P12Q6,2,60,57.88,-0.820101352,10,23.66002,Pyric Herbivorism,Medium scrubland
+2021-05-19,P12Q7,2,63,58.24,-0.730030717,7,23.13916,Pyric Herbivorism,Medium scrubland
+2021-05-19,P12Q8,1,19,17.36,-1.92243983,12,24.58791,Pyric Herbivorism,Low scrubland
+2021-05-19,P14Q1,3,73,82.52,-0.397993981,10,23.39887,Pyric Herbivorism,Stipa dense steppes
+2021-05-19,P14Q2,2,15,24.28,-1.71649872,12,21.99804,Pyric Herbivorism,Medium scrubland
+2021-05-19,P14Q3,1,9,5.48,-1.671057671,8,23.6784,Pyric Herbivorism,Low scrubland
+2021-05-19,P14Q4,4,44,72.64,-1.380044864,15,23.49466,Pyric Herbivorism,Dense scrubland
+2021-05-19,P14Q5,1,18,14.76,-1.709734415,14,22.75441,Pyric Herbivorism,Low scrubland
+2021-05-19,P14Q6,3,19,20.84,-1.194557083,15,18.67039,Pyric Herbivorism,Stipa dense steppes
+2021-05-19,P14Q7,2,44,51.92,-1.606172792,15,24.36948,Pyric Herbivorism,Medium scrubland
+2021-05-19,P14Q8,4,32,55.16,-1.929236088,17,25.05923,Pyric Herbivorism,Dense scrubland
+2021-05-19,P4Q1,2,33,22.8,-1.47362539,10,20.70409,Pyric Herbivorism,Medium scrubland
+2021-05-19,P4Q2,4,31,40.4,-1.150347937,13,21.12263,Pyric Herbivorism,Dense scrubland
+2021-05-19,P4Q3,1,17,9.04,-2.092721267,20,21.30364,Pyric Herbivorism,Low scrubland
+2021-05-19,P4Q4,3,87,93.84,-0.557655181,9,16.60535,Pyric Herbivorism,Stipa dense steppes
+2021-05-19,P4Q5,3,55,66.76,-0.865464602,9,19.11492,Pyric Herbivorism,Stipa dense steppes
+2021-05-19,P4Q6,1,18,7.36,-1.619552639,12,19.6202,Pyric Herbivorism,Low scrubland
+2021-05-19,P4Q7,2,18,12.76,-2.064163525,17,15.81243,Pyric Herbivorism,Medium scrubland
+2021-05-19,P4Q8,4,41,52.6,-1.196908034,9,16.39336,Pyric Herbivorism,Dense scrubland
+2021-05-19,PR15Q1,3,52,69.48,-1.102197818,16,34.27146,Pyric Herbivorism,Stipa dense steppes
+2021-05-19,PR15Q2,3,60,60.8,-0.60446738,10,26.77098,Pyric Herbivorism,Stipa dense steppes
+2021-05-19,PR15Q3,2,30,17.24,-1.28828624,14,30.14411,Pyric Herbivorism,Medium scrubland
+2021-05-19,PR15Q4,1,14,13.52,-2.231168651,13,34.68411,Pyric Herbivorism,Low scrubland
+2021-05-19,PR15Q5,1,15,6.84,-1.945040315,11,26.95376,Pyric Herbivorism,Low scrubland
+2021-05-19,PR15Q6,4,32,38.44,-1.556903303,14,28.11761,Pyric Herbivorism,Dense scrubland
+2021-05-19,PR15Q7,2,25,22.52,-1.800063915,13,25.09244,Pyric Herbivorism,Medium scrubland
+2021-05-19,PR15Q8,4,10,5.68,-2.133219035,13,25.34467,Pyric Herbivorism,Dense scrubland
+2021-05-19,PR16Q1,3,80,85.44,-0.178720831,9,10.39454,Pyric Herbivorism,Stipa dense steppes
+2021-05-19,PR16Q2,3,82,95,-0.405391458,15,17.19698,Pyric Herbivorism,Stipa dense steppes
+2021-05-19,PR16Q3,4,21,7.28,-2.364276998,17,14.42968,Pyric Herbivorism,Dense scrubland
+2021-05-19,PR16Q4,4,15,6.36,-2.225447328,13,16.40337,Pyric Herbivorism,Dense scrubland
+2021-05-19,PR16Q5,2,19,12.28,-1.229920443,12,4.8498,Pyric Herbivorism,Medium scrubland
+2021-05-19,PR16Q6,2,9,21.52,-2.522990022,23,12.36696,Pyric Herbivorism,Medium scrubland
+2021-05-19,PR16Q7,1,23,12.32,-1.805537841,15,11.72359,Pyric Herbivorism,Low scrubland
+2021-05-19,PR16Q8,1,12,8.68,-1.195530795,9,14.41119,Pyric Herbivorism,Low scrubland
+2021-05-19,PR17Q1,1,10,7.96,-1.046547091,6,31.29884,Pyric Herbivorism,Low scrubland
+2021-05-19,PR17Q2,1,6,0.84,-0.815822047,5,28.25184,Pyric Herbivorism,Low scrubland
+2021-05-19,PR17Q3,2,10,9.04,-1.801641253,10,31.80959,Pyric Herbivorism,Medium scrubland
+2021-05-19,PR17Q4,2,18,10.16,-0.883020016,5,25.98298,Pyric Herbivorism,Medium scrubland
+2021-05-19,PR17Q5,4,45,51.4,-0.950279168,5,34.77873,Pyric Herbivorism,Dense scrubland
+2021-05-19,PR17Q6,3,29,31.24,-0.539883666,7,30.85988,Pyric Herbivorism,Stipa dense steppes
+2021-05-19,PR17Q7,4,19,17.52,-1.343425778,8,30.41705,Pyric Herbivorism,Dense scrubland
+2021-05-19,PR17Q8,3,33,31.44,-0.353725099,4,40.51976,Pyric Herbivorism,Stipa dense steppes
+2021-05-19,PR18Q1,3,50,52.8,-0.382335792,5,15.92186,Pyric Herbivorism,Stipa dense steppes
+2021-05-19,PR18Q2,3,56,71.84,-0.374258297,10,19.26535,Pyric Herbivorism,Stipa dense steppes
+2021-05-19,PR18Q3,4,24,36.6,-1.082343642,11,29.41033,Pyric Herbivorism,Dense scrubland
+2021-05-19,PR18Q4,4,16,51.28,-2.029254035,15,22.41317,Pyric Herbivorism,Dense scrubland
+2021-05-19,PR18Q5,1,13,2.16,-1.956842514,14,33.48799,Pyric Herbivorism,Low scrubland
+2021-05-19,PR18Q6,2,30,21.76,-1.587079924,21,24.84428,Pyric Herbivorism,Medium scrubland
+2021-05-19,PR18Q7,1,11,4.36,-2.237593076,16,20.77496,Pyric Herbivorism,Low scrubland
+2021-05-19,PR18Q8,2,11,10.76,-1.306551137,9,27.15471,Pyric Herbivorism,Medium scrubland

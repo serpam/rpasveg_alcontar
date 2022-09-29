@@ -17,7 +17,9 @@ CRediT[^1] Statment (Contributor Roles Taxonomy)[^2]:
 
 -   **Mauro J. Tognetti Barbieri**: Data curation, Methodology, Validation, and Writing - review & editing.
 
--   **Carlos Tarragona**: Data curation, Methodology, and Validation.
+-   **Carlos Tarragona Pérez**: Data curation, Methodology, and Validation.
+
+-   **Guillermo Calvo Renta**: Data curation, Methodology, and Validation.
 
 -   **Ana Belén Robles Cruz**: Conceptualization, Funding acquisition, Methodology, Project administration, Resources, Supervision, and Writing - review & editing.
 

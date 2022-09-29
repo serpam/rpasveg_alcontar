@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "rpasveg_alcontar"
+  title: "RPAS-Field comparison"
   navbar:
     left:
       - href: index.qmd
@@ -11,12 +11,22 @@ website:
       - about.qmd
       - href: analysis.qmd
         text: Analysis
-
+      - href: prepare_data.qmd
+        text: Data
+      - icon: github
+        href: https://github.com/serpam/rpasveg_alcontar
+        aria-label: GitHub repo 
+      - icon: twitter
+        href: https://twitter.com/SERPAM_EEZ
+        aria-label: SERPAM Twitter
+        
 format:
   html:
-    theme: cosmo
+    theme: yeti
     css: styles.css
     toc: true
+    code-fold: true
+    code-tools: true
 
 
 

@@ -1,0 +1,88 @@
+---
+title: "Prepare data"
+format:
+  html:
+    code-fold: true
+execute:
+  warning: false
+editor_options: 
+  chunk_output_type: console
+---
+
+In this script we prepared the data for posterior analysis. The data are also deposited at Figshare: doi:10.6084/m9.figshare.21207836.v1 [![DOI:10.6084/m9.figshare.21207836.v1](http://img.shields.io/badge/DOI-10.6084/m9.figshare.21207836.v1-5782a7.svg)](https://doi.org/10.6084/m9.figshare.21207836.v1 )
+
+
+```{r}
+#| echo: false
+source('scripts/99-pkgs.R')
+```
+
+
+```{r}
+raw_data <- read_excel(path=here::here("data/rpasfield_alcontar.xlsx"),
+                 sheet = "alcontar") 
+```
+
+```{r}
+raw_data %>% datatable() 
+```
+
+
+```{r}
+spdata <- read_excel(path=here::here("data/rpasfield_alcontar.xlsx"),
+                 sheet = "species_coverage") 
+
+table_species <- spdata %>% 
+  mutate(treatment = recode(treatment, 
+                            'Prescribed Burn'='PB', 
+                            'Pyric Herbivorism'='PH')) %>% 
+  group_by(species_name, treatment) %>% 
+  summarise_at("coverage", list(mean = ~round(mean(., na.rm=TRUE),2),
+                                se = ~round(plotrix::std.error(., na.rm = TRUE),2),
+                                min = ~min(., na.rm = TRUE),
+                                max = ~max(., na.rm = TRUE),
+                                n = ~length(.)
+                                )) 
+
+table_species %>% kable()
+```
+
+```{r}
+# Get the name of the species 
+#| echo: false
+#| eval: false
+
+taxon <- table_species %>%
+  pull(species_name) %>%
+  unique() %>%
+  as_tibble() %>%
+  rename(scientificName = value)
+
+taxon_names <- rgbif::name_backbone_checklist(taxon) 
+
+table_species_normalized <- table_species %>% inner_join(
+  (taxon_names %>% dplyr::select(scientificName, verbatim_name)),
+  by=c("species_name"="verbatim_name"))
+
+write_csv(table_species_normalized, file=here::here("output/normalized_gbif.csv"))
+```
+
+
+```{r}
+#| eval: false
+#| echo: false
+spdata %>% 
+  mutate(treatment = recode(treatment, 'Prescribed Burn'='PB', 'Pyric Herbivorism'='PH')) %>% 
+  group_by(treatment) %>% summarise(c = unique(species_name)) %>% group_by(treatment) %>% count()
+
+
+%>% 
+  unite('m', c('mean','se'), sep = '±', na.rm = TRUE) %>% 
+  pivot_wider(names_from = treatment, 
+              values_from = c(m, min, max, n),
+              names_glue = "{treatment}_{.value}") %>% 
+  relocate(starts_with("PH"), .after=species_name)
+
+```
+
+

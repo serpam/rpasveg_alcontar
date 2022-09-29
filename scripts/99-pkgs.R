@@ -10,12 +10,15 @@ pkg <- c('grateful',
          'ggtext',
          'patchwork',
          'Metrics',
+         'modelr',
          'party',
          'rpart',
+         'ggpubr',
          'ggparty',
          'partykit',
          'tenzing',
-         'plotrix'
+         'plotrix',
+         'rgbif'
          )
 
 eval(

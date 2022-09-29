@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>rpasveg_alcontar - About</title>
+<title>RPAS-Field comparison - About</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
@@ -90,7 +153,7 @@ div.csl-indent {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">rpasveg_alcontar</span>
+    <span class="navbar-title">RPAS-Field comparison</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -106,6 +169,19 @@ div.csl-indent {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./analysis.html">Analysis</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./prepare_data.html">Data</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/serpam/rpasveg_alcontar"><i class="bi bi-github" role="img" aria-label="GitHub repo">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/SERPAM_EEZ"><i class="bi bi-twitter" role="img" aria-label="SERPAM Twitter">
+</i> 
+ </a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -125,7 +201,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<div class="quarto-title-block"><div><h1 class="title">About</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -145,14 +221,17 @@ div.csl-indent {
 <li><p><a href="https://github.com/ajpelu"><strong>Antonio J. Pérez-Luque</strong></a> <a href="https://orcid.org/0000-0002-1747-0469" target="orcid.widget"> <img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" alt="ORCID logo" width="16" height="16"></a>: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Validation, Visualization, Writing - original draft, and Writing - review &amp; editing.</p></li>
 <li><p><strong>Maria Eugenia Ramos Font</strong> <a href="https://orcid.org/0000-0002-4888-0401" target="orcid.widget"> <img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" alt="ORCID logo" width="16" height="16"></a>:: Conceptualization, Investigation, Methodology, and Writing - review &amp; editing.</p></li>
 <li><p><strong>Mauro J. Tognetti Barbieri</strong>: Data curation, Methodology, Validation, and Writing - review &amp; editing.</p></li>
-<li><p><strong>Carlos Tarragona</strong>: Data curation, Methodology, and Validation.</p></li>
+<li><p><strong>Carlos Tarragona Pérez</strong>: Data curation, Methodology, and Validation.</p></li>
+<li><p><strong>Guillermo Calvo Renta</strong>: Data curation, Methodology, and Validation.</p></li>
 <li><p><strong>Ana Belén Robles Cruz</strong>: Conceptualization, Funding acquisition, Methodology, Project administration, Resources, Supervision, and Writing - review &amp; editing.</p></li>
 </ul>
 <div class="cell">
 
 </div>
-<p>We used R version 4.2.1 <span class="citation" data-cites="base">(<a href="#ref-base" role="doc-biblioref">R Core Team 2022a</a>)</span> and the following R packages: datasets v. 4.2.1 <span class="citation" data-cites="datasets">(<a href="#ref-datasets" role="doc-biblioref">R Core Team 2022b</a>)</span>, DT v. 0.25 <span class="citation" data-cites="DT">(<a href="#ref-DT" role="doc-biblioref">Xie, Cheng, and Tan 2022</a>)</span>, ggparty v. 1.0.0 <span class="citation" data-cites="ggparty">(<a href="#ref-ggparty" role="doc-biblioref">Borkovec and Madin 2019</a>)</span>, ggtext v. 0.1.2 <span class="citation" data-cites="ggtext">(<a href="#ref-ggtext" role="doc-biblioref">Wilke and Wiernik 2022</a>)</span>, graphics v. 4.2.1 <span class="citation" data-cites="graphics">(<a href="#ref-graphics" role="doc-biblioref">R Core Team 2022c</a>)</span>, grateful v. 0.1.11 <span class="citation" data-cites="grateful">(<a href="#ref-grateful" role="doc-biblioref">Rodríguez-Sánchez, Jackson, and Hutchins 2022</a>)</span>, grDevices v. 4.2.1 <span class="citation" data-cites="grDevices">(<a href="#ref-grDevices" role="doc-biblioref">R Core Team 2022d</a>)</span>, grid v. 4.2.1 <span class="citation" data-cites="grid">(<a href="#ref-grid" role="doc-biblioref">R Core Team 2022e</a>)</span>, here v. 1.0.1 <span class="citation" data-cites="here">(<a href="#ref-here" role="doc-biblioref">Müller 2020</a>)</span>, kableExtra v. 1.3.4 <span class="citation" data-cites="kableExtra">(<a href="#ref-kableExtra" role="doc-biblioref">Zhu 2021</a>)</span>, knitr v. 1.40 <span class="citation" data-cites="knitr2014 knitr2015 knitr2022">(<a href="#ref-knitr2014" role="doc-biblioref">Xie 2014</a>, <a href="#ref-knitr2015" role="doc-biblioref">2015</a>, <a href="#ref-knitr2022" role="doc-biblioref">2022</a>)</span>, libcoin v. 1.0.9 <span class="citation" data-cites="libcoin">(<a href="#ref-libcoin" role="doc-biblioref">Hothorn 2021</a>)</span>, methods v. 4.2.1 <span class="citation" data-cites="methods">(<a href="#ref-methods" role="doc-biblioref">R Core Team 2022f</a>)</span>, Metrics v. 0.1.4 <span class="citation" data-cites="Metrics">(<a href="#ref-Metrics" role="doc-biblioref">Hamner and Frasco 2018</a>)</span>, modeltools v. 0.2.23 <span class="citation" data-cites="modeltools">(<a href="#ref-modeltools" role="doc-biblioref">Hothorn, Leisch, and Zeileis 2020</a>)</span>, mvtnorm v. 1.1.3 <span class="citation" data-cites="mvtnorm2009 mvtnorm2021">(<a href="#ref-mvtnorm2009" role="doc-biblioref">Genz and Bretz 2009</a>; <a href="#ref-mvtnorm2021" role="doc-biblioref">Genz et al. 2021</a>)</span>, party v. 1.3.10 <span class="citation" data-cites="party2006a party2006c party2007d party2008b party2008e">(<a href="#ref-party2006a" role="doc-biblioref">Hothorn, Hornik, and Zeileis 2006a</a>; <a href="#ref-party2006c" role="doc-biblioref">Hothorn et al. 2006</a>; <a href="#ref-party2007d" role="doc-biblioref">Strobl et al. 2007</a>, <a href="#ref-party2008e" role="doc-biblioref">2008</a>; <a href="#ref-party2008b" role="doc-biblioref">Zeileis, Hothorn, and Hornik 2008a</a>)</span>, partykit v. 1.2.16 <span class="citation" data-cites="partykit2006 partykit2008 partykit2015">(<a href="#ref-partykit2006" role="doc-biblioref">Hothorn, Hornik, and Zeileis 2006b</a>; <a href="#ref-partykit2008" role="doc-biblioref">Zeileis, Hothorn, and Hornik 2008b</a>; <a href="#ref-partykit2015" role="doc-biblioref">Hothorn and Zeileis 2015</a>)</span>, patchwork v. 1.1.2 <span class="citation" data-cites="patchwork">(<a href="#ref-patchwork" role="doc-biblioref">Pedersen 2022</a>)</span>, rpart v. 4.1.16 <span class="citation" data-cites="rpart">(<a href="#ref-rpart" role="doc-biblioref">Therneau and Atkinson 2022</a>)</span>, sandwich v. 3.0.2 <span class="citation" data-cites="sandwich2004 sandwich2006 sandwich2020">(<a href="#ref-sandwich2004" role="doc-biblioref">Zeileis 2004</a>, <a href="#ref-sandwich2006" role="doc-biblioref">2006b</a>; <a href="#ref-sandwich2020" role="doc-biblioref">Zeileis, Köll, and Graham 2020</a>)</span>, stats v. 4.2.1 <span class="citation" data-cites="stats">(<a href="#ref-stats" role="doc-biblioref">R Core Team 2022g</a>)</span>, stats4 v. 4.2.1 <span class="citation" data-cites="stats4">(<a href="#ref-stats4" role="doc-biblioref">R Core Team 2022h</a>)</span>, strucchange v. 1.5.3 <span class="citation" data-cites="strucchange2002 strucchange2003 strucchange2006">(<a href="#ref-strucchange2002" role="doc-biblioref">Zeileis et al. 2002</a>, <a href="#ref-strucchange2003" role="doc-biblioref">2003</a>; <a href="#ref-strucchange2006" role="doc-biblioref">Zeileis 2006a</a>)</span>, tidyverse v. 1.3.2 <span class="citation" data-cites="tidyverse">(<a href="#ref-tidyverse" role="doc-biblioref">Wickham et al. 2019</a>)</span>, utils v. 4.2.1 <span class="citation" data-cites="utils">(<a href="#ref-utils" role="doc-biblioref">R Core Team 2022i</a>)</span>, zoo v. 1.8.11 <span class="citation" data-cites="zoo">(<a href="#ref-zoo" role="doc-biblioref">Zeileis and Grothendieck 2005</a>)</span>.</p>
+<p>We used R version 4.2.1 <span class="citation" data-cites="base">(<a href="#ref-base" role="doc-biblioref">R Core Team 2022a</a>)</span> and the following R packages: datasets v. 4.2.1 <span class="citation" data-cites="datasets">(<a href="#ref-datasets" role="doc-biblioref">R Core Team 2022b</a>)</span>, DT v. 0.25 <span class="citation" data-cites="DT">(<a href="#ref-DT" role="doc-biblioref">Xie, Cheng, and Tan 2022</a>)</span>, ggparty v. 1.0.0 <span class="citation" data-cites="ggparty">(<a href="#ref-ggparty" role="doc-biblioref">Borkovec and Madin 2019</a>)</span>, ggpubr v. 0.4.0 <span class="citation" data-cites="ggpubr">(<a href="#ref-ggpubr" role="doc-biblioref">Kassambara 2020</a>)</span>, ggtext v. 0.1.2 <span class="citation" data-cites="ggtext">(<a href="#ref-ggtext" role="doc-biblioref">Wilke and Wiernik 2022</a>)</span>, graphics v. 4.2.1 <span class="citation" data-cites="graphics">(<a href="#ref-graphics" role="doc-biblioref">R Core Team 2022c</a>)</span>, grateful v. 0.1.11 <span class="citation" data-cites="grateful">(<a href="#ref-grateful" role="doc-biblioref">Rodríguez-Sánchez, Jackson, and Hutchins 2022</a>)</span>, grDevices v. 4.2.1 <span class="citation" data-cites="grDevices">(<a href="#ref-grDevices" role="doc-biblioref">R Core Team 2022d</a>)</span>, grid v. 4.2.1 <span class="citation" data-cites="grid">(<a href="#ref-grid" role="doc-biblioref">R Core Team 2022e</a>)</span>, here v. 1.0.1 <span class="citation" data-cites="here">(<a href="#ref-here" role="doc-biblioref">Müller 2020</a>)</span>, kableExtra v. 1.3.4 <span class="citation" data-cites="kableExtra">(<a href="#ref-kableExtra" role="doc-biblioref">Zhu 2021</a>)</span>, knitr v. 1.40 <span class="citation" data-cites="knitr2014 knitr2015 knitr2022">(<a href="#ref-knitr2014" role="doc-biblioref">Xie 2014</a>, <a href="#ref-knitr2015" role="doc-biblioref">2015</a>, <a href="#ref-knitr2022" role="doc-biblioref">2022</a>)</span>, libcoin v. 1.0.9 <span class="citation" data-cites="libcoin">(<a href="#ref-libcoin" role="doc-biblioref">Hothorn 2021</a>)</span>, methods v. 4.2.1 <span class="citation" data-cites="methods">(<a href="#ref-methods" role="doc-biblioref">R Core Team 2022f</a>)</span>, Metrics v. 0.1.4 <span class="citation" data-cites="Metrics">(<a href="#ref-Metrics" role="doc-biblioref">Hamner and Frasco 2018</a>)</span>, modeltools v. 0.2.23 <span class="citation" data-cites="modeltools">(<a href="#ref-modeltools" role="doc-biblioref">Hothorn, Leisch, and Zeileis 2020</a>)</span>, mvtnorm v. 1.1.3 <span class="citation" data-cites="mvtnorm2009 mvtnorm2021">(<a href="#ref-mvtnorm2009" role="doc-biblioref">Genz and Bretz 2009</a>; <a href="#ref-mvtnorm2021" role="doc-biblioref">Genz et al. 2021</a>)</span>, party v. 1.3.10 <span class="citation" data-cites="party2006a party2006c party2007d party2008b party2008e">(<a href="#ref-party2006a" role="doc-biblioref">Hothorn, Hornik, and Zeileis 2006a</a>; <a href="#ref-party2006c" role="doc-biblioref">Hothorn et al. 2006</a>; <a href="#ref-party2007d" role="doc-biblioref">Strobl et al. 2007</a>, <a href="#ref-party2008e" role="doc-biblioref">2008</a>; <a href="#ref-party2008b" role="doc-biblioref">Zeileis, Hothorn, and Hornik 2008a</a>)</span>, partykit v. 1.2.16 <span class="citation" data-cites="partykit2006 partykit2008 partykit2015">(<a href="#ref-partykit2006" role="doc-biblioref">Hothorn, Hornik, and Zeileis 2006b</a>; <a href="#ref-partykit2008" role="doc-biblioref">Zeileis, Hothorn, and Hornik 2008b</a>; <a href="#ref-partykit2015" role="doc-biblioref">Hothorn and Zeileis 2015</a>)</span>, patchwork v. 1.1.2 <span class="citation" data-cites="patchwork">(<a href="#ref-patchwork" role="doc-biblioref">Pedersen 2022</a>)</span>, plotrix v. 3.8.2 <span class="citation" data-cites="plotrix">(<a href="#ref-plotrix" role="doc-biblioref">J 2006</a>)</span>, rgbif v. 3.7.3 <span class="citation" data-cites="rgbif2017 rgbif2022">(<a href="#ref-rgbif2017" role="doc-biblioref">Chamberlain and Boettiger 2017</a>; <a href="#ref-rgbif2022" role="doc-biblioref">Chamberlain et al. 2022</a>)</span>, rpart v. 4.1.16 <span class="citation" data-cites="rpart">(<a href="#ref-rpart" role="doc-biblioref">Therneau and Atkinson 2022</a>)</span>, sandwich v. 3.0.2 <span class="citation" data-cites="sandwich2004 sandwich2006 sandwich2020">(<a href="#ref-sandwich2004" role="doc-biblioref">Zeileis 2004</a>, <a href="#ref-sandwich2006" role="doc-biblioref">2006b</a>; <a href="#ref-sandwich2020" role="doc-biblioref">Zeileis, Köll, and Graham 2020</a>)</span>, stats v. 4.2.1 <span class="citation" data-cites="stats">(<a href="#ref-stats" role="doc-biblioref">R Core Team 2022g</a>)</span>, stats4 v. 4.2.1 <span class="citation" data-cites="stats4">(<a href="#ref-stats4" role="doc-biblioref">R Core Team 2022h</a>)</span>, strucchange v. 1.5.3 <span class="citation" data-cites="strucchange2002 strucchange2003 strucchange2006">(<a href="#ref-strucchange2002" role="doc-biblioref">Zeileis et al. 2002</a>, <a href="#ref-strucchange2003" role="doc-biblioref">2003</a>; <a href="#ref-strucchange2006" role="doc-biblioref">Zeileis 2006a</a>)</span>, tenzing v. 0.2.0 <span class="citation" data-cites="tenzing2020a tenzing2020b">(<a href="#ref-tenzing2020a" role="doc-biblioref">Kovacs et al. 2020</a>; <a href="#ref-tenzing2020b" role="doc-biblioref">Holcombe et al. 2020</a>)</span>, tidyverse v. 1.3.2 <span class="citation" data-cites="tidyverse">(<a href="#ref-tidyverse" role="doc-biblioref">Wickham et al. 2019</a>)</span>, utils v. 4.2.1 <span class="citation" data-cites="utils">(<a href="#ref-utils" role="doc-biblioref">R Core Team 2022i</a>)</span>, zoo v. 1.8.11 <span class="citation" data-cites="zoo">(<a href="#ref-zoo" role="doc-biblioref">Zeileis and Grothendieck 2005</a>)</span>.</p>
 
+
+<!-- -->
 
 
 
@@ -160,6 +239,12 @@ div.csl-indent {
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-ggparty" class="csl-entry" role="doc-biblioentry">
 Borkovec, Martin, and Niyaz Madin. 2019. <em>Ggparty: ’Ggplot’ Visualizations for the ’Partykit’ Package</em>. <a href="https://CRAN.R-project.org/package=ggparty">https://CRAN.R-project.org/package=ggparty</a>.
+</div>
+<div id="ref-rgbif2022" class="csl-entry" role="doc-biblioentry">
+Chamberlain, Scott, Vijay Barve, Dan Mcglinn, Damiano Oldoni, Peter Desmet, Laurens Geffert, and Karthik Ram. 2022. <em>Rgbif: Interface to the Global Biodiversity Information Facility API</em>. <a href="https://CRAN.R-project.org/package=rgbif">https://CRAN.R-project.org/package=rgbif</a>.
+</div>
+<div id="ref-rgbif2017" class="csl-entry" role="doc-biblioentry">
+Chamberlain, Scott, and Carl Boettiger. 2017. <span>“R Python, and Ruby Clients for GBIF Species Occurrence Data.”</span> <em>PeerJ PrePrints</em>. <a href="https://doi.org/10.7287/peerj.preprints.3304v1">https://doi.org/10.7287/peerj.preprints.3304v1</a>.
 </div>
 <div id="ref-mvtnorm2009" class="csl-entry" role="doc-biblioentry">
 Genz, Alan, and Frank Bretz. 2009. <em>Computation of Multivariate Normal and t Probabilities</em>. Lecture Notes in Statistics. Heidelberg: Springer-Verlag.
@@ -169,6 +254,9 @@ Genz, Alan, Frank Bretz, Tetsuhisa Miwa, Xuefei Mi, Friedrich Leisch, Fabian Sch
 </div>
 <div id="ref-Metrics" class="csl-entry" role="doc-biblioentry">
 Hamner, Ben, and Michael Frasco. 2018. <em>Metrics: Evaluation Metrics for Machine Learning</em>. <a href="https://CRAN.R-project.org/package=Metrics">https://CRAN.R-project.org/package=Metrics</a>.
+</div>
+<div id="ref-tenzing2020b" class="csl-entry" role="doc-biblioentry">
+Holcombe, Alex O., Marton Kovacs, Fredrik Aust, and Balazs Aczel. 2020. <span>“<span class="nocase">tenzing</span>: <span>A</span> Web App to Document Contributorship with <span>CRediT</span>.”</span> <em>MetaArXiv</em>. <a href="https://doi.org/10.31222/osf.io/b6ywe">https://doi.org/10.31222/osf.io/b6ywe</a>.
 </div>
 <div id="ref-libcoin" class="csl-entry" role="doc-biblioentry">
 Hothorn, Torsten. 2021. <em>Libcoin: Linear Test Statistics for Permutation Inference</em>. <a href="https://CRAN.R-project.org/package=libcoin">https://CRAN.R-project.org/package=libcoin</a>.
@@ -187,6 +275,15 @@ Hothorn, Torsten, Friedrich Leisch, and Achim Zeileis. 2020. <em>Modeltools: Too
 </div>
 <div id="ref-partykit2015" class="csl-entry" role="doc-biblioentry">
 Hothorn, Torsten, and Achim Zeileis. 2015. <span>“<span class="nocase">partykit</span>: A Modular Toolkit for Recursive Partytioning in <span>R</span>.”</span> <em>Journal of Machine Learning Research</em> 16: 3905–9. <a href="https://jmlr.org/papers/v16/hothorn15a.html">https://jmlr.org/papers/v16/hothorn15a.html</a>.
+</div>
+<div id="ref-plotrix" class="csl-entry" role="doc-biblioentry">
+J, Lemon. 2006. <span>“Plotrix: A Package in the Red Light District of r.”</span> <em>R-News</em> 6 (4): 8–12.
+</div>
+<div id="ref-ggpubr" class="csl-entry" role="doc-biblioentry">
+Kassambara, Alboukadel. 2020. <em>Ggpubr: ’Ggplot2’ Based Publication Ready Plots</em>. <a href="https://CRAN.R-project.org/package=ggpubr">https://CRAN.R-project.org/package=ggpubr</a>.
+</div>
+<div id="ref-tenzing2020a" class="csl-entry" role="doc-biblioentry">
+Kovacs, Marton, Fredrik Aust, Alex O. Holcombe, and Balazs Aczel. 2020. <span>“<span class="nocase">tenzing</span>: <span>D</span>ocumenting Contributions to Scientific Scholarly Output with <span>CRediT</span>.”</span> <a href="https://github.com/marton-balazs-kovacs/tenzing">https://github.com/marton-balazs-kovacs/tenzing</a>.
 </div>
 <div id="ref-here" class="csl-entry" role="doc-biblioentry">
 Müller, Kirill. 2020. <em>Here: A Simpler Way to Find Your Files</em>. <a href="https://CRAN.R-project.org/package=here">https://CRAN.R-project.org/package=here</a>.
@@ -336,6 +433,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
@@ -385,7 +533,49 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "About"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> grateful-refs.bib</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>This repository contains the code, data and analysis of the manuscript submitted to Drones.</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>CRediT<span class="ot">[^1]</span> Statment (Contributor Roles Taxonomy)<span class="ot">[^2]</span>:</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ot">[^1]: </span><span class="co">[</span><span class="ot">CRedIT</span><span class="co">](https://credit.niso.org/)</span> is a high-level taxonomy, including 14 roles, that indicate some of the roles played by contributors to scientific scholarly output. The roles describe each contributor's specific contribution to the scholarly output.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ot">[^2]: </span>We used the package <span class="co">[</span><span class="ot">`tenzing`</span><span class="co">](https://rollercoaster.shinyapps.io/tenzing/)</span> to generate the CRediT taxonomy.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">**Antonio J. Pérez-Luque**</span><span class="co">](https://github.com/ajpelu)</span> <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://orcid.org/0000-0002-1747-0469"</span> <span class="er">target</span><span class="ot">=</span><span class="st">"orcid.widget"</span><span class="kw">&gt;</span> <span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"ORCID logo"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"16"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"16"</span><span class="kw">/&gt;&lt;/a&gt;</span>: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Validation, Visualization, Writing - original draft, and Writing - review &amp; editing.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Maria Eugenia Ramos Font** <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://orcid.org/0000-0002-4888-0401"</span> <span class="er">target</span><span class="ot">=</span><span class="st">"orcid.widget"</span><span class="kw">&gt;</span> <span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"ORCID logo"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"16"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"16"</span><span class="kw">/&gt;&lt;/a&gt;</span>:: Conceptualization, Investigation, Methodology, and Writing - review &amp; editing.</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Mauro J. Tognetti Barbieri**: Data curation, Methodology, Validation, and Writing - review &amp; editing.</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Carlos Tarragona Pérez**: Data curation, Methodology, and Validation.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Guillermo Calvo Renta**: Data curation, Methodology, and Validation.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Ana Belén Robles Cruz**: Conceptualization, Funding acquisition, Methodology, Project administration, Resources, Supervision, and Writing - review &amp; editing.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">'scripts/99-pkgs.R'</span>)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>pkgs <span class="ot">&lt;-</span> (<span class="fu">.packages</span>())</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: asis</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">cite_packages</span>(<span class="at">pkgs =</span> pkgs, <span class="at">output =</span> <span class="st">"paragraph"</span>)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 
 

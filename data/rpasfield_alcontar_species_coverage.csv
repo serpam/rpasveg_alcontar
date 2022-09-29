@@ -1,0 +1,1010 @@
+treatment,quadrat_name,species_name,scientificName,coverage,rank
+Pyric Herbivorism,P11Q1,Bromus rubens,Bromus rubens L.,0.1,SPECIES
+Pyric Herbivorism,P11Q1,Galium parissiense subsp. parissiense,Galium parisiense subsp. parisiense,0.1,SUBSPECIES
+Pyric Herbivorism,P11Q1,Helianthemum almeriense,Helianthemum almeriense Pau,0.3,SPECIES
+Pyric Herbivorism,P11Q1,Helianthemum almeriense,Helianthemum almeriense Pau,0.4,SPECIES
+Pyric Herbivorism,P11Q1,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.1,SUBSPECIES
+Pyric Herbivorism,P11Q1,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,7,SPECIES
+Pyric Herbivorism,P11Q1,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.75,SPECIES
+Pyric Herbivorism,P11Q1,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,0.7,SPECIES
+Pyric Herbivorism,P11Q1,Poa bulbosa,Poa bulbosa L.,0.5,SPECIES
+Pyric Herbivorism,P11Q2,Arabis parvula,Arabis parvula Dufour,0.1,SPECIES
+Pyric Herbivorism,P11Q2,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,3,SPECIES
+Pyric Herbivorism,P11Q2,Genista scorpius,Genista scorpius (L.) DC.,3,SPECIES
+Pyric Herbivorism,P11Q2,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.5,SUBSPECIES
+Pyric Herbivorism,P11Q2,Helianthemum salicifolium,Helianthemum salicifolium (L.) Mill.,0.1,SPECIES
+Pyric Herbivorism,P11Q2,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,9,SPECIES
+Pyric Herbivorism,P11Q2,Linum suffruticosum,Linum suffruticosum L.,0.5,SPECIES
+Pyric Herbivorism,P11Q2,Lithodora fruticosa,Lithodora fruticosa (L.) Griseb.,0.8,SPECIES
+Pyric Herbivorism,P11Q2,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",1,SPECIES
+Pyric Herbivorism,P11Q2,Poa bulbosa,Poa bulbosa L.,0.3,SPECIES
+Pyric Herbivorism,P11Q3,Arabis parvula,Arabis parvula Dufour,0.1,SPECIES
+Pyric Herbivorism,P11Q3,Arenaria leptoclados,Arenaria leptoclados (Rchb.) Guss.,0.1,SPECIES
+Pyric Herbivorism,P11Q3,Asphodelus albus,Asphodelus albus Mill.,0.6,SPECIES
+Pyric Herbivorism,P11Q3,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,1,SPECIES
+Pyric Herbivorism,P11Q3,Helianthemum almeriense,Helianthemum almeriense Pau,0.25,SPECIES
+Pyric Herbivorism,P11Q3,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.25,SUBSPECIES
+Pyric Herbivorism,P11Q3,Helianthemum salicifolium,Helianthemum salicifolium (L.) Mill.,0.1,SPECIES
+Pyric Herbivorism,P11Q3,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,0.7,SPECIES
+Pyric Herbivorism,P11Q3,Hippocrepis ciliata,Hippocrepis ciliata Willd.,0.2,SPECIES
+Pyric Herbivorism,P11Q3,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.1,SPECIES
+Pyric Herbivorism,P11Q3,Linum suffruticosum,Linum suffruticosum L.,0.4,SPECIES
+Pyric Herbivorism,P11Q3,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",2,SPECIES
+Pyric Herbivorism,P11Q3,Picris hispanica,Picris hispanica (Willd.) P.D.Sell,2.5,SPECIES
+Pyric Herbivorism,P11Q3,Reseda lutea,Reseda lutea L.,1,SPECIES
+Pyric Herbivorism,P11Q4,Bromus rubens,Bromus rubens L.,0.1,SPECIES
+Pyric Herbivorism,P11Q4,Genista scorpius,Genista scorpius (L.) DC.,9,SPECIES
+Pyric Herbivorism,P11Q4,Helianthemum almeriense,Helianthemum almeriense Pau,0.2,SPECIES
+Pyric Herbivorism,P11Q4,Helianthemum ledifolium,Helianthemum ledifolium (L.) Mill.,0.8,SPECIES
+Pyric Herbivorism,P11Q4,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,8,SPECIES
+Pyric Herbivorism,P11Q4,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.2,SPECIES
+Pyric Herbivorism,P11Q4,Linum suffruticosum,Linum suffruticosum L.,0.1,SPECIES
+Pyric Herbivorism,P11Q4,Malcolmia africana,Malcolmia africana (L.) R.Br.,0.2,SPECIES
+Pyric Herbivorism,P11Q5,Arrhenatherum album,Arrhenatherum album (Vahl) Clayton,0.1,SPECIES
+Pyric Herbivorism,P11Q5,Bromus rubens,Bromus rubens L.,1.5,SPECIES
+Pyric Herbivorism,P11Q5,Filago fuscescens,Filago fuscescens Pomel,0.1,SPECIES
+Pyric Herbivorism,P11Q5,Galium verticillatum,Galium verticillatum Danthoine ex Lam.,0.3,SPECIES
+Pyric Herbivorism,P11Q5,Genista scorpius,Genista scorpius (L.) DC.,2.5,SPECIES
+Pyric Herbivorism,P11Q5,Helianthemum almeriense,Helianthemum almeriense Pau,2,SPECIES
+Pyric Herbivorism,P11Q5,Helianthemum appenninum,Helianthemum apenninum (L.) Mill.,1,SPECIES
+Pyric Herbivorism,P11Q5,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.5,SPECIES
+Pyric Herbivorism,P11Q5,Hippocrepis ciliata,Hippocrepis ciliata Willd.,0.2,SPECIES
+Pyric Herbivorism,P11Q5,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,0.2,SPECIES
+Pyric Herbivorism,P11Q5,Linum suffruticosum,Linum suffruticosum L.,0.5,SPECIES
+Pyric Herbivorism,P11Q5,Picris hispanica,Picris hispanica (Willd.) P.D.Sell,7,SPECIES
+Pyric Herbivorism,P11Q5,Poa bulbosa,Poa bulbosa L.,8,SPECIES
+Pyric Herbivorism,P11Q5,Stipa bufensis,"Stipa bufensis F.M.Vázquez, H.Scholz & Sonnentag",2,SPECIES
+Pyric Herbivorism,P11Q5,Valerianella,Valerianella Mill.,0.1,GENUS
+Pyric Herbivorism,P11Q6,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,1,SPECIES
+Pyric Herbivorism,P11Q6,Galium parissiense subsp. parissiense,Galium parisiense subsp. parisiense,0.1,SUBSPECIES
+Pyric Herbivorism,P11Q6,Genista scorpius,Genista scorpius (L.) DC.,1.5,SPECIES
+Pyric Herbivorism,P11Q6,Helianthemum almeriense,Helianthemum almeriense Pau,2,SPECIES
+Pyric Herbivorism,P11Q6,Helianthemum appenninum,Helianthemum apenninum (L.) Mill.,1,SPECIES
+Pyric Herbivorism,P11Q6,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,24,SPECIES
+Pyric Herbivorism,P11Q6,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,1.2,SPECIES
+Pyric Herbivorism,P11Q6,Poa bulbosa,Poa bulbosa L.,0.3,SPECIES
+Pyric Herbivorism,P11Q6,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.1,SUBSPECIES
+Pyric Herbivorism,P11Q7,Arabis auriculata,Arabis auriculata Lam.,0.2,SPECIES
+Pyric Herbivorism,P11Q7,Asterolinon linum-stellatum,Asterolinon linum-stellatum (L.) Duby,0.1,SPECIES
+Pyric Herbivorism,P11Q7,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,5.5,SPECIES
+Pyric Herbivorism,P11Q7,Genista scorpius,Genista scorpius (L.) DC.,55,SPECIES
+Pyric Herbivorism,P11Q7,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.7,SUBSPECIES
+Pyric Herbivorism,P11Q7,Helianthemum salicifolium,Helianthemum salicifolium (L.) Mill.,0.2,SPECIES
+Pyric Herbivorism,P11Q7,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,2,SPECIES
+Pyric Herbivorism,P11Q7,Linum suffruticosum,Linum suffruticosum L.,0.5,SPECIES
+Pyric Herbivorism,P11Q7,Minuartia hybrida,Minuartia hybrida Vill.,0.2,SPECIES
+Pyric Herbivorism,P11Q7,Reseda lutea,Reseda lutea L.,0.8,SPECIES
+Pyric Herbivorism,P11Q8,Asterolinon linum-stellatum,Asterolinon linum-stellatum (L.) Duby,0.2,SPECIES
+Pyric Herbivorism,P11Q8,Bromus rubens,Bromus rubens L.,0.2,SPECIES
+Pyric Herbivorism,P11Q8,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,4,SPECIES
+Pyric Herbivorism,P11Q8,Filago fuscescens,Filago fuscescens Pomel,0.1,SPECIES
+Pyric Herbivorism,P11Q8,Helianthemum almeriense,Helianthemum almeriense Pau,1.5,SPECIES
+Pyric Herbivorism,P11Q8,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,1.5,SUBSPECIES
+Pyric Herbivorism,P11Q8,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,6,SPECIES
+Pyric Herbivorism,P11Q8,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.3,SPECIES
+Pyric Herbivorism,P11Q8,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.2,SPECIES
+Pyric Herbivorism,P11Q8,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",14,SPECIES
+Pyric Herbivorism,P11Q8,Minuartia hybrida,Minuartia hybrida Vill.,0.1,SPECIES
+Pyric Herbivorism,P11Q8,Sideritis pusilla,Sideritis pusilla (Lange) Pau,0.1,SPECIES
+Pyric Herbivorism,P12Q1,Genista scorpius,Genista scorpius (L.) DC.,2,SPECIES
+Pyric Herbivorism,P12Q1,Helianthemum almeriense,Helianthemum almeriense Pau,2.3,SPECIES
+Pyric Herbivorism,P12Q1,Helianthemum salicifolium,Helianthemum salicifolium (L.) Mill.,0.2,SPECIES
+Pyric Herbivorism,P12Q1,Linum suffruticosum,Linum suffruticosum L.,2,SPECIES
+Pyric Herbivorism,P12Q1,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",24,SPECIES
+Pyric Herbivorism,P12Q1,Minuartia hybrida,Minuartia hybrida Vill.,0.3,SPECIES
+Pyric Herbivorism,P12Q1,Reseda lutea,Reseda lutea L.,0.2,SPECIES
+Pyric Herbivorism,P12Q1,Reseda undata subsp. Undata,Reseda undata L.,0.4,SPECIES
+Pyric Herbivorism,P12Q2,Carex hallerana,Carex halleriana Asso,4,SPECIES
+Pyric Herbivorism,P12Q2,Cerastium brachypetalum,Cerastium brachypetalum Desf. ex Pers.,0.1,SPECIES
+Pyric Herbivorism,P12Q2,Genista scorpius,Genista scorpius (L.) DC.,3,SPECIES
+Pyric Herbivorism,P12Q2,Helianthemum almeriense,Helianthemum almeriense Pau,14,SPECIES
+Pyric Herbivorism,P12Q2,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,1,SUBSPECIES
+Pyric Herbivorism,P12Q2,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,3.5,SPECIES
+Pyric Herbivorism,P12Q2,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.1,SPECIES
+Pyric Herbivorism,P12Q2,Linum suffruticosum,Linum suffruticosum L.,1.2,SPECIES
+Pyric Herbivorism,P12Q2,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",25,SPECIES
+Pyric Herbivorism,P12Q2,Odontites,Odontites Ludw.,0.2,GENUS
+Pyric Herbivorism,P12Q2,Reseda lutea,Reseda lutea L.,0.2,SPECIES
+Pyric Herbivorism,P12Q2,Sanguisorba,Sanguisorba L.,0.2,GENUS
+Pyric Herbivorism,P12Q2,Sideritis pusilla,Sideritis pusilla (Lange) Pau,0.3,SPECIES
+Pyric Herbivorism,P12Q3,Arabidopsis thaliana,Arabidopsis thaliana (L.) Heynh.,1.5,SPECIES
+Pyric Herbivorism,P12Q3,Biscutella laxa,Biscutella laxa Boiss. & Reut.,0.2,SPECIES
+Pyric Herbivorism,P12Q3,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.6,SPECIES
+Pyric Herbivorism,P12Q3,Carex hallerana,Carex halleriana Asso,2,SPECIES
+Pyric Herbivorism,P12Q3,Cerastium brachypetalum,Cerastium brachypetalum Desf. ex Pers.,0.3,SPECIES
+Pyric Herbivorism,P12Q3,Crepis albida subsp. grosii,Crepis albida subsp. grosii (Pau) Babc.,1.3,SUBSPECIES
+Pyric Herbivorism,P12Q3,Crupina,Crupina (Pers.) DC.,0.2,GENUS
+Pyric Herbivorism,P12Q3,Genista scorpius,Genista scorpius (L.) DC.,0.6,SPECIES
+Pyric Herbivorism,P12Q3,Helianthemum almeriense,Helianthemum almeriense Pau,1.5,SPECIES
+Pyric Herbivorism,P12Q3,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,4,SUBSPECIES
+Pyric Herbivorism,P12Q3,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,4.5,SPECIES
+Pyric Herbivorism,P12Q3,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.2,SPECIES
+Pyric Herbivorism,P12Q3,Linum suffruticosum,Linum suffruticosum L.,1.2,SPECIES
+Pyric Herbivorism,P12Q3,Ononis natrix,Ononis natrix L.,0.3,SPECIES
+Pyric Herbivorism,P12Q3,Reseda lutea,Reseda lutea L.,2.2,SPECIES
+Pyric Herbivorism,P12Q4,Arenaria leptoclados,Arenaria leptoclados (Rchb.) Guss.,0.1,SPECIES
+Pyric Herbivorism,P12Q4,Biscutella laxa,Biscutella laxa Boiss. & Reut.,0.2,SPECIES
+Pyric Herbivorism,P12Q4,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.4,SPECIES
+Pyric Herbivorism,P12Q4,Carex hallerana,Carex halleriana Asso,0.2,SPECIES
+Pyric Herbivorism,P12Q4,Cerastium brachypetalum,Cerastium brachypetalum Desf. ex Pers.,0.1,SPECIES
+Pyric Herbivorism,P12Q4,Eryngium campestre,Eryngium campestre L.,0.1,SPECIES
+Pyric Herbivorism,P12Q4,Genista scorpius,Genista scorpius (L.) DC.,10,SPECIES
+Pyric Herbivorism,P12Q4,Helianthemum almeriense,Helianthemum almeriense Pau,0.2,SPECIES
+Pyric Herbivorism,P12Q4,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,7,SUBSPECIES
+Pyric Herbivorism,P12Q4,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,4.5,SPECIES
+Pyric Herbivorism,P12Q4,Linum suffruticosum,Linum suffruticosum L.,1.6,SPECIES
+Pyric Herbivorism,P12Q4,Reseda lutea,Reseda lutea L.,0.1,SPECIES
+Pyric Herbivorism,P12Q4,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,0.5,SUBSPECIES
+Pyric Herbivorism,P12Q5,Avenula bromoides subsp. pauneroi,Avenula bromoides subsp. pauneroi Romero Zarco,0.2,SUBSPECIES
+Pyric Herbivorism,P12Q5,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,2.5,SPECIES
+Pyric Herbivorism,P12Q5,Carex hallerana,Carex halleriana Asso,0.5,SPECIES
+Pyric Herbivorism,P12Q5,Crepis albida subsp. grosii,Crepis albida subsp. grosii (Pau) Babc.,0.6,SUBSPECIES
+Pyric Herbivorism,P12Q5,Festuca capillifolia,Festuca capillifolia Dufour ex Roem. & Schult.,5,SPECIES
+Pyric Herbivorism,P12Q5,Genista scorpius,Genista scorpius (L.) DC.,1,SPECIES
+Pyric Herbivorism,P12Q5,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,0.5,SPECIES
+Pyric Herbivorism,P12Q5,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,2,SPECIES
+Pyric Herbivorism,P12Q5,Lavandula lanata,Lavandula lanata Boiss.,1,SPECIES
+Pyric Herbivorism,P12Q5,Linum suffruticosum,Linum suffruticosum L.,1.5,SPECIES
+Pyric Herbivorism,P12Q5,Poa bulbosa,Poa bulbosa L.,0.3,SPECIES
+Pyric Herbivorism,P12Q5,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.3,SUBSPECIES
+Pyric Herbivorism,P12Q6,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.1,SPECIES
+Pyric Herbivorism,P12Q6,Carex hallerana,Carex halleriana Asso,1,SPECIES
+Pyric Herbivorism,P12Q6,Genista scorpius,Genista scorpius (L.) DC.,2,SPECIES
+Pyric Herbivorism,P12Q6,Helianthemum almeriense,Helianthemum almeriense Pau,1,SPECIES
+Pyric Herbivorism,P12Q6,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,2,SUBSPECIES
+Pyric Herbivorism,P12Q6,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,5,SPECIES
+Pyric Herbivorism,P12Q6,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,0.1,SPECIES
+Pyric Herbivorism,P12Q6,Linum suffruticosum,Linum suffruticosum L.,0.5,SPECIES
+Pyric Herbivorism,P12Q6,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,48,SUBSPECIES
+Pyric Herbivorism,P12Q6,Scabiosa turolensis,Scabiosa turolensis Pau,0.1,SPECIES
+Pyric Herbivorism,P12Q7,Genista scorpius,Genista scorpius (L.) DC.,0.2,SPECIES
+Pyric Herbivorism,P12Q7,Helianthemum almeriense,Helianthemum almeriense Pau,2,SPECIES
+Pyric Herbivorism,P12Q7,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.2,SUBSPECIES
+Pyric Herbivorism,P12Q7,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,12,SPECIES
+Pyric Herbivorism,P12Q7,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,0.8,SPECIES
+Pyric Herbivorism,P12Q7,Linum suffruticosum,Linum suffruticosum L.,0.2,SPECIES
+Pyric Herbivorism,P12Q7,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,50,SUBSPECIES
+Pyric Herbivorism,P12Q8,Asperula hirsuta,Asperula hirsuta Desf.,12,SPECIES
+Pyric Herbivorism,P12Q8,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.4,SPECIES
+Pyric Herbivorism,P12Q8,Carex hallerana,Carex halleriana Asso,1.8,SPECIES
+Pyric Herbivorism,P12Q8,Genista scorpius,Genista scorpius (L.) DC.,2.5,SPECIES
+Pyric Herbivorism,P12Q8,Helianthemum almeriense,Helianthemum almeriense Pau,4,SPECIES
+Pyric Herbivorism,P12Q8,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,1.5,SUBSPECIES
+Pyric Herbivorism,P12Q8,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,10,SPECIES
+Pyric Herbivorism,P12Q8,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,3,SPECIES
+Pyric Herbivorism,P12Q8,Linum suffruticosum,Linum suffruticosum L.,0.4,SPECIES
+Pyric Herbivorism,P12Q8,Ononis pusilla,Ononis pusilla L.,0.5,SPECIES
+Pyric Herbivorism,P12Q8,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,2,SUBSPECIES
+Pyric Herbivorism,P12Q8,Valerianella,Valerianella Mill.,0.1,GENUS
+Pyric Herbivorism,P14Q1,Alyssum granatense,Alyssum granatense Boiss. & Reut.,0.2,SPECIES
+Pyric Herbivorism,P14Q1,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.5,SPECIES
+Pyric Herbivorism,P14Q1,Colutea hispanica,Colutea hispanica Talavera & Arista,0.8,SPECIES
+Pyric Herbivorism,P14Q1,Crupina,Crupina (Pers.) DC.,0.1,GENUS
+Pyric Herbivorism,P14Q1,Genista scorpius,Genista scorpius (L.) DC.,1.1,SPECIES
+Pyric Herbivorism,P14Q1,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,0.4,SPECIES
+Pyric Herbivorism,P14Q1,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,0.4,SPECIES
+Pyric Herbivorism,P14Q1,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",70,SPECIES
+Pyric Herbivorism,P14Q1,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,1.5,SUBSPECIES
+Pyric Herbivorism,P14Q1,Stipa bufensis,"Stipa bufensis F.M.Vázquez, H.Scholz & Sonnentag",0.4,SPECIES
+Pyric Herbivorism,P14Q2,Avenula bromoides subsp. pauneroi,Avenula bromoides subsp. pauneroi Romero Zarco,0.25,SUBSPECIES
+Pyric Herbivorism,P14Q2,Biscutella laxa,Biscutella laxa Boiss. & Reut.,0.2,SPECIES
+Pyric Herbivorism,P14Q2,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,2,SPECIES
+Pyric Herbivorism,P14Q2,Festuca capillifolia,Festuca capillifolia Dufour ex Roem. & Schult.,0.7,SPECIES
+Pyric Herbivorism,P14Q2,Genista scorpius,Genista scorpius (L.) DC.,3,SPECIES
+Pyric Herbivorism,P14Q2,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,3,SPECIES
+Pyric Herbivorism,P14Q2,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,0.2,SPECIES
+Pyric Herbivorism,P14Q2,Linum suffruticosum,Linum suffruticosum L.,0.5,SPECIES
+Pyric Herbivorism,P14Q2,Odontites,Odontites Ludw.,0.1,GENUS
+Pyric Herbivorism,P14Q2,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,7.5,SUBSPECIES
+Pyric Herbivorism,P14Q2,Staehelina dubia,Staehelina dubia L.,0.25,SPECIES
+Pyric Herbivorism,P14Q2,Stipa bufensis,"Stipa bufensis F.M.Vázquez, H.Scholz & Sonnentag",0.1,SPECIES
+Pyric Herbivorism,P14Q3,Biscutella laxa,Biscutella laxa Boiss. & Reut.,0.2,SPECIES
+Pyric Herbivorism,P14Q3,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.4,SPECIES
+Pyric Herbivorism,P14Q3,Festuca capillifolia,Festuca capillifolia Dufour ex Roem. & Schult.,4,SPECIES
+Pyric Herbivorism,P14Q3,Genista scorpius,Genista scorpius (L.) DC.,0.5,SPECIES
+Pyric Herbivorism,P14Q3,Lavandula lanata,Lavandula lanata Boiss.,1.5,SPECIES
+Pyric Herbivorism,P14Q3,Linum suffruticosum,Linum suffruticosum L.,1,SPECIES
+Pyric Herbivorism,P14Q3,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,2.1,SUBSPECIES
+Pyric Herbivorism,P14Q3,Staehelina dubia,Staehelina dubia L.,0.3,SPECIES
+Pyric Herbivorism,P14Q4,Arabidopsis thaliana,Arabidopsis thaliana (L.) Heynh.,0.1,SPECIES
+Pyric Herbivorism,P14Q4,Biscutella laxa,Biscutella laxa Boiss. & Reut.,0.1,SPECIES
+Pyric Herbivorism,P14Q4,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,1,SPECIES
+Pyric Herbivorism,P14Q4,Clypeola jonthlaspi subsp. microcarpa,Clypeola jonthlaspi subsp. microcarpa (Boiss.) Breistr.,0.2,SUBSPECIES
+Pyric Herbivorism,P14Q4,Genista scorpius,Genista scorpius (L.) DC.,28,SPECIES
+Pyric Herbivorism,P14Q4,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.2,SPECIES
+Pyric Herbivorism,P14Q4,Linaria aeruginea subsp. aeruginea,Linaria aeruginea subsp. aeruginea,0.7,SUBSPECIES
+Pyric Herbivorism,P14Q4,Linaria simplex,Linaria simplex (Willd.) DC.,0.1,SPECIES
+Pyric Herbivorism,P14Q4,Linum suffruticosum,Linum suffruticosum L.,4.2,SPECIES
+Pyric Herbivorism,P14Q4,Odontites,Odontites Ludw.,0.1,GENUS
+Pyric Herbivorism,P14Q4,Ononis natrix,Ononis natrix L.,0.6,SPECIES
+Pyric Herbivorism,P14Q4,Polygala rupestris,Polygala rupestris Pourr.,0.1,SPECIES
+Pyric Herbivorism,P14Q4,Reseda lutea,Reseda lutea L.,5,SPECIES
+Pyric Herbivorism,P14Q4,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,4,SUBSPECIES
+Pyric Herbivorism,P14Q4,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,1,SUBSPECIES
+Pyric Herbivorism,P14Q5,Avenula bromoides subsp. pauneroi,Avenula bromoides subsp. pauneroi Romero Zarco,0.4,SUBSPECIES
+Pyric Herbivorism,P14Q5,Biscutella laxa,Biscutella laxa Boiss. & Reut.,0.1,SPECIES
+Pyric Herbivorism,P14Q5,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.7,SPECIES
+Pyric Herbivorism,P14Q5,Cerastium gracile,Cerastium gracile Dufour,0.1,SPECIES
+Pyric Herbivorism,P14Q5,Chaenorhinum macropodum subsp. macropodum,Chaenorhinum macropodum subsp. macropodum,1.2,SUBSPECIES
+Pyric Herbivorism,P14Q5,Genista scorpius,Genista scorpius (L.) DC.,1,SPECIES
+Pyric Herbivorism,P14Q5,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.1,SPECIES
+Pyric Herbivorism,P14Q5,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,2,SPECIES
+Pyric Herbivorism,P14Q5,Linum suffruticosum,Linum suffruticosum L.,0.2,SPECIES
+Pyric Herbivorism,P14Q5,Odontites,Odontites Ludw.,0.4,GENUS
+Pyric Herbivorism,P14Q5,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,10,SUBSPECIES
+Pyric Herbivorism,P14Q5,Stipa almeriense,Stipa almeriensis F.M.Vázquez,1.5,SPECIES
+Pyric Herbivorism,P14Q5,Stipa bufensis,"Stipa bufensis F.M.Vázquez, H.Scholz & Sonnentag",1,SPECIES
+Pyric Herbivorism,P14Q5,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.1,SUBSPECIES
+Pyric Herbivorism,P14Q6,Arabidopsis thaliana,Arabidopsis thaliana (L.) Heynh.,0.1,SPECIES
+Pyric Herbivorism,P14Q6,Biscutella laxa,Biscutella laxa Boiss. & Reut.,0.6,SPECIES
+Pyric Herbivorism,P14Q6,Bufonia tenuifolia,Bufonia tenuifolia L.,0.2,SPECIES
+Pyric Herbivorism,P14Q6,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.3,SPECIES
+Pyric Herbivorism,P14Q6,Clypeola jonthlaspi subsp. microcarpa,Clypeola jonthlaspi subsp. microcarpa (Boiss.) Breistr.,0.1,SUBSPECIES
+Pyric Herbivorism,P14Q6,Crepis albida subsp. grosii,Crepis albida subsp. grosii (Pau) Babc.,0.1,SUBSPECIES
+Pyric Herbivorism,P14Q6,Genista scorpius,Genista scorpius (L.) DC.,1,SPECIES
+Pyric Herbivorism,P14Q6,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.1,SPECIES
+Pyric Herbivorism,P14Q6,Linaria simplex,Linaria simplex (Willd.) DC.,1,SPECIES
+Pyric Herbivorism,P14Q6,Linum suffruticosum,Linum suffruticosum L.,0.4,SPECIES
+Pyric Herbivorism,P14Q6,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",15,SPECIES
+Pyric Herbivorism,P14Q6,Minuartia hybrida,Minuartia hybrida Vill.,0.3,SPECIES
+Pyric Herbivorism,P14Q6,Petrorhagia nanteuilii,Petrorhagia nanteuilii (Burnat) P.W.Ball & Heywood,0.1,SPECIES
+Pyric Herbivorism,P14Q6,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,1,SUBSPECIES
+Pyric Herbivorism,P14Q6,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.2,SUBSPECIES
+Pyric Herbivorism,P14Q7,Biscutella laxa,Biscutella laxa Boiss. & Reut.,0.3,SPECIES
+Pyric Herbivorism,P14Q7,Chaenorhinum macropodum subsp. macropodum,Chaenorhinum macropodum subsp. macropodum,0.4,SUBSPECIES
+Pyric Herbivorism,P14Q7,Festuca capillifolia,Festuca capillifolia Dufour ex Roem. & Schult.,25,SPECIES
+Pyric Herbivorism,P14Q7,Genista scorpius,Genista scorpius (L.) DC.,4.5,SPECIES
+Pyric Herbivorism,P14Q7,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,1,SPECIES
+Pyric Herbivorism,P14Q7,Lavandula lanata,Lavandula lanata Boiss.,6,SPECIES
+Pyric Herbivorism,P14Q7,Linaria aeruginea subsp. aeruginea,Linaria aeruginea subsp. aeruginea,0.2,SUBSPECIES
+Pyric Herbivorism,P14Q7,Linum suffruticosum,Linum suffruticosum L.,0.5,SPECIES
+Pyric Herbivorism,P14Q7,Minuartia hybrida,Minuartia hybrida Vill.,0.3,SPECIES
+Pyric Herbivorism,P14Q7,Ononis natrix,Ononis natrix L.,1.5,SPECIES
+Pyric Herbivorism,P14Q7,Poa bulbosa,Poa bulbosa L.,0.2,SPECIES
+Pyric Herbivorism,P14Q7,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,3,SUBSPECIES
+Pyric Herbivorism,P14Q7,Silene conica,Silene conica L.,0.1,SPECIES
+Pyric Herbivorism,P14Q7,Silene mellifera,Silene mellifera Boiss. & Reut.,0.5,SPECIES
+Pyric Herbivorism,P14Q7,Staehelina dubia,Staehelina dubia L.,2,SPECIES
+Pyric Herbivorism,P14Q8,Arabidopsis thaliana,Arabidopsis thaliana (L.) Heynh.,0.5,SPECIES
+Pyric Herbivorism,P14Q8,Asterolinon linum-stellatum,Asterolinon linum-stellatum (L.) Duby,0.1,SPECIES
+Pyric Herbivorism,P14Q8,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,2.3,SPECIES
+Pyric Herbivorism,P14Q8,Clypeola jonthlaspi subsp. microcarpa,Clypeola jonthlaspi subsp. microcarpa (Boiss.) Breistr.,0.1,SUBSPECIES
+Pyric Herbivorism,P14Q8,Digitalis obscura subsp. obscura,Digitalis obscura subsp. obscura,0.3,SUBSPECIES
+Pyric Herbivorism,P14Q8,Genista scorpius,Genista scorpius (L.) DC.,8,SPECIES
+Pyric Herbivorism,P14Q8,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,0.1,SPECIES
+Pyric Herbivorism,P14Q8,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.3,SPECIES
+Pyric Herbivorism,P14Q8,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.5,SPECIES
+Pyric Herbivorism,P14Q8,Linaria aeruginea subsp. aeruginea,Linaria aeruginea subsp. aeruginea,0.1,SUBSPECIES
+Pyric Herbivorism,P14Q8,Linum suffruticosum,Linum suffruticosum L.,1,SPECIES
+Pyric Herbivorism,P14Q8,Ononis natrix,Ononis natrix L.,1.5,SPECIES
+Pyric Herbivorism,P14Q8,Polygala rupestris,Polygala rupestris Pourr.,0.2,SPECIES
+Pyric Herbivorism,P14Q8,Reseda lutea,Reseda lutea L.,0.6,SPECIES
+Pyric Herbivorism,P14Q8,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,12,SUBSPECIES
+Pyric Herbivorism,P14Q8,Sideritis pusilla,Sideritis pusilla (Lange) Pau,3,SPECIES
+Pyric Herbivorism,P14Q8,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,2,SUBSPECIES
+Pyric Herbivorism,P4Q1,Eryngium campestre,Eryngium campestre L.,2,SPECIES
+Pyric Herbivorism,P4Q1,Genista scorpius,Genista scorpius (L.) DC.,15,SPECIES
+Pyric Herbivorism,P4Q1,Helianthemum almeriense,Helianthemum almeriense Pau,8,SPECIES
+Pyric Herbivorism,P4Q1,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,1,SPECIES
+Pyric Herbivorism,P4Q1,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,3,SPECIES
+Pyric Herbivorism,P4Q1,Linum suffruticosum,Linum suffruticosum L.,0.1,SPECIES
+Pyric Herbivorism,P4Q1,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",2.2,SPECIES
+Pyric Herbivorism,P4Q1,Odontites,Odontites Ludw.,0.3,GENUS
+Pyric Herbivorism,P4Q1,Poa bulbosa,Poa bulbosa L.,0.1,SPECIES
+Pyric Herbivorism,P4Q2,Biscutella laxa,Biscutella laxa Boiss. & Reut.,0.1,SPECIES
+Pyric Herbivorism,P4Q2,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.3,SPECIES
+Pyric Herbivorism,P4Q2,Eryngium campestre,Eryngium campestre L.,0.2,SPECIES
+Pyric Herbivorism,P4Q2,Festuca capillifolia,Festuca capillifolia Dufour ex Roem. & Schult.,2,SPECIES
+Pyric Herbivorism,P4Q2,Genista scorpius,Genista scorpius (L.) DC.,24,SPECIES
+Pyric Herbivorism,P4Q2,Helianthemum almeriense,Helianthemum almeriense Pau,2,SPECIES
+Pyric Herbivorism,P4Q2,Helianthemum appenninum,Helianthemum apenninum (L.) Mill.,1.2,SPECIES
+Pyric Herbivorism,P4Q2,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.8,SUBSPECIES
+Pyric Herbivorism,P4Q2,Lavandula lanata,Lavandula lanata Boiss.,0.2,SPECIES
+Pyric Herbivorism,P4Q2,Linum suffruticosum,Linum suffruticosum L.,1.4,SPECIES
+Pyric Herbivorism,P4Q2,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",0.2,SPECIES
+Pyric Herbivorism,P4Q2,Odontites,Odontites Ludw.,0.5,GENUS
+Pyric Herbivorism,P4Q2,Sideritis pusilla,Sideritis pusilla (Lange) Pau,0.1,SPECIES
+Pyric Herbivorism,P4Q3,Anthyllis vulneraria,Anthyllis vulneraria L.,0.1,SPECIES
+Pyric Herbivorism,P4Q3,Arenaria leptoclados,Arenaria leptoclados (Rchb.) Guss.,0.3,SPECIES
+Pyric Herbivorism,P4Q3,Biscutella laxa,Biscutella laxa Boiss. & Reut.,0.1,SPECIES
+Pyric Herbivorism,P4Q3,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,1.2,SPECIES
+Pyric Herbivorism,P4Q3,Eryngium campestre,Eryngium campestre L.,0.2,SPECIES
+Pyric Herbivorism,P4Q3,Festuca capillifolia,Festuca capillifolia Dufour ex Roem. & Schult.,2,SPECIES
+Pyric Herbivorism,P4Q3,Helianthemum salicifolium,Helianthemum salicifolium (L.) Mill.,0.1,SPECIES
+Pyric Herbivorism,P4Q3,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,6,SPECIES
+Pyric Herbivorism,P4Q3,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.1,SPECIES
+Pyric Herbivorism,P4Q3,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,2,SPECIES
+Pyric Herbivorism,P4Q3,Linaria arvensis,Linaria arvensis (L.) Desf.,0.1,SPECIES
+Pyric Herbivorism,P4Q3,Linum suffruticosum,Linum suffruticosum L.,0.2,SPECIES
+Pyric Herbivorism,P4Q3,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",0.3,SPECIES
+Pyric Herbivorism,P4Q3,Odontites,Odontites Ludw.,0.4,GENUS
+Pyric Herbivorism,P4Q3,Ononis reclinata subsp. Mollis,Ononis reclinata L.,0.2,SPECIES
+Pyric Herbivorism,P4Q3,Paronychia argentea,Paronychia argentea Lam.,0.1,SPECIES
+Pyric Herbivorism,P4Q3,Poa bulbosa,Poa bulbosa L.,1.2,SPECIES
+Pyric Herbivorism,P4Q3,Rhaponticum coniferum,Rhaponticum coniferum (L.) Greuter,0.1,SPECIES
+Pyric Herbivorism,P4Q3,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.5,SUBSPECIES
+Pyric Herbivorism,P4Q3,Velezia rigida,Velezia rigida L.,0.1,SPECIES
+Pyric Herbivorism,P4Q4,Asphodelus albus,Asphodelus albus Mill.,0.2,SPECIES
+Pyric Herbivorism,P4Q4,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,1.5,SPECIES
+Pyric Herbivorism,P4Q4,Genista scorpius,Genista scorpius (L.) DC.,3,SPECIES
+Pyric Herbivorism,P4Q4,Helianthemum almeriense,Helianthemum almeriense Pau,3,SPECIES
+Pyric Herbivorism,P4Q4,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.2,SUBSPECIES
+Pyric Herbivorism,P4Q4,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,1,SPECIES
+Pyric Herbivorism,P4Q4,Linum suffruticosum,Linum suffruticosum L.,1,SPECIES
+Pyric Herbivorism,P4Q4,Logfia arvensis,Logfia arvensis (L.) Holub,0.5,SPECIES
+Pyric Herbivorism,P4Q4,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",80,SPECIES
+Pyric Herbivorism,P4Q5,Biscutella laxa,Biscutella laxa Boiss. & Reut.,0.2,SPECIES
+Pyric Herbivorism,P4Q5,Genista scorpius,Genista scorpius (L.) DC.,13,SPECIES
+Pyric Herbivorism,P4Q5,Helianthemum almeriense,Helianthemum almeriense Pau,1.4,SPECIES
+Pyric Herbivorism,P4Q5,Helianthemum appenninum,Helianthemum apenninum (L.) Mill.,0.3,SPECIES
+Pyric Herbivorism,P4Q5,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.1,SUBSPECIES
+Pyric Herbivorism,P4Q5,Helianthemum salicifolium,Helianthemum salicifolium (L.) Mill.,0.1,SPECIES
+Pyric Herbivorism,P4Q5,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.8,SPECIES
+Pyric Herbivorism,P4Q5,Linum suffruticosum,Linum suffruticosum L.,0.8,SPECIES
+Pyric Herbivorism,P4Q5,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",40,SPECIES
+Pyric Herbivorism,P4Q6,Alyssum granatense,Alyssum granatense Boiss. & Reut.,0.1,SPECIES
+Pyric Herbivorism,P4Q6,Avenula bromoides subsp. pauneroi,Avenula bromoides subsp. pauneroi Romero Zarco,0.1,SUBSPECIES
+Pyric Herbivorism,P4Q6,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,3,SPECIES
+Pyric Herbivorism,P4Q6,Genista scorpius,Genista scorpius (L.) DC.,8,SPECIES
+Pyric Herbivorism,P4Q6,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.1,SPECIES
+Pyric Herbivorism,P4Q6,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,4,SPECIES
+Pyric Herbivorism,P4Q6,Linum suffruticosum,Linum suffruticosum L.,0.5,SPECIES
+Pyric Herbivorism,P4Q6,Minuartia hybrida,Minuartia hybrida Vill.,0.1,SPECIES
+Pyric Herbivorism,P4Q6,Odontites,Odontites Ludw.,0.2,GENUS
+Pyric Herbivorism,P4Q6,Poa bulbosa,Poa bulbosa L.,1.5,SPECIES
+Pyric Herbivorism,P4Q6,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.3,SUBSPECIES
+Pyric Herbivorism,P4Q6,Thymus zygis subsp. gracilis,Thymus zygis subsp. gracilis (Boiss.) R.Morales,0.5,SUBSPECIES
+Pyric Herbivorism,P4Q7,Anthyllis vulneraria,Anthyllis vulneraria L.,0.4,SPECIES
+Pyric Herbivorism,P4Q7,Arenaria leptoclados,Arenaria leptoclados (Rchb.) Guss.,0.5,SPECIES
+Pyric Herbivorism,P4Q7,Asperula hirsuta,Asperula hirsuta Desf.,0.2,SPECIES
+Pyric Herbivorism,P4Q7,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,1,SPECIES
+Pyric Herbivorism,P4Q7,Genista scorpius,Genista scorpius (L.) DC.,6,SPECIES
+Pyric Herbivorism,P4Q7,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,4.5,SPECIES
+Pyric Herbivorism,P4Q7,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.5,SPECIES
+Pyric Herbivorism,P4Q7,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.1,SPECIES
+Pyric Herbivorism,P4Q7,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,3,SPECIES
+Pyric Herbivorism,P4Q7,Linaria arvensis,Linaria arvensis (L.) Desf.,0.1,SPECIES
+Pyric Herbivorism,P4Q7,Linum suffruticosum,Linum suffruticosum L.,0.5,SPECIES
+Pyric Herbivorism,P4Q7,Odontites,Odontites Ludw.,0.3,GENUS
+Pyric Herbivorism,P4Q7,Paronychia argentea,Paronychia argentea Lam.,0.1,SPECIES
+Pyric Herbivorism,P4Q7,Petrorhagia nanteuilii,Petrorhagia nanteuilii (Burnat) P.W.Ball & Heywood,0.1,SPECIES
+Pyric Herbivorism,P4Q7,Poa bulbosa,Poa bulbosa L.,1.2,SPECIES
+Pyric Herbivorism,P4Q7,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,1.5,SUBSPECIES
+Pyric Herbivorism,P4Q8,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.5,SPECIES
+Pyric Herbivorism,P4Q8,Genista scorpius,Genista scorpius (L.) DC.,28,SPECIES
+Pyric Herbivorism,P4Q8,Helianthemum almeriense,Helianthemum almeriense Pau,6,SPECIES
+Pyric Herbivorism,P4Q8,Helianthemum appenninum,Helianthemum apenninum (L.) Mill.,0.1,SPECIES
+Pyric Herbivorism,P4Q8,Helianthemum salicifolium,Helianthemum salicifolium (L.) Mill.,2,SPECIES
+Pyric Herbivorism,P4Q8,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.3,SPECIES
+Pyric Herbivorism,P4Q8,Linum suffruticosum,Linum suffruticosum L.,1,SPECIES
+Pyric Herbivorism,P4Q8,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",7,SPECIES
+Pyric Herbivorism,P4Q8,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.2,SUBSPECIES
+Pyric Herbivorism,PR15Q1,Arabis auriculata,Arabis auriculata Lam.,0.5,SPECIES
+Pyric Herbivorism,PR15Q1,Arenaria leptoclados,Arenaria leptoclados (Rchb.) Guss.,0.2,SPECIES
+Pyric Herbivorism,PR15Q1,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.3,SPECIES
+Pyric Herbivorism,PR15Q1,Chaenorhinum grandiflorum,Chaenorhinum grandiflorum (Coss.) Willk.,1,SPECIES
+Pyric Herbivorism,PR15Q1,Festuca capillifolia,Festuca capillifolia Dufour ex Roem. & Schult.,0.7,SPECIES
+Pyric Herbivorism,PR15Q1,Genista scorpius,Genista scorpius (L.) DC.,1,SPECIES
+Pyric Herbivorism,PR15Q1,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.4,SPECIES
+Pyric Herbivorism,PR15Q1,Lavandula lanata,Lavandula lanata Boiss.,0.1,SPECIES
+Pyric Herbivorism,PR15Q1,Linum suffruticosum,Linum suffruticosum L.,0.7,SPECIES
+Pyric Herbivorism,PR15Q1,Lomelosia stellata,Lomelosia stellata (L.) Raf.,0.5,SPECIES
+Pyric Herbivorism,PR15Q1,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",40,SPECIES
+Pyric Herbivorism,PR15Q1,Reseda lutea,Reseda lutea L.,0.2,SPECIES
+Pyric Herbivorism,PR15Q1,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,10,SUBSPECIES
+Pyric Herbivorism,PR15Q1,Silene mellifera,Silene mellifera Boiss. & Reut.,0.1,SPECIES
+Pyric Herbivorism,PR15Q1,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,1,SUBSPECIES
+Pyric Herbivorism,PR15Q2,Alyssum granatense,Alyssum granatense Boiss. & Reut.,0.2,SPECIES
+Pyric Herbivorism,PR15Q2,Arabis auriculata,Arabis auriculata Lam.,0.1,SPECIES
+Pyric Herbivorism,PR15Q2,Asterolinon linum-stellatum,Asterolinon linum-stellatum (L.) Duby,0.1,SPECIES
+Pyric Herbivorism,PR15Q2,Chaenorhinum minus,Chaenorhinum minus (L.) Lange,1,SPECIES
+Pyric Herbivorism,PR15Q2,Genista scorpius,Genista scorpius (L.) DC.,4.5,SPECIES
+Pyric Herbivorism,PR15Q2,Helianthemum appenninum,Helianthemum apenninum (L.) Mill.,1,SPECIES
+Pyric Herbivorism,PR15Q2,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.3,SPECIES
+Pyric Herbivorism,PR15Q2,Inula montana,Inula montana Lucé,1,SPECIES
+Pyric Herbivorism,PR15Q2,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",54,SPECIES
+Pyric Herbivorism,PR15Q2,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,0.3,SUBSPECIES
+Pyric Herbivorism,PR15Q3,Arabidopsis thaliana,Arabidopsis thaliana (L.) Heynh.,0.1,SPECIES
+Pyric Herbivorism,PR15Q3,Asperula hirsuta,Asperula hirsuta Desf.,0.2,SPECIES
+Pyric Herbivorism,PR15Q3,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.3,SPECIES
+Pyric Herbivorism,PR15Q3,Cerastium brachypetalum,Cerastium brachypetalum Desf. ex Pers.,0.2,SPECIES
+Pyric Herbivorism,PR15Q3,Festuca capillifolia,Festuca capillifolia Dufour ex Roem. & Schult.,1.5,SPECIES
+Pyric Herbivorism,PR15Q3,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,1,SUBSPECIES
+Pyric Herbivorism,PR15Q3,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,19,SPECIES
+Pyric Herbivorism,PR15Q3,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.2,SPECIES
+Pyric Herbivorism,PR15Q3,Linum suffruticosum,Linum suffruticosum L.,0.7,SPECIES
+Pyric Herbivorism,PR15Q3,Odontites,Odontites Ludw.,0.1,GENUS
+Pyric Herbivorism,PR15Q3,Reseda undata subsp. Undata,Reseda undata L.,0.1,SPECIES
+Pyric Herbivorism,PR15Q3,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,6,SUBSPECIES
+Pyric Herbivorism,PR15Q3,Silene mellifera,Silene mellifera Boiss. & Reut.,0.5,SPECIES
+Pyric Herbivorism,PR15Q3,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.4,SUBSPECIES
+Pyric Herbivorism,PR15Q4,Asperula hirsuta,Asperula hirsuta Desf.,0.2,SPECIES
+Pyric Herbivorism,PR15Q4,Avenula bromoides subsp. pauneroi,Avenula bromoides subsp. pauneroi Romero Zarco,0.2,SUBSPECIES
+Pyric Herbivorism,PR15Q4,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.4,SPECIES
+Pyric Herbivorism,PR15Q4,Carex hallerana,Carex halleriana Asso,0.5,SPECIES
+Pyric Herbivorism,PR15Q4,Chaenorhinum grandiflorum,Chaenorhinum grandiflorum (Coss.) Willk.,0.2,SPECIES
+Pyric Herbivorism,PR15Q4,Festuca capillifolia,Festuca capillifolia Dufour ex Roem. & Schult.,1.2,SPECIES
+Pyric Herbivorism,PR15Q4,Genista scorpius,Genista scorpius (L.) DC.,1,SPECIES
+Pyric Herbivorism,PR15Q4,Helianthemum appenninum,Helianthemum apenninum (L.) Mill.,2.5,SPECIES
+Pyric Herbivorism,PR15Q4,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,2,SUBSPECIES
+Pyric Herbivorism,PR15Q4,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,1,SPECIES
+Pyric Herbivorism,PR15Q4,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,1,SPECIES
+Pyric Herbivorism,PR15Q4,Linum suffruticosum,Linum suffruticosum L.,0.8,SPECIES
+Pyric Herbivorism,PR15Q4,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,3.5,SUBSPECIES
+Pyric Herbivorism,PR15Q5,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.3,SPECIES
+Pyric Herbivorism,PR15Q5,Carex hallerana,Carex halleriana Asso,0.8,SPECIES
+Pyric Herbivorism,PR15Q5,Crepis albida subsp. grosii,Crepis albida subsp. grosii (Pau) Babc.,0.6,SUBSPECIES
+Pyric Herbivorism,PR15Q5,Festuca capillifolia,Festuca capillifolia Dufour ex Roem. & Schult.,2.3,SPECIES
+Pyric Herbivorism,PR15Q5,Genista scorpius,Genista scorpius (L.) DC.,0.3,SPECIES
+Pyric Herbivorism,PR15Q5,Helianthemum appenninum,Helianthemum apenninum (L.) Mill.,5,SPECIES
+Pyric Herbivorism,PR15Q5,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.5,SUBSPECIES
+Pyric Herbivorism,PR15Q5,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,3,SPECIES
+Pyric Herbivorism,PR15Q5,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,0.7,SPECIES
+Pyric Herbivorism,PR15Q5,Linum suffruticosum,Linum suffruticosum L.,1,SPECIES
+Pyric Herbivorism,PR15Q5,Staehelina dubia,Staehelina dubia L.,0.3,SPECIES
+Pyric Herbivorism,PR15Q6,Arenaria leptoclados,Arenaria leptoclados (Rchb.) Guss.,0.1,SPECIES
+Pyric Herbivorism,PR15Q6,Carex hallerana,Carex halleriana Asso,1.2,SPECIES
+Pyric Herbivorism,PR15Q6,Chaenorhinum grandiflorum,Chaenorhinum grandiflorum (Coss.) Willk.,0.2,SPECIES
+Pyric Herbivorism,PR15Q6,Genista scorpius,Genista scorpius (L.) DC.,19.5,SPECIES
+Pyric Herbivorism,PR15Q6,Helianthemum appenninum,Helianthemum apenninum (L.) Mill.,2,SPECIES
+Pyric Herbivorism,PR15Q6,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,2,SPECIES
+Pyric Herbivorism,PR15Q6,Hornungia petraea,Hornungia petraea (L.) Rchb.,1.5,SPECIES
+Pyric Herbivorism,PR15Q6,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,0.3,SPECIES
+Pyric Herbivorism,PR15Q6,Linum suffruticosum,Linum suffruticosum L.,0.4,SPECIES
+Pyric Herbivorism,PR15Q6,Ononis pusilla,Ononis pusilla L.,0.1,SPECIES
+Pyric Herbivorism,PR15Q6,Reseda alba,Reseda alba L.,1,SPECIES
+Pyric Herbivorism,PR15Q6,Reseda lutea,Reseda lutea L.,0.5,SPECIES
+Pyric Herbivorism,PR15Q6,Sideritis pusilla,Sideritis pusilla (Lange) Pau,2.5,SPECIES
+Pyric Herbivorism,PR15Q6,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,1,SUBSPECIES
+Pyric Herbivorism,PR15Q7,Biscutella laxa,Biscutella laxa Boiss. & Reut.,0.7,SPECIES
+Pyric Herbivorism,PR15Q7,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.2,SPECIES
+Pyric Herbivorism,PR15Q7,Carex hallerana,Carex halleriana Asso,1,SPECIES
+Pyric Herbivorism,PR15Q7,Crepis albida subsp. grosii,Crepis albida subsp. grosii (Pau) Babc.,1,SUBSPECIES
+Pyric Herbivorism,PR15Q7,Genista scorpius,Genista scorpius (L.) DC.,7,SPECIES
+Pyric Herbivorism,PR15Q7,Helianthemum appenninum,Helianthemum apenninum (L.) Mill.,8,SPECIES
+Pyric Herbivorism,PR15Q7,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.4,SUBSPECIES
+Pyric Herbivorism,PR15Q7,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,5,SPECIES
+Pyric Herbivorism,PR15Q7,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.1,SPECIES
+Pyric Herbivorism,PR15Q7,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.5,SPECIES
+Pyric Herbivorism,PR15Q7,Reseda lutea,Reseda lutea L.,1,SPECIES
+Pyric Herbivorism,PR15Q7,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.1,SUBSPECIES
+Pyric Herbivorism,PR15Q7,Trifolium arvense,Trifolium arvense L.,0.3,SPECIES
+Pyric Herbivorism,PR15Q8,Asterolinon linum-stellatum,Asterolinon linum-stellatum (L.) Duby,0.3,SPECIES
+Pyric Herbivorism,PR15Q8,Bromus tectorum,Bromus tectorum L.,0.2,SPECIES
+Pyric Herbivorism,PR15Q8,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.5,SPECIES
+Pyric Herbivorism,PR15Q8,Cerastium brachypetalum,Cerastium brachypetalum Desf. ex Pers.,0.1,SPECIES
+Pyric Herbivorism,PR15Q8,Genista scorpius,Genista scorpius (L.) DC.,1.5,SPECIES
+Pyric Herbivorism,PR15Q8,Helianthemum appenninum,Helianthemum apenninum (L.) Mill.,2,SPECIES
+Pyric Herbivorism,PR15Q8,Helianthemum ledifolium,Helianthemum ledifolium (L.) Mill.,2.5,SPECIES
+Pyric Herbivorism,PR15Q8,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,0.3,SPECIES
+Pyric Herbivorism,PR15Q8,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.3,SPECIES
+Pyric Herbivorism,PR15Q8,Linaria simplex,Linaria simplex (Willd.) DC.,0.1,SPECIES
+Pyric Herbivorism,PR15Q8,Linum suffruticosum,Linum suffruticosum L.,0.7,SPECIES
+Pyric Herbivorism,PR15Q8,Minuartia hybrida,Minuartia hybrida Vill.,0.3,SPECIES
+Pyric Herbivorism,PR15Q8,Stipa bufensis,"Stipa bufensis F.M.Vázquez, H.Scholz & Sonnentag",1,SPECIES
+Pyric Herbivorism,PR16Q1,Asterolinon linum-stellatum,Asterolinon linum-stellatum (L.) Duby,0.2,SPECIES
+Pyric Herbivorism,PR16Q1,Astragalus sesameus,Astragalus sesameus L.,0.1,SPECIES
+Pyric Herbivorism,PR16Q1,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.5,SPECIES
+Pyric Herbivorism,PR16Q1,Filago fuscescens,Filago fuscescens Pomel,0.2,SPECIES
+Pyric Herbivorism,PR16Q1,Genista scorpius,Genista scorpius (L.) DC.,0.4,SPECIES
+Pyric Herbivorism,PR16Q1,Linaria simplex,Linaria simplex (Willd.) DC.,0.1,SPECIES
+Pyric Herbivorism,PR16Q1,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",80,SPECIES
+Pyric Herbivorism,PR16Q1,Minuartia hybrida,Minuartia hybrida Vill.,0.1,SPECIES
+Pyric Herbivorism,PR16Q1,Ononis pusilla,Ononis pusilla L.,0.7,SPECIES
+Pyric Herbivorism,PR16Q2,Arabidopsis thaliana,Arabidopsis thaliana (L.) Heynh.,0.2,SPECIES
+Pyric Herbivorism,PR16Q2,Asterolinon linum-stellatum,Asterolinon linum-stellatum (L.) Duby,0.2,SPECIES
+Pyric Herbivorism,PR16Q2,Biscutella laxa,Biscutella laxa Boiss. & Reut.,0.5,SPECIES
+Pyric Herbivorism,PR16Q2,Cerastium brachypetalum,Cerastium brachypetalum Desf. ex Pers.,0.3,SPECIES
+Pyric Herbivorism,PR16Q2,Fumaria officinalis subsp. officinalis,Fumaria officinalis subsp. officinalis,0.2,SUBSPECIES
+Pyric Herbivorism,PR16Q2,Genista scorpius,Genista scorpius (L.) DC.,1,SPECIES
+Pyric Herbivorism,PR16Q2,Helianthemum almeriense,Helianthemum almeriense Pau,0.7,SPECIES
+Pyric Herbivorism,PR16Q2,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.1,SPECIES
+Pyric Herbivorism,PR16Q2,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,0.3,SPECIES
+Pyric Herbivorism,PR16Q2,Linum suffruticosum,Linum suffruticosum L.,0.5,SPECIES
+Pyric Herbivorism,PR16Q2,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",80,SPECIES
+Pyric Herbivorism,PR16Q2,Papaver dubium,Papaver dubium L.,0.2,SPECIES
+Pyric Herbivorism,PR16Q2,Polygala rupestris,Polygala rupestris Pourr.,0.3,SPECIES
+Pyric Herbivorism,PR16Q2,Reseda lutea,Reseda lutea L.,1,SPECIES
+Pyric Herbivorism,PR16Q2,Silene mellifera,Silene mellifera Boiss. & Reut.,0.2,SPECIES
+Pyric Herbivorism,PR16Q3,Androsace maxima,Androsace maxima L.,0.2,SPECIES
+Pyric Herbivorism,PR16Q3,Arabidopsis thaliana,Arabidopsis thaliana (L.) Heynh.,5,SPECIES
+Pyric Herbivorism,PR16Q3,Arenaria leptoclados,Arenaria leptoclados (Rchb.) Guss.,1,SPECIES
+Pyric Herbivorism,PR16Q3,Bromus tectorum,Bromus tectorum L.,0.2,SPECIES
+Pyric Herbivorism,PR16Q3,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.4,SPECIES
+Pyric Herbivorism,PR16Q3,Cerastium brachypetalum,Cerastium brachypetalum Desf. ex Pers.,0.5,SPECIES
+Pyric Herbivorism,PR16Q3,Clypeola jonthlaspi subsp. microcarpa,Clypeola jonthlaspi subsp. microcarpa (Boiss.) Breistr.,0.5,SUBSPECIES
+Pyric Herbivorism,PR16Q3,Euphorbia segetalis,Euphorbia segetalis L.,1.7,SPECIES
+Pyric Herbivorism,PR16Q3,Genista scorpius,Genista scorpius (L.) DC.,3.5,SPECIES
+Pyric Herbivorism,PR16Q3,Linaria simplex,Linaria simplex (Willd.) DC.,0.3,SPECIES
+Pyric Herbivorism,PR16Q3,Minuartia hybrida,Minuartia hybrida Vill.,3,SPECIES
+Pyric Herbivorism,PR16Q3,Polygala rupestris,Polygala rupestris Pourr.,0.8,SPECIES
+Pyric Herbivorism,PR16Q3,Reseda lutea,Reseda lutea L.,1.2,SPECIES
+Pyric Herbivorism,PR16Q3,Sanguisorba,Sanguisorba L.,1,GENUS
+Pyric Herbivorism,PR16Q3,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,1.5,SUBSPECIES
+Pyric Herbivorism,PR16Q3,Valerianella,Valerianella Mill.,0.1,GENUS
+Pyric Herbivorism,PR16Q4,Asterolinon linum-stellatum,Asterolinon linum-stellatum (L.) Duby,0.1,SPECIES
+Pyric Herbivorism,PR16Q4,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,1.3,SPECIES
+Pyric Herbivorism,PR16Q4,Cerastium brachypetalum,Cerastium brachypetalum Desf. ex Pers.,0.1,SPECIES
+Pyric Herbivorism,PR16Q4,Genista scorpius,Genista scorpius (L.) DC.,1,SPECIES
+Pyric Herbivorism,PR16Q4,Helianthemum ledifolium,Helianthemum ledifolium (L.) Mill.,2.5,SPECIES
+Pyric Herbivorism,PR16Q4,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,0.7,SPECIES
+Pyric Herbivorism,PR16Q4,Linum suffruticosum,Linum suffruticosum L.,0.2,SPECIES
+Pyric Herbivorism,PR16Q4,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",2.5,SPECIES
+Pyric Herbivorism,PR16Q4,Minuartia hybrida,Minuartia hybrida Vill.,0.2,SPECIES
+Pyric Herbivorism,PR16Q4,Onopordum acaulon,Onopordum acaulon L.,2.5,SPECIES
+Pyric Herbivorism,PR16Q4,Polygala rupestris,Polygala rupestris Pourr.,0.7,SPECIES
+Pyric Herbivorism,PR16Q4,Reseda alba,Reseda alba L.,1,SPECIES
+Pyric Herbivorism,PR16Q4,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,1.5,SUBSPECIES
+Pyric Herbivorism,PR16Q5,Andryala ragusina,Andryala ragusina L.,0.1,SPECIES
+Pyric Herbivorism,PR16Q5,Asphodelus albus,Asphodelus albus Mill.,0.3,SPECIES
+Pyric Herbivorism,PR16Q5,Avenula bromoides subsp. pauneroi,Avenula bromoides subsp. pauneroi Romero Zarco,0.1,SUBSPECIES
+Pyric Herbivorism,PR16Q5,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,2,SPECIES
+Pyric Herbivorism,PR16Q5,Crupina,Crupina (Pers.) DC.,0.1,GENUS
+Pyric Herbivorism,PR16Q5,Genista scorpius,Genista scorpius (L.) DC.,2,SPECIES
+Pyric Herbivorism,PR16Q5,Helianthemum almeriense,Helianthemum almeriense Pau,13,SPECIES
+Pyric Herbivorism,PR16Q5,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,0.5,SPECIES
+Pyric Herbivorism,PR16Q5,Linum suffruticosum,Linum suffruticosum L.,0.8,SPECIES
+Pyric Herbivorism,PR16Q5,Minuartia hybrida,Minuartia hybrida Vill.,0.1,SPECIES
+Pyric Herbivorism,PR16Q5,Polygala rupestris,Polygala rupestris Pourr.,0.2,SPECIES
+Pyric Herbivorism,PR16Q5,Reseda lutea,Reseda lutea L.,0.2,SPECIES
+Pyric Herbivorism,PR16Q6,Androsace maxima,Androsace maxima L.,0.1,SPECIES
+Pyric Herbivorism,PR16Q6,Arenaria leptoclados,Arenaria leptoclados (Rchb.) Guss.,0.4,SPECIES
+Pyric Herbivorism,PR16Q6,Bombycilaena,Bombycilaena (DC.) Smoljan.,1,GENUS
+Pyric Herbivorism,PR16Q6,Bromus hordeaceus,Bromus hordeaceus L.,0.5,SPECIES
+Pyric Herbivorism,PR16Q6,Bufonia tenuifolia,Bufonia tenuifolia L.,0.1,SPECIES
+Pyric Herbivorism,PR16Q6,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,2.5,SPECIES
+Pyric Herbivorism,PR16Q6,Cerastium brachypetalum,Cerastium brachypetalum Desf. ex Pers.,0.3,SPECIES
+Pyric Herbivorism,PR16Q6,Clypeola jonthlaspi subsp. microcarpa,Clypeola jonthlaspi subsp. microcarpa (Boiss.) Breistr.,0.1,SUBSPECIES
+Pyric Herbivorism,PR16Q6,Filago fuscescens,Filago fuscescens Pomel,0.1,SPECIES
+Pyric Herbivorism,PR16Q6,Galium parissiense subsp. parissiense,Galium parisiense subsp. parisiense,0.1,SUBSPECIES
+Pyric Herbivorism,PR16Q6,Genista scorpius,Genista scorpius (L.) DC.,2.5,SPECIES
+Pyric Herbivorism,PR16Q6,Helianthemum almeriense,Helianthemum almeriense Pau,0.3,SPECIES
+Pyric Herbivorism,PR16Q6,Helianthemum ledifolium,Helianthemum ledifolium (L.) Mill.,0.1,SPECIES
+Pyric Herbivorism,PR16Q6,Helianthemum salicifolium,Helianthemum salicifolium (L.) Mill.,0.1,SPECIES
+Pyric Herbivorism,PR16Q6,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,0.1,SPECIES
+Pyric Herbivorism,PR16Q6,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,0.5,SPECIES
+Pyric Herbivorism,PR16Q6,Lavandula lanata,Lavandula lanata Boiss.,0.2,SPECIES
+Pyric Herbivorism,PR16Q6,Linum suffruticosum,Linum suffruticosum L.,1,SPECIES
+Pyric Herbivorism,PR16Q6,Poa bulbosa,Poa bulbosa L.,0.4,SPECIES
+Pyric Herbivorism,PR16Q6,Stipa bufensis,"Stipa bufensis F.M.Vázquez, H.Scholz & Sonnentag",0.3,SPECIES
+Pyric Herbivorism,PR16Q6,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,1,SUBSPECIES
+Pyric Herbivorism,PR16Q6,Valerianella,Valerianella Mill.,0.1,GENUS
+Pyric Herbivorism,PR16Q6,Xeranthemum inapertum,Xeranthemum inapertum (L.) Mill.,0.1,SPECIES
+Pyric Herbivorism,PR16Q7,Arenaria leptoclados,Arenaria leptoclados (Rchb.) Guss.,0.1,SPECIES
+Pyric Herbivorism,PR16Q7,Avenula bromoides subsp. pauneroi,Avenula bromoides subsp. pauneroi Romero Zarco,0.1,SUBSPECIES
+Pyric Herbivorism,PR16Q7,Bromus rubens,Bromus rubens L.,0.5,SPECIES
+Pyric Herbivorism,PR16Q7,Euphorbia serrata,Euphorbia serrata L.,3.8,SPECIES
+Pyric Herbivorism,PR16Q7,Genista scorpius,Genista scorpius (L.) DC.,8,SPECIES
+Pyric Herbivorism,PR16Q7,Helianthemum almeriense,Helianthemum almeriense Pau,6,SPECIES
+Pyric Herbivorism,PR16Q7,Helianthemum salicifolium,Helianthemum salicifolium (L.) Mill.,0.2,SPECIES
+Pyric Herbivorism,PR16Q7,Hippocrepis ciliata,Hippocrepis ciliata Willd.,0.2,SPECIES
+Pyric Herbivorism,PR16Q7,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.1,SPECIES
+Pyric Herbivorism,PR16Q7,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,1.5,SPECIES
+Pyric Herbivorism,PR16Q7,Lavandula lanata,Lavandula lanata Boiss.,0.7,SPECIES
+Pyric Herbivorism,PR16Q7,Linum suffruticosum,Linum suffruticosum L.,0.6,SPECIES
+Pyric Herbivorism,PR16Q7,Medicago minima,Medicago minima (L.) Bartal.,0.1,SPECIES
+Pyric Herbivorism,PR16Q7,Reseda lutea,Reseda lutea L.,0.3,SPECIES
+Pyric Herbivorism,PR16Q7,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.5,SUBSPECIES
+Pyric Herbivorism,PR16Q8,Bromus tectorum,Bromus tectorum L.,0.1,SPECIES
+Pyric Herbivorism,PR16Q8,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.6,SPECIES
+Pyric Herbivorism,PR16Q8,Festuca capillifolia,Festuca capillifolia Dufour ex Roem. & Schult.,0.4,SPECIES
+Pyric Herbivorism,PR16Q8,Genista scorpius,Genista scorpius (L.) DC.,1.6,SPECIES
+Pyric Herbivorism,PR16Q8,Helianthemum almeriense,Helianthemum almeriense Pau,8,SPECIES
+Pyric Herbivorism,PR16Q8,Linum suffruticosum,Linum suffruticosum L.,0.2,SPECIES
+Pyric Herbivorism,PR16Q8,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",0.1,SPECIES
+Pyric Herbivorism,PR16Q8,Stipa bufensis,"Stipa bufensis F.M.Vázquez, H.Scholz & Sonnentag",0.1,SPECIES
+Pyric Herbivorism,PR16Q8,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,1,SUBSPECIES
+Pyric Herbivorism,PR17Q1,Bromus rubens,Bromus rubens L.,0.5,SPECIES
+Pyric Herbivorism,PR17Q1,Genista scorpius,Genista scorpius (L.) DC.,3,SPECIES
+Pyric Herbivorism,PR17Q1,Helianthemum almeriense,Helianthemum almeriense Pau,6,SPECIES
+Pyric Herbivorism,PR17Q1,Linum suffruticosum,Linum suffruticosum L.,0.2,SPECIES
+Pyric Herbivorism,PR17Q1,Malcolmia africana,Malcolmia africana (L.) R.Br.,0.3,SPECIES
+Pyric Herbivorism,PR17Q1,Rosmarinus officinalis,Rosmarinus officinalis L.,0.1,SPECIES
+Pyric Herbivorism,PR17Q2,Andryala ragusina,Andryala ragusina L.,0.3,SPECIES
+Pyric Herbivorism,PR17Q2,Bromus rubens,Bromus rubens L.,0.1,SPECIES
+Pyric Herbivorism,PR17Q2,Helianthemum almeriense,Helianthemum almeriense Pau,4.5,SPECIES
+Pyric Herbivorism,PR17Q2,Malcolmia africana,Malcolmia africana (L.) R.Br.,0.4,SPECIES
+Pyric Herbivorism,PR17Q2,Reseda lutea,Reseda lutea L.,0.5,SPECIES
+Pyric Herbivorism,PR17Q3,Carex hallerana,Carex halleriana Asso,1,SPECIES
+Pyric Herbivorism,PR17Q3,Genista scorpius,Genista scorpius (L.) DC.,3.5,SPECIES
+Pyric Herbivorism,PR17Q3,Helianthemum almeriense,Helianthemum almeriense Pau,1.7,SPECIES
+Pyric Herbivorism,PR17Q3,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.2,SUBSPECIES
+Pyric Herbivorism,PR17Q3,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,2,SPECIES
+Pyric Herbivorism,PR17Q3,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",0.5,SPECIES
+Pyric Herbivorism,PR17Q3,Picris hispanica,Picris hispanica (Willd.) P.D.Sell,0.1,SPECIES
+Pyric Herbivorism,PR17Q3,Reseda lutea,Reseda lutea L.,2.3,SPECIES
+Pyric Herbivorism,PR17Q3,Rosmarinus officinalis,Rosmarinus officinalis L.,0.2,SPECIES
+Pyric Herbivorism,PR17Q4,Asphodelus albus,Asphodelus albus Mill.,4.5,SPECIES
+Pyric Herbivorism,PR17Q4,Helianthemum almeriense,Helianthemum almeriense Pau,12,SPECIES
+Pyric Herbivorism,PR17Q4,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,1.5,SPECIES
+Pyric Herbivorism,PR17Q4,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",0.1,SPECIES
+Pyric Herbivorism,PR17Q4,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.1,SUBSPECIES
+Pyric Herbivorism,PR17Q5,Genista scorpius,Genista scorpius (L.) DC.,6,SPECIES
+Pyric Herbivorism,PR17Q5,Helianthemum almeriense,Helianthemum almeriense Pau,6,SPECIES
+Pyric Herbivorism,PR17Q5,Helianthemum ledifolium,Helianthemum ledifolium (L.) Mill.,1,SPECIES
+Pyric Herbivorism,PR17Q5,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,1,SPECIES
+Pyric Herbivorism,PR17Q5,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",32,SPECIES
+Pyric Herbivorism,PR17Q6,Bromus rubens,Bromus rubens L.,0.1,SPECIES
+Pyric Herbivorism,PR17Q6,Carex hallerana,Carex halleriana Asso,0.2,SPECIES
+Pyric Herbivorism,PR17Q6,Helianthemum almeriense,Helianthemum almeriense Pau,4,SPECIES
+Pyric Herbivorism,PR17Q6,Linum suffruticosum,Linum suffruticosum L.,0.2,SPECIES
+Pyric Herbivorism,PR17Q6,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",25,SPECIES
+Pyric Herbivorism,PR17Q6,Sideritis pusilla,Sideritis pusilla (Lange) Pau,0.1,SPECIES
+Pyric Herbivorism,PR17Q6,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.1,SUBSPECIES
+Pyric Herbivorism,PR17Q7,Asphodelus albus,Asphodelus albus Mill.,2.5,SPECIES
+Pyric Herbivorism,PR17Q7,Genista scorpius,Genista scorpius (L.) DC.,0.5,SPECIES
+Pyric Herbivorism,PR17Q7,Helianthemum almeriense,Helianthemum almeriense Pau,11.5,SPECIES
+Pyric Herbivorism,PR17Q7,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",0.5,SPECIES
+Pyric Herbivorism,PR17Q7,Reseda lutea,Reseda lutea L.,3,SPECIES
+Pyric Herbivorism,PR17Q7,Rosmarinus officinalis,Rosmarinus officinalis L.,0.4,SPECIES
+Pyric Herbivorism,PR17Q7,Scorzonera angustifolia,Scorzonera angustifolia L.,0.3,SPECIES
+Pyric Herbivorism,PR17Q7,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,1,SUBSPECIES
+Pyric Herbivorism,PR17Q8,Asphodelus albus,Asphodelus albus Mill.,0.1,SPECIES
+Pyric Herbivorism,PR17Q8,Helianthemum almeriense,Helianthemum almeriense Pau,2.7,SPECIES
+Pyric Herbivorism,PR17Q8,Helianthemum ledifolium,Helianthemum ledifolium (L.) Mill.,0.3,SPECIES
+Pyric Herbivorism,PR17Q8,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",30,SPECIES
+Pyric Herbivorism,PR18Q1,Helianthemum almeriense,Helianthemum almeriense Pau,5.7,SPECIES
+Pyric Herbivorism,PR18Q1,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",49,SPECIES
+Pyric Herbivorism,PR18Q1,Poa bulbosa,Poa bulbosa L.,0.1,SPECIES
+Pyric Herbivorism,PR18Q1,Sideritis pusilla,Sideritis pusilla (Lange) Pau,0.1,SPECIES
+Pyric Herbivorism,PR18Q1,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.2,SUBSPECIES
+Pyric Herbivorism,PR18Q2,Arabidopsis thaliana,Arabidopsis thaliana (L.) Heynh.,0.1,SPECIES
+Pyric Herbivorism,PR18Q2,Asterolinon linum-stellatum,Asterolinon linum-stellatum (L.) Duby,0.1,SPECIES
+Pyric Herbivorism,PR18Q2,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,1,SPECIES
+Pyric Herbivorism,PR18Q2,Helianthemum almeriense,Helianthemum almeriense Pau,1.5,SPECIES
+Pyric Herbivorism,PR18Q2,Helianthemum ledifolium,Helianthemum ledifolium (L.) Mill.,0.2,SPECIES
+Pyric Herbivorism,PR18Q2,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.1,SPECIES
+Pyric Herbivorism,PR18Q2,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",55,SPECIES
+Pyric Herbivorism,PR18Q2,Polygala rupestris,Polygala rupestris Pourr.,0.2,SPECIES
+Pyric Herbivorism,PR18Q2,Reseda lutea,Reseda lutea L.,0.5,SPECIES
+Pyric Herbivorism,PR18Q2,Scorzonera angustifolia,Scorzonera angustifolia L.,0.4,SPECIES
+Pyric Herbivorism,PR18Q3,Genista scorpius,Genista scorpius (L.) DC.,7,SPECIES
+Pyric Herbivorism,PR18Q3,Helianthemum almeriense,Helianthemum almeriense Pau,16,SPECIES
+Pyric Herbivorism,PR18Q3,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.2,SPECIES
+Pyric Herbivorism,PR18Q3,Linaria simplex,Linaria simplex (Willd.) DC.,0.1,SPECIES
+Pyric Herbivorism,PR18Q3,Linum suffruticosum,Linum suffruticosum L.,1,SPECIES
+Pyric Herbivorism,PR18Q3,Ononis natrix,Ononis natrix L.,0.2,SPECIES
+Pyric Herbivorism,PR18Q3,Polygala rupestris,Polygala rupestris Pourr.,0.1,SPECIES
+Pyric Herbivorism,PR18Q3,Reseda lutea,Reseda lutea L.,0.3,SPECIES
+Pyric Herbivorism,PR18Q3,Sanguisorba,Sanguisorba L.,0.2,GENUS
+Pyric Herbivorism,PR18Q3,Scorzonera angustifolia,Scorzonera angustifolia L.,0.1,SPECIES
+Pyric Herbivorism,PR18Q3,Sideritis pusilla,Sideritis pusilla (Lange) Pau,0.5,SPECIES
+Pyric Herbivorism,PR18Q4,Arabidopsis thaliana,Arabidopsis thaliana (L.) Heynh.,0.1,SPECIES
+Pyric Herbivorism,PR18Q4,Asperula hirsuta,Asperula hirsuta Desf.,0.2,SPECIES
+Pyric Herbivorism,PR18Q4,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.3,SPECIES
+Pyric Herbivorism,PR18Q4,Chaenorhinum grandiflorum,Chaenorhinum grandiflorum (Coss.) Willk.,1,SPECIES
+Pyric Herbivorism,PR18Q4,Festuca capillifolia,Festuca capillifolia Dufour ex Roem. & Schult.,0.2,SPECIES
+Pyric Herbivorism,PR18Q4,Genista scorpius,Genista scorpius (L.) DC.,5,SPECIES
+Pyric Herbivorism,PR18Q4,Helianthemum almeriense,Helianthemum almeriense Pau,5,SPECIES
+Pyric Herbivorism,PR18Q4,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.8,SUBSPECIES
+Pyric Herbivorism,PR18Q4,Linum suffruticosum,Linum suffruticosum L.,2,SPECIES
+Pyric Herbivorism,PR18Q4,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",0.1,SPECIES
+Pyric Herbivorism,PR18Q4,Ononis natrix,Ononis natrix L.,1,SPECIES
+Pyric Herbivorism,PR18Q4,Ononis pusilla,Ononis pusilla L.,0.1,SPECIES
+Pyric Herbivorism,PR18Q4,Reseda lutea,Reseda lutea L.,0.9,SPECIES
+Pyric Herbivorism,PR18Q4,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,0.1,SUBSPECIES
+Pyric Herbivorism,PR18Q4,Sideritis pusilla,Sideritis pusilla (Lange) Pau,1.2,SPECIES
+Pyric Herbivorism,PR18Q5,Argyrolobium zanonii,Argyrolobium zanonii (Turra) P.W.Ball,0.5,SPECIES
+Pyric Herbivorism,PR18Q5,Asperula hirsuta,Asperula hirsuta Desf.,0.3,SPECIES
+Pyric Herbivorism,PR18Q5,Asphodelus albus,Asphodelus albus Mill.,6,SPECIES
+Pyric Herbivorism,PR18Q5,Asterolinon linum-stellatum,Asterolinon linum-stellatum (L.) Duby,0.2,SPECIES
+Pyric Herbivorism,PR18Q5,Avenula bromoides subsp. pauneroi,Avenula bromoides subsp. pauneroi Romero Zarco,0.8,SUBSPECIES
+Pyric Herbivorism,PR18Q5,Centaurea gabrielis-blancae,Centaurea gabrielis-blancae Fern.Casas,0.2,SPECIES
+Pyric Herbivorism,PR18Q5,Chaenorhinum grandiflorum,Chaenorhinum grandiflorum (Coss.) Willk.,0.1,SPECIES
+Pyric Herbivorism,PR18Q5,Helianthemum almeriense,Helianthemum almeriense Pau,1.2,SPECIES
+Pyric Herbivorism,PR18Q5,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.2,SUBSPECIES
+Pyric Herbivorism,PR18Q5,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.3,SPECIES
+Pyric Herbivorism,PR18Q5,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,0.6,SPECIES
+Pyric Herbivorism,PR18Q5,Lavandula lanata,Lavandula lanata Boiss.,0.6,SPECIES
+Pyric Herbivorism,PR18Q5,Linum suffruticosum,Linum suffruticosum L.,0.7,SPECIES
+Pyric Herbivorism,PR18Q5,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,2,SUBSPECIES
+Pyric Herbivorism,PR18Q6,Anthyllis vulneraria,Anthyllis vulneraria L.,0.3,SPECIES
+Pyric Herbivorism,PR18Q6,Asphodelus albus,Asphodelus albus Mill.,0.4,SPECIES
+Pyric Herbivorism,PR18Q6,Asterolinon linum-stellatum,Asterolinon linum-stellatum (L.) Duby,0.2,SPECIES
+Pyric Herbivorism,PR18Q6,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.1,SPECIES
+Pyric Herbivorism,PR18Q6,Cerastium brachypetalum,Cerastium brachypetalum Desf. ex Pers.,0.1,SPECIES
+Pyric Herbivorism,PR18Q6,Galium parissiense subsp. parissiense,Galium parisiense subsp. parisiense,0.5,SUBSPECIES
+Pyric Herbivorism,PR18Q6,Helianthemum almeriense,Helianthemum almeriense Pau,0.3,SPECIES
+Pyric Herbivorism,PR18Q6,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.2,SUBSPECIES
+Pyric Herbivorism,PR18Q6,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,16,SPECIES
+Pyric Herbivorism,PR18Q6,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.1,SPECIES
+Pyric Herbivorism,PR18Q6,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.3,SPECIES
+Pyric Herbivorism,PR18Q6,Lavandula lanata,Lavandula lanata Boiss.,8,SPECIES
+Pyric Herbivorism,PR18Q6,Leontodon longirrostris,Leontodon longirostris (Finch & P.D.Sell) Talavera,0.1,SPECIES
+Pyric Herbivorism,PR18Q6,Linum suffruticosum,Linum suffruticosum L.,0.5,SPECIES
+Pyric Herbivorism,PR18Q6,Minuartia hybrida,Minuartia hybrida Vill.,0.1,SPECIES
+Pyric Herbivorism,PR18Q6,Odontites,Odontites Ludw.,0.1,GENUS
+Pyric Herbivorism,PR18Q6,Poa bulbosa,Poa bulbosa L.,0.3,SPECIES
+Pyric Herbivorism,PR18Q6,Reseda lutea,Reseda lutea L.,0.3,SPECIES
+Pyric Herbivorism,PR18Q6,Rhaponticum coniferum,Rhaponticum coniferum (L.) Greuter,0.7,SPECIES
+Pyric Herbivorism,PR18Q6,Sanguisorba,Sanguisorba L.,0.5,GENUS
+Pyric Herbivorism,PR18Q6,Scabiosa turolensis,Scabiosa turolensis Pau,1.5,SPECIES
+Pyric Herbivorism,PR18Q7,Artemisia campestris,Artemisia campestris L.,0.1,SPECIES
+Pyric Herbivorism,PR18Q7,Asperula hirsuta,Asperula hirsuta Desf.,0.2,SPECIES
+Pyric Herbivorism,PR18Q7,Eryngium campestre,Eryngium campestre L.,0.3,SPECIES
+Pyric Herbivorism,PR18Q7,Festuca capillifolia,Festuca capillifolia Dufour ex Roem. & Schult.,0.3,SPECIES
+Pyric Herbivorism,PR18Q7,Helianthemum almeriense,Helianthemum almeriense Pau,1.5,SPECIES
+Pyric Herbivorism,PR18Q7,Helianthemum salicifolium,Helianthemum salicifolium (L.) Mill.,0.6,SPECIES
+Pyric Herbivorism,PR18Q7,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.6,SPECIES
+Pyric Herbivorism,PR18Q7,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.1,SPECIES
+Pyric Herbivorism,PR18Q7,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,2.5,SPECIES
+Pyric Herbivorism,PR18Q7,Linum suffruticosum,Linum suffruticosum L.,0.6,SPECIES
+Pyric Herbivorism,PR18Q7,Minuartia campestris,Minuartia campestris L.,0.1,SPECIES
+Pyric Herbivorism,PR18Q7,Minuartia hybrida,Minuartia hybrida Vill.,0.1,SPECIES
+Pyric Herbivorism,PR18Q7,Odontites,Odontites Ludw.,0.5,GENUS
+Pyric Herbivorism,PR18Q7,Poa bulbosa,Poa bulbosa L.,2.5,SPECIES
+Pyric Herbivorism,PR18Q7,Reseda lutea,Reseda lutea L.,0.3,SPECIES
+Pyric Herbivorism,PR18Q7,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.25,SUBSPECIES
+Pyric Herbivorism,PR18Q8,Arabidopsis thaliana,Arabidopsis thaliana (L.) Heynh.,0.1,SPECIES
+Pyric Herbivorism,PR18Q8,Bromus rubens,Bromus rubens L.,0.1,SPECIES
+Pyric Herbivorism,PR18Q8,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.2,SPECIES
+Pyric Herbivorism,PR18Q8,Dactylis glomerata,Dactylis glomerata L.,0.1,SPECIES
+Pyric Herbivorism,PR18Q8,Helianthemum almeriense,Helianthemum almeriense Pau,5.5,SPECIES
+Pyric Herbivorism,PR18Q8,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,0.8,SPECIES
+Pyric Herbivorism,PR18Q8,Linum suffruticosum,Linum suffruticosum L.,0.5,SPECIES
+Pyric Herbivorism,PR18Q8,Retama sphaerocarpa,Retama sphaerocarpa (L.) Boiss.,4,SPECIES
+Pyric Herbivorism,PR18Q8,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.2,SUBSPECIES
+Prescribed Burn,NP13Q1,Andryala ragusina,Andryala ragusina L.,0.3,SPECIES
+Prescribed Burn,NP13Q1,Asphodelus albus,Asphodelus albus Mill.,2,SPECIES
+Prescribed Burn,NP13Q1,Genista scorpius,Genista scorpius (L.) DC.,1,SPECIES
+Prescribed Burn,NP13Q1,Helianthemum almeriense,Helianthemum almeriense Pau,9,SPECIES
+Prescribed Burn,NP13Q1,Helianthemum salicifolium,Helianthemum salicifolium (L.) Mill.,0.1,SPECIES
+Prescribed Burn,NP13Q1,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,3,SPECIES
+Prescribed Burn,NP13Q1,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.1,SPECIES
+Prescribed Burn,NP13Q1,Linum suffruticosum,Linum suffruticosum L.,1.3,SPECIES
+Prescribed Burn,NP13Q1,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",2.5,SPECIES
+Prescribed Burn,NP13Q1,Ononis reclinata subsp. Mollis,Ononis reclinata L.,0.1,SPECIES
+Prescribed Burn,NP13Q1,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.4,SUBSPECIES
+Prescribed Burn,NP13Q2,Asphodelus albus,Asphodelus albus Mill.,0.1,SPECIES
+Prescribed Burn,NP13Q2,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,5,SPECIES
+Prescribed Burn,NP13Q2,Helianthemum almeriense,Helianthemum almeriense Pau,10,SPECIES
+Prescribed Burn,NP13Q2,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,5,SPECIES
+Prescribed Burn,NP13Q2,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.5,SPECIES
+Prescribed Burn,NP13Q2,Linum suffruticosum,Linum suffruticosum L.,1,SPECIES
+Prescribed Burn,NP13Q2,Scorzonera angustifolia,Scorzonera angustifolia L.,0.5,SPECIES
+Prescribed Burn,NP13Q3,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,9,SPECIES
+Prescribed Burn,NP13Q3,Genista scorpius,Genista scorpius (L.) DC.,12.5,SPECIES
+Prescribed Burn,NP13Q3,Helianthemum almeriense,Helianthemum almeriense Pau,7,SPECIES
+Prescribed Burn,NP13Q3,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,0.5,SPECIES
+Prescribed Burn,NP13Q3,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.3,SPECIES
+Prescribed Burn,NP13Q3,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,0.1,SPECIES
+Prescribed Burn,NP13Q3,Linum suffruticosum,Linum suffruticosum L.,0.3,SPECIES
+Prescribed Burn,NP13Q3,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",0.1,SPECIES
+Prescribed Burn,NP13Q3,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.1,SUBSPECIES
+Prescribed Burn,NP13Q3,Thymus zygis subsp. gracilis,Thymus zygis subsp. gracilis (Boiss.) R.Morales,0.1,SUBSPECIES
+Prescribed Burn,NP13Q4,Asphodelus albus,Asphodelus albus Mill.,0.4,SPECIES
+Prescribed Burn,NP13Q4,Helianthemum almeriense,Helianthemum almeriense Pau,10,SPECIES
+Prescribed Burn,NP13Q4,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,2,SPECIES
+Prescribed Burn,NP13Q4,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",8,SPECIES
+Prescribed Burn,NP13Q5,Asphodelus albus,Asphodelus albus Mill.,0.5,SPECIES
+Prescribed Burn,NP13Q5,Genista scorpius,Genista scorpius (L.) DC.,12,SPECIES
+Prescribed Burn,NP13Q5,Helianthemum almeriense,Helianthemum almeriense Pau,8,SPECIES
+Prescribed Burn,NP13Q5,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.2,SPECIES
+Prescribed Burn,NP13Q5,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",14,SPECIES
+Prescribed Burn,NP13Q6,Genista scorpius,Genista scorpius (L.) DC.,0.8,SPECIES
+Prescribed Burn,NP13Q6,Helianthemum almeriense,Helianthemum almeriense Pau,7.5,SPECIES
+Prescribed Burn,NP13Q6,Helianthemum ledifolium,Helianthemum ledifolium (L.) Mill.,0.1,SPECIES
+Prescribed Burn,NP13Q6,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.1,SPECIES
+Prescribed Burn,NP13Q6,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",60,SPECIES
+Prescribed Burn,NP13Q7,Asphodelus albus,Asphodelus albus Mill.,0.1,SPECIES
+Prescribed Burn,NP13Q7,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.1,SPECIES
+Prescribed Burn,NP13Q7,Genista scorpius,Genista scorpius (L.) DC.,9,SPECIES
+Prescribed Burn,NP13Q7,Helianthemum almeriense,Helianthemum almeriense Pau,1,SPECIES
+Prescribed Burn,NP13Q7,Helianthemum ledifolium,Helianthemum ledifolium (L.) Mill.,0.1,SPECIES
+Prescribed Burn,NP13Q7,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,1.5,SPECIES
+Prescribed Burn,NP13Q7,Linum suffruticosum,Linum suffruticosum L.,0.7,SPECIES
+Prescribed Burn,NP13Q7,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",50,SPECIES
+Prescribed Burn,NP13Q8,Asphodelus albus,Asphodelus albus Mill.,2,SPECIES
+Prescribed Burn,NP13Q8,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,10,SPECIES
+Prescribed Burn,NP13Q8,Eryngium campestre,Eryngium campestre L.,0.5,SPECIES
+Prescribed Burn,NP13Q8,Festuca capillifolia,Festuca capillifolia Dufour ex Roem. & Schult.,3,SPECIES
+Prescribed Burn,NP13Q8,Genista scorpius,Genista scorpius (L.) DC.,15,SPECIES
+Prescribed Burn,NP13Q8,Helianthemum almeriense,Helianthemum almeriense Pau,5.5,SPECIES
+Prescribed Burn,NP13Q8,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.5,SUBSPECIES
+Prescribed Burn,NP13Q8,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.7,SPECIES
+Prescribed Burn,NP13Q8,Linum suffruticosum,Linum suffruticosum L.,1,SPECIES
+Prescribed Burn,NP13Q8,Scorzonera angustifolia,Scorzonera angustifolia L.,0.2,SPECIES
+Prescribed Burn,NP7Q1,Avenula bromoides subsp. pauneroi,Avenula bromoides subsp. pauneroi Romero Zarco,0.3,SUBSPECIES
+Prescribed Burn,NP7Q1,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,4.2,SPECIES
+Prescribed Burn,NP7Q1,Genista scorpius,Genista scorpius (L.) DC.,0.3,SPECIES
+Prescribed Burn,NP7Q1,Helianthemum almeriense,Helianthemum almeriense Pau,1.5,SPECIES
+Prescribed Burn,NP7Q1,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,1.6,SUBSPECIES
+Prescribed Burn,NP7Q1,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,6,SPECIES
+Prescribed Burn,NP7Q1,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,1.3,SPECIES
+Prescribed Burn,NP7Q1,Linum suffruticosum,Linum suffruticosum L.,1.3,SPECIES
+Prescribed Burn,NP7Q1,Stipa bufensis,"Stipa bufensis F.M.Vázquez, H.Scholz & Sonnentag",1,SPECIES
+Prescribed Burn,NP7Q1,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,1.2,SUBSPECIES
+Prescribed Burn,NP7Q2,Astragalus monspessulanus subsp. monspessulanus,Astragalus monspessulanus subsp. monspessulanus,0.6,SUBSPECIES
+Prescribed Burn,NP7Q2,Avenula bromoides subsp. pauneroi,Avenula bromoides subsp. pauneroi Romero Zarco,0.5,SUBSPECIES
+Prescribed Burn,NP7Q2,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,15,SPECIES
+Prescribed Burn,NP7Q2,Dactylis glomerata,Dactylis glomerata L.,0.2,SPECIES
+Prescribed Burn,NP7Q2,Genista scorpius,Genista scorpius (L.) DC.,5.5,SPECIES
+Prescribed Burn,NP7Q2,Helianthemum almeriense,Helianthemum almeriense Pau,6,SPECIES
+Prescribed Burn,NP7Q2,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,1,SPECIES
+Prescribed Burn,NP7Q2,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,1.4,SPECIES
+Prescribed Burn,NP7Q2,Linum suffruticosum,Linum suffruticosum L.,0.5,SPECIES
+Prescribed Burn,NP7Q2,Picris hispanica,Picris hispanica (Willd.) P.D.Sell,0.1,SPECIES
+Prescribed Burn,NP7Q3,Astragalus monspessulanus subsp. monspessulanus,Astragalus monspessulanus subsp. monspessulanus,1.5,SUBSPECIES
+Prescribed Burn,NP7Q3,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,5,SPECIES
+Prescribed Burn,NP7Q3,Dactylis glomerata,Dactylis glomerata L.,0.1,SPECIES
+Prescribed Burn,NP7Q3,Genista scorpius,Genista scorpius (L.) DC.,5,SPECIES
+Prescribed Burn,NP7Q3,Helianthemum almeriense,Helianthemum almeriense Pau,12,SPECIES
+Prescribed Burn,NP7Q3,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,1,SPECIES
+Prescribed Burn,NP7Q3,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,2.5,SPECIES
+Prescribed Burn,NP7Q3,Linum suffruticosum,Linum suffruticosum L.,0.7,SPECIES
+Prescribed Burn,NP7Q3,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.6,SUBSPECIES
+Prescribed Burn,NP7Q4,Astragalus alopecuroides,Astragalus alopecuroides L.,4,SPECIES
+Prescribed Burn,NP7Q4,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,2,SPECIES
+Prescribed Burn,NP7Q4,Clypeola jonthlaspi subsp. microcarpa,Clypeola jonthlaspi subsp. microcarpa (Boiss.) Breistr.,0.1,SUBSPECIES
+Prescribed Burn,NP7Q4,Galium verticillatum,Galium verticillatum Danthoine ex Lam.,0.1,SPECIES
+Prescribed Burn,NP7Q4,Genista scorpius,Genista scorpius (L.) DC.,0.2,SPECIES
+Prescribed Burn,NP7Q4,Helianthemum almeriense,Helianthemum almeriense Pau,2,SPECIES
+Prescribed Burn,NP7Q4,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,3,SPECIES
+Prescribed Burn,NP7Q4,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,2.5,SPECIES
+Prescribed Burn,NP7Q4,Odontites,Odontites Ludw.,0.5,GENUS
+Prescribed Burn,NP7Q4,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,4,SUBSPECIES
+Prescribed Burn,NP7Q4,Trachynia distachya,Trachynia distachya (L.) Link,0.2,SPECIES
+Prescribed Burn,NP7Q5,Astragalus alopecuroides,Astragalus alopecuroides L.,6,SPECIES
+Prescribed Burn,NP7Q5,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,2.5,SPECIES
+Prescribed Burn,NP7Q5,Genista scorpius,Genista scorpius (L.) DC.,5,SPECIES
+Prescribed Burn,NP7Q5,Helianthemum almeriense,Helianthemum almeriense Pau,7,SPECIES
+Prescribed Burn,NP7Q5,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.7,SUBSPECIES
+Prescribed Burn,NP7Q5,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.3,SPECIES
+Prescribed Burn,NP7Q5,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,1,SUBSPECIES
+Prescribed Burn,NP7Q5,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,5,SUBSPECIES
+Prescribed Burn,NP7Q6,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.4,SPECIES
+Prescribed Burn,NP7Q6,Genista scorpius,Genista scorpius (L.) DC.,20,SPECIES
+Prescribed Burn,NP7Q6,Helianthemum almeriense,Helianthemum almeriense Pau,5,SPECIES
+Prescribed Burn,NP7Q6,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,0.3,SPECIES
+Prescribed Burn,NP7Q6,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.3,SPECIES
+Prescribed Burn,NP7Q6,Linum suffruticosum,Linum suffruticosum L.,2,SPECIES
+Prescribed Burn,NP7Q6,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.5,SUBSPECIES
+Prescribed Burn,NP7Q7,Asphodelus albus,Asphodelus albus Mill.,1.5,SPECIES
+Prescribed Burn,NP7Q7,Genista scorpius,Genista scorpius (L.) DC.,0.3,SPECIES
+Prescribed Burn,NP7Q7,Helianthemum almeriense,Helianthemum almeriense Pau,4,SPECIES
+Prescribed Burn,NP7Q7,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.3,SPECIES
+Prescribed Burn,NP7Q7,Linum strictum,Linum strictum L.,0.1,SPECIES
+Prescribed Burn,NP7Q7,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",2.3,SPECIES
+Prescribed Burn,NP7Q7,Onopordum acaulon,Onopordum acaulon L.,0.3,SPECIES
+Prescribed Burn,NP7Q7,Reseda lutea,Reseda lutea L.,0.4,SPECIES
+Prescribed Burn,NP7Q7,Scorzonera angustifolia,Scorzonera angustifolia L.,0.1,SPECIES
+Prescribed Burn,NP7Q8,Helianthemum almeriense,Helianthemum almeriense Pau,2.5,SPECIES
+Prescribed Burn,NP7Q8,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.2,SPECIES
+Prescribed Burn,NP7Q8,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",18,SPECIES
+Prescribed Burn,NP7Q8,Reseda alba,Reseda alba L.,1,SPECIES
+Prescribed Burn,NP8Q1,Asphodelus albus,Asphodelus albus Mill.,0.3,SPECIES
+Prescribed Burn,NP8Q1,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,5.2,SPECIES
+Prescribed Burn,NP8Q1,Genista scorpius,Genista scorpius (L.) DC.,9,SPECIES
+Prescribed Burn,NP8Q1,Helianthemum almeriense,Helianthemum almeriense Pau,10,SPECIES
+Prescribed Burn,NP8Q1,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.5,SUBSPECIES
+Prescribed Burn,NP8Q1,Helianthemum ledifolium,Helianthemum ledifolium (L.) Mill.,0.1,SPECIES
+Prescribed Burn,NP8Q1,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,1,SPECIES
+Prescribed Burn,NP8Q1,Linum suffruticosum,Linum suffruticosum L.,0.7,SPECIES
+Prescribed Burn,NP8Q1,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",0.2,SPECIES
+Prescribed Burn,NP8Q2,Genista scorpius,Genista scorpius (L.) DC.,3.5,SPECIES
+Prescribed Burn,NP8Q2,Helianthemum almeriense,Helianthemum almeriense Pau,2,SPECIES
+Prescribed Burn,NP8Q2,Helianthemum ledifolium,Helianthemum ledifolium (L.) Mill.,0.4,SPECIES
+Prescribed Burn,NP8Q2,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,1,SPECIES
+Prescribed Burn,NP8Q2,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",45,SPECIES
+Prescribed Burn,NP8Q3,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,2,SPECIES
+Prescribed Burn,NP8Q3,Helianthemum almeriense,Helianthemum almeriense Pau,7.5,SPECIES
+Prescribed Burn,NP8Q3,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.3,SPECIES
+Prescribed Burn,NP8Q3,Linum suffruticosum,Linum suffruticosum L.,0.4,SPECIES
+Prescribed Burn,NP8Q3,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",4,SPECIES
+Prescribed Burn,NP8Q3,Rhaponticum coniferum,Rhaponticum coniferum (L.) Greuter,0.4,SPECIES
+Prescribed Burn,NP8Q3,Stipa bufensis,"Stipa bufensis F.M.Vázquez, H.Scholz & Sonnentag",33,SPECIES
+Prescribed Burn,NP8Q4,Arabidopsis thaliana,Arabidopsis thaliana (L.) Heynh.,0.1,SPECIES
+Prescribed Burn,NP8Q4,Asphodelus albus,Asphodelus albus Mill.,5,SPECIES
+Prescribed Burn,NP8Q4,Asterolinon linum-stellatum,Asterolinon linum-stellatum (L.) Duby,0.1,SPECIES
+Prescribed Burn,NP8Q4,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,1,SPECIES
+Prescribed Burn,NP8Q4,Helianthemum almeriense,Helianthemum almeriense Pau,7,SPECIES
+Prescribed Burn,NP8Q4,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.2,SUBSPECIES
+Prescribed Burn,NP8Q4,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,14,SPECIES
+Prescribed Burn,NP8Q4,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.1,SPECIES
+Prescribed Burn,NP8Q4,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,0.2,SPECIES
+Prescribed Burn,NP8Q4,Minuartia hybrida,Minuartia hybrida Vill.,0.1,SPECIES
+Prescribed Burn,NP8Q5,Asphodelus albus,Asphodelus albus Mill.,0.7,SPECIES
+Prescribed Burn,NP8Q5,Avenula bromoides subsp. pauneroi,Avenula bromoides subsp. pauneroi Romero Zarco,0.35,SUBSPECIES
+Prescribed Burn,NP8Q5,Dipcadi serotinum,Dipcadi serotinum (L.) Medik.,0.2,SPECIES
+Prescribed Burn,NP8Q5,Helianthemum almeriense,Helianthemum almeriense Pau,7.5,SPECIES
+Prescribed Burn,NP8Q5,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",0.5,SPECIES
+Prescribed Burn,NP8Q6,Avenula bromoides subsp. pauneroi,Avenula bromoides subsp. pauneroi Romero Zarco,0.3,SUBSPECIES
+Prescribed Burn,NP8Q6,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,1,SPECIES
+Prescribed Burn,NP8Q6,Galium verticillatum,Galium verticillatum Danthoine ex Lam.,0.5,SPECIES
+Prescribed Burn,NP8Q6,Helianthemum almeriense,Helianthemum almeriense Pau,3,SPECIES
+Prescribed Burn,NP8Q6,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,1,SPECIES
+Prescribed Burn,NP8Q6,Linum suffruticosum,Linum suffruticosum L.,0.8,SPECIES
+Prescribed Burn,NP8Q6,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",8,SPECIES
+Prescribed Burn,NP8Q6,Poa bulbosa,Poa bulbosa L.,0.3,SPECIES
+Prescribed Burn,NP8Q7,Bromus rubens,Bromus rubens L.,0.1,SPECIES
+Prescribed Burn,NP8Q7,Crupina,Crupina (Pers.) DC.,0.2,GENUS
+Prescribed Burn,NP8Q7,Helianthemum almeriense,Helianthemum almeriense Pau,4,SPECIES
+Prescribed Burn,NP8Q7,Helianthemum ledifolium,Helianthemum ledifolium (L.) Mill.,0.1,SPECIES
+Prescribed Burn,NP8Q7,Helianthemum salicifolium,Helianthemum salicifolium (L.) Mill.,0.1,SPECIES
+Prescribed Burn,NP8Q7,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",17.5,SPECIES
+Prescribed Burn,NP8Q7,Polygala rupestris,Polygala rupestris Pourr.,0.2,SPECIES
+Prescribed Burn,NP8Q7,Reseda lutea,Reseda lutea L.,0.3,SPECIES
+Prescribed Burn,NP8Q8,Asterolinon linum-stellatum,Asterolinon linum-stellatum (L.) Duby,0.1,SPECIES
+Prescribed Burn,NP8Q8,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.5,SPECIES
+Prescribed Burn,NP8Q8,Carlina,Carlina L.,0.1,GENUS
+Prescribed Burn,NP8Q8,Eryngium campestre,Eryngium campestre L.,0.5,SPECIES
+Prescribed Burn,NP8Q8,Filago fuscescens,Filago fuscescens Pomel,0.2,SPECIES
+Prescribed Burn,NP8Q8,Helianthemum almeriense,Helianthemum almeriense Pau,5,SPECIES
+Prescribed Burn,NP8Q8,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.4,SPECIES
+Prescribed Burn,NP8Q8,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",52,SPECIES
+Prescribed Burn,NP8Q8,Ononis pusilla,Ononis pusilla L.,0.1,SPECIES
+Prescribed Burn,NP8Q8,Petrorhagia nanteuilii,Petrorhagia nanteuilii (Burnat) P.W.Ball & Heywood,0.1,SPECIES
+Prescribed Burn,NP8Q8,Plantago albicans,Plantago albicans L.,6,SPECIES
+Prescribed Burn,NP8Q8,Trigonella polyceratia,Trigonella polyceratia L.,0.1,SPECIES
+Prescribed Burn,NP9Q1,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,1,SPECIES
+Prescribed Burn,NP9Q1,Eryngium campestre,Eryngium campestre L.,0.1,SPECIES
+Prescribed Burn,NP9Q1,Helianthemum almeriense,Helianthemum almeriense Pau,4.5,SPECIES
+Prescribed Burn,NP9Q1,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.2,SPECIES
+Prescribed Burn,NP9Q1,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",38,SPECIES
+Prescribed Burn,NP9Q1,Scorzonera angustifolia,Scorzonera angustifolia L.,0.1,SPECIES
+Prescribed Burn,NP9Q2,Dactylis glomerata,Dactylis glomerata L.,0.5,SPECIES
+Prescribed Burn,NP9Q2,Genista scorpius,Genista scorpius (L.) DC.,7,SPECIES
+Prescribed Burn,NP9Q2,Helianthemum almeriense,Helianthemum almeriense Pau,9,SPECIES
+Prescribed Burn,NP9Q2,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.7,SPECIES
+Prescribed Burn,NP9Q2,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",20,SPECIES
+Prescribed Burn,NP9Q3,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,5,SPECIES
+Prescribed Burn,NP9Q3,Carex hallerana,Carex halleriana Asso,2.5,SPECIES
+Prescribed Burn,NP9Q3,Genista scorpius,Genista scorpius (L.) DC.,16,SPECIES
+Prescribed Burn,NP9Q3,Helianthemum almeriense,Helianthemum almeriense Pau,3,SPECIES
+Prescribed Burn,NP9Q3,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,3,SPECIES
+Prescribed Burn,NP9Q3,Linum suffruticosum,Linum suffruticosum L.,3.5,SPECIES
+Prescribed Burn,NP9Q3,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",4.5,SPECIES
+Prescribed Burn,NP9Q4,Anthyllis vulneraria,Anthyllis vulneraria L.,0.4,SPECIES
+Prescribed Burn,NP9Q4,Asperula hirsuta,Asperula hirsuta Desf.,0.2,SPECIES
+Prescribed Burn,NP9Q4,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,2.3,SPECIES
+Prescribed Burn,NP9Q4,Carex hallerana,Carex halleriana Asso,0.4,SPECIES
+Prescribed Burn,NP9Q4,Genista scorpius,Genista scorpius (L.) DC.,1.8,SPECIES
+Prescribed Burn,NP9Q4,Helianthemum almeriense,Helianthemum almeriense Pau,6.5,SPECIES
+Prescribed Burn,NP9Q4,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.1,SUBSPECIES
+Prescribed Burn,NP9Q4,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,1.6,SPECIES
+Prescribed Burn,NP9Q4,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.1,SPECIES
+Prescribed Burn,NP9Q4,Linum suffruticosum,Linum suffruticosum L.,0.6,SPECIES
+Prescribed Burn,NP9Q4,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",2.2,SPECIES
+Prescribed Burn,NP9Q4,Picris hispanica,Picris hispanica (Willd.) P.D.Sell,0.1,SPECIES
+Prescribed Burn,NP9Q5,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,1,SPECIES
+Prescribed Burn,NP9Q5,Carex hallerana,Carex halleriana Asso,0.2,SPECIES
+Prescribed Burn,NP9Q5,Genista scorpius,Genista scorpius (L.) DC.,9,SPECIES
+Prescribed Burn,NP9Q5,Helianthemum almeriense,Helianthemum almeriense Pau,6,SPECIES
+Prescribed Burn,NP9Q5,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.2,SUBSPECIES
+Prescribed Burn,NP9Q5,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,2,SPECIES
+Prescribed Burn,NP9Q5,Linum suffruticosum,Linum suffruticosum L.,1.5,SPECIES
+Prescribed Burn,NP9Q5,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",7,SPECIES
+Prescribed Burn,NP9Q5,Salvia lavandulifolia subsp. vellerea,Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart.,1,SUBSPECIES
+Prescribed Burn,NP9Q5,Teucrium capitatum subsp. gracillimum,Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.,0.1,SUBSPECIES
+Prescribed Burn,NP9Q5,Thymelaea,Thymelaea Mill.,0.4,GENUS
+Prescribed Burn,NP9Q6,Genista scorpius,Genista scorpius (L.) DC.,1.5,SPECIES
+Prescribed Burn,NP9Q6,Helianthemum almeriense,Helianthemum almeriense Pau,2.5,SPECIES
+Prescribed Burn,NP9Q6,Helianthemum cinereum subsp. cinereum,Helianthemum cinereum subsp. cinereum,0.2,SUBSPECIES
+Prescribed Burn,NP9Q6,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,2,SPECIES
+Prescribed Burn,NP9Q6,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.4,SPECIES
+Prescribed Burn,NP9Q6,Linum suffruticosum,Linum suffruticosum L.,0.2,SPECIES
+Prescribed Burn,NP9Q6,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",20,SPECIES
+Prescribed Burn,NP9Q7,Arabidopsis thaliana,Arabidopsis thaliana (L.) Heynh.,0.1,SPECIES
+Prescribed Burn,NP9Q7,Asterolinon linum-stellatum,Asterolinon linum-stellatum (L.) Duby,0.1,SPECIES
+Prescribed Burn,NP9Q7,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,1.7,SPECIES
+Prescribed Burn,NP9Q7,Carex hallerana,Carex halleriana Asso,16,SPECIES
+Prescribed Burn,NP9Q7,Genista scorpius,Genista scorpius (L.) DC.,1,SPECIES
+Prescribed Burn,NP9Q7,Helianthemum almeriense,Helianthemum almeriense Pau,11,SPECIES
+Prescribed Burn,NP9Q7,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,5,SPECIES
+Prescribed Burn,NP9Q7,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,4,SPECIES
+Prescribed Burn,NP9Q7,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.1,SPECIES
+Prescribed Burn,NP9Q7,Linum strictum,Linum strictum L.,0.1,SPECIES
+Prescribed Burn,NP9Q7,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",7,SPECIES
+Prescribed Burn,NP9Q7,Medicago minima,Medicago minima (L.) Bartal.,0.1,SPECIES
+Prescribed Burn,NP9Q7,Scorzonera angustifolia,Scorzonera angustifolia L.,2,SPECIES
+Prescribed Burn,NP9Q8,Arabidopsis thaliana,Arabidopsis thaliana (L.) Heynh.,0.1,SPECIES
+Prescribed Burn,NP9Q8,Asphodelus albus,Asphodelus albus Mill.,3,SPECIES
+Prescribed Burn,NP9Q8,Asterolinon linum-stellatum,Asterolinon linum-stellatum (L.) Duby,0.1,SPECIES
+Prescribed Burn,NP9Q8,Bupleurum spinosum,Bupleurum spinosum Gouan & Ill.Observ.Bot.,0.3,SPECIES
+Prescribed Burn,NP9Q8,Helianthemum almeriense,Helianthemum almeriense Pau,11,SPECIES
+Prescribed Burn,NP9Q8,Helictotrichon filifolium,Helictotrichon filifolium (Lag.) Henrard,3,SPECIES
+Prescribed Burn,NP9Q8,Hippocrepis bourgaei,Hippocrepis bourgaei (Nyman) Hervier,0.4,SPECIES
+Prescribed Burn,NP9Q8,Hornungia petraea,Hornungia petraea (L.) Rchb.,0.1,SPECIES
+Prescribed Burn,NP9Q8,Koeleria vallesiana,Koeleria vallesiana (Honck.) Bertol. ex Schult.,0.3,SPECIES
+Prescribed Burn,NP9Q8,Macrochloa tenacissima,"Macrochloa tenacissima Linnaeus, 1755",3,SPECIES
+Prescribed Burn,NP9Q8,Minuartia hybrida,Minuartia hybrida Vill.,0.1,SPECIES

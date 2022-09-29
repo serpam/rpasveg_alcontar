@@ -22,7 +22,6 @@ df <- read_excel(path=here::here("data/rpasfield_alcontar.xlsx"),
 
 -   Explore the correlation between plant cover estimated by RPAS (RPAS-estimated vegetation cover) and estimated by field measures (Field-estimated vegetation cover)
 
-
 - Compute the RMSE (Root Mean Squared Error) and the normalized RMSE 
 
 ```{r}
@@ -61,7 +60,6 @@ ylab <- "RPAS-estimated"
 xlab <- "Field-estimated"
 
 # See https://stackoverflow.com/questions/65076492/ggplot-size-of-annotate-vs-size-of-element-text 
-
 
 # Custom theme
 theme_rpas <- function(){
@@ -102,7 +100,6 @@ general_plot <- df %>%
   theme_rpas() 
 general_plot
 ```
-
 
 
 ## Comparison by treatments 
@@ -229,47 +226,6 @@ combined_plot <- covertype_plot / treatment_plot   +
 ```
 
 
-
-```{r}
-#| echo: false
-#| label: generate-jpg 
-
-ggsave(general_plot,
-       filename = here::here("output/correla_general.jpg"),
-       device = "jpg", height = 10, width = 10, unit="cm", dpi = "print")
-
-ggsave(treatment_plot,
-       filename = here::here("output/correla_treatment.jpg"),
-       device = "jpg", height = 10, width = 15, unit="cm", dpi = "print")
-
-ggsave(covertype_plot,
-       filename = here::here("output/correla_covertype.jpg"),
-       device = "jpg", height = 15, width = 15, unit="cm", dpi = "print")
-
-ggsave(combined_plot,
-       filename = here::here("output/correla_combined.jpg"),
-       device = "jpg", height = 20, width = 14, unit="cm", dpi = "print")
-
-
-
-# PNG devices 
-ggsave(general_plot,
-       filename = here::here("output/correla_general_transp.png"),
-       device = "png", height = 10, width = 10, unit="cm", dpi = "print",
-       bg = "transparent")
-
-ggsave(treatment_plot,
-       filename = here::here("output/correla_treatment_transp.png"),
-       device = "png", height = 10, width = 15, unit="cm", dpi = "print",
-       bg = "transparent")
-
-ggsave(covertype_plot,
-       filename = here::here("output/correla_covertype_transp.png"),
-       device = "png", height = 15, width = 15, unit="cm", dpi = "print",
-        bg = "transparent")
-
-```
-
 ## Variance partitioning 
 
 Is the relationship between the vegetation coverage estimated by RPAS and by field measurement uniform across all coverage values? or is the correlation between those two approach homogeneous across all coverage values? 
@@ -283,7 +239,6 @@ sctest(ct)
 There are 5 terminal nodes. 
 
 ```{r}
-
 ggparty(ct) + 
   geom_edge() +
   geom_edge_label(colour = "grey", size = 4) +
@@ -366,7 +321,6 @@ plotcp(ctrpart2)
 ```
 
 
-
 ```{r}
 set.seed(123)
 ct_ok <- partykit::ctree(plant_coverage_rpas ~ plant_coverage_field,
@@ -374,7 +328,6 @@ ct_ok <- partykit::ctree(plant_coverage_rpas ~ plant_coverage_field,
   control =
     ctree_control(minsplit = 1, alpha = 0.05, maxdepth = 1)
 )
-plot(ct_ok)
 
 plot_party <- ggparty(ct_ok) +
   geom_edge() +
@@ -430,15 +383,160 @@ plot_party <- ggparty(ct_ok) +
   ) +
   theme(legend.position = "none")
 
+plot_party
+```
+
+
+```{r}
+df <- df %>% 
+  mutate(cover_vp = case_when(
+    plant_coverage_field <= 36 ~ as.character("cob_low"),
+    TRUE ~ "cob_high"
+  ))
+```
+
+
+```{r}
+#| label: rmse-vp
+df.rmse_vp <- df %>% 
+  group_by(cover_vp) %>% 
+  summarise(rmse = round(
+    Metrics::rmse(plant_coverage_field, plant_coverage_rpas),4),
+    min = min(plant_coverage_field), 
+    max = max(plant_coverage_field),
+    rmsen.minmax = rmse / (max(plant_coverage_field) - min(plant_coverage_field))*100)
+```
+
+
+```{r}
+#| label: tab-rmse-vp
+#| tbl-cap: RMSE and normalized RMSE values for the correlation between the vegetation coverage estimates using RPAS *vs* Field measures. Values by variance partitioning-groups.
+df.rmse_vp %>% kbl(
+  col.names = c("Groups Variance partitioning", "RMSE","min","max","norm. RMSE (%)"),
+  digits = c(0,2,0,0,2)) %>% 
+  kable_material()
+```
+
+
+# Is the the estimation influenced by other variables? 
+
+```{r}
+m <- lm(plant_coverage_rpas ~ plant_coverage_field, data=df)
+df <- df %>% modelr::add_residuals(m) %>% 
+  mutate(resid.abs = abs(resid))
+
+
+dfres <- df %>% 
+  mutate(abs.Shannon = abs(shannon)) %>% 
+  dplyr::select(
+                Shannon = abs.Shannon, 
+                Richness = richness, Slope = slope, resid, resid.abs) %>% 
+  pivot_longer(cols = c("Shannon","Richness", "Slope")) %>% 
+  mutate(variable = fct_relevel(name, c("Shannon", "Richness", "Slope")))
+  
+
+```
+
+
+```{r}
+p <- ggpubr::ggscatter(dfres,
+  x = "value", y = "resid.abs",
+  color = verde_oscuro,
+  alpha = 0.5,
+  xlab = "", 
+  ylab = expression(paste("|","Residuals","|")),
+  add = "reg.line",
+  add.params = list(color = verde_oscuro, fill = verde_claro),
+  conf.int = TRUE, 
+  facet.by = "variable"
+) + 
+  stat_cor(
+    label.y.npc="top", label.x.npc = "left",
+    aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")),
+    color = verde_oscuro, size = 5
+    ) +
+  theme(text=element_text(
+                          colour = verde_oscuro, 
+                          size = 12), 
+        strip.text = element_text( 
+                          colour = verde_oscuro, 
+                          size = 10), 
+        axis.title = element_text(size = 12))
+
+p.resid <- ggpubr::facet(p,
+  facet.by = "variable", scales = "free_x",
+  panel.labs.background = list(fill = "white"),
+        panel.background = element_blank(),
+        strip.background = element_blank()
+)
+
+p.resid
+```
+
+
+
+
+
+```{r}
+#| echo: false
+#| label: generate-jpg 
+
+ggsave(general_plot,
+       filename = here::here("output/correla_general.jpg"),
+       device = "jpg", height = 10, width = 10, unit="cm", dpi = "print")
+
+ggsave(treatment_plot,
+       filename = here::here("output/correla_treatment.jpg"),
+       device = "jpg", height = 10, width = 15, unit="cm", dpi = "print")
+
+ggsave(covertype_plot,
+       filename = here::here("output/correla_covertype.jpg"),
+       device = "jpg", height = 15, width = 15, unit="cm", dpi = "print")
+
+ggsave(combined_plot,
+       filename = here::here("output/correla_combined.jpg"),
+       device = "jpg", height = 20, width = 14, unit="cm", dpi = "print")
+
+ggsave(p.resid,
+       filename = here::here("output/residuals.jpg"),
+       device = "jpg", height = 8, width = 20, unit="cm", dpi = "print")
 
 ggsave(plot_party,
        filename = here::here("output/correla_partitioning.jpg"),
        device = "jpg", height = 12, width = 12, unit="cm", dpi = "print", bg = "white")
 
 
+
+# PNG devices 
+ggsave(general_plot,
+       filename = here::here("output/correla_general_transp.png"),
+       device = "png", height = 10, width = 10, unit="cm", dpi = "print",
+       bg = "transparent")
+
+ggsave(treatment_plot,
+       filename = here::here("output/correla_treatment_transp.png"),
+       device = "png", height = 10, width = 15, unit="cm", dpi = "print",
+       bg = "transparent")
+
+ggsave(covertype_plot,
+       filename = here::here("output/correla_covertype_transp.png"),
+       device = "png", height = 15, width = 15, unit="cm", dpi = "print",
+        bg = "transparent")
+
+ggsave(combined_plot,
+       filename = here::here("output/correla_combined.png"),
+       device = "png", height = 20, width = 14, unit="cm", dpi = "print",
+       bg = "transparent")
+
+ggsave(p.resid,
+       filename = here::here("output/residuals.png"),
+       device = "png", height = 8, width = 20, unit="cm", dpi = "print",
+       bg = "transparent")
+
+ggsave(plot_party,
+       filename = here::here("output/correla_partitioning.jpg"),
+       device = "png", height = 12, width = 12, unit="cm", dpi = "print", 
+       bg = "transparent")
+
 ```
-
-
-
-
 

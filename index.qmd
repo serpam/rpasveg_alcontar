@@ -7,9 +7,9 @@ title: "Plant coverage: RPAS-Field comparison"
 
 
 This repository contains all information and results for the paper 
-*Vegetation cover estimation in semi-arid shrublands after prescribed burning. Field-ground and UAV comparison* submitted to *Drones* 
+*Vegetation cover estimation in semi-arid shrublands after prescribed burning. Field-ground and UAV comparison*. 
 
-The paper have been submitted to *Drones* by Pérez-Luque AJ; Ramos Font ME; Tognetti Barbieri M; Tarragono C; and Robles Cruz AB. 
+The paper have been submitted to *Drones* by Pérez-Luque AJ; Ramos Font ME; Tognetti Barbieri M; Tarragona C; Calvo, G. and Robles Cruz AB. 
 
 
 ## Acknowledgements 
