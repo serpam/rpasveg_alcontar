@@ -18,18 +18,16 @@ pkg <- c('grateful',
          'partykit',
          'tenzing',
          'plotrix',
-         'rgbif'
-         )
+         'rgbif',
+         'MPV'
+)
 
 eval(
   parse(text =  
           glue::glue('suppressPackageStartupMessages(library({pkg}))')))
 
                                  
-                                 
-
-
-
+                            
 
 
 

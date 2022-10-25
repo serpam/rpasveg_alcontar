@@ -12,7 +12,7 @@ source('scripts/99-pkgs.R')
 ```
 
 ```{r}
-df <- read_excel(path=here::here("data/rpasfield_alcontar.xlsx"),
+df <- read_excel(path = here::here("data/rpasfield_alcontar.xlsx"),
                  sheet = "alcontar") 
 ```
 
@@ -42,6 +42,61 @@ df.rmse_global %>% kbl(
   digits = 2) %>% 
   kable_material()
 ```
+
+- Compute the LM and the PRESS statistics. More info [here](https://tomhopper.me/2014/05/16/can-we-do-better-than-r-squared/). 
+
+```{r}
+#| label: tab-lm-global
+#| tbl-cap: Estimates of the regression between RPAS and Field measurement
+m <- lm(plant_coverage_rpas~plant_coverage_field, data = df)
+broom::tidy(m) |> 
+  kbl() |> 
+  kable_styling()
+```
+
+```{r}
+broom::glance(m) |> t() |> 
+  kbl() |> 
+  kable_styling()
+```
+
+The p-value of the regression is `r broom::glance(m)$p.value`.
+
+```{r}
+#| label: press-computation
+
+# https://fhernanb.github.io/libro_regresion/diag2.html#estad%C3%ADstica-press-y-r2-de-predicci%C3%B3n 
+# https://rpubs.com/RatherBit/102428
+# https://tomhopper.me/2014/05/16/can-we-do-better-than-r-squared/ 
+
+PRESS <- function(linear.model) {
+  # calculate the predictive residuals
+  pr <- residuals(linear.model) / (1 - lm.influence(linear.model)$hat)
+  # calculate the PRESS
+  PRESS <- sum(pr^2)
+  return(PRESS)
+}
+
+pred_r_squared <- function(linear.model) {
+  #' Use anova() to get the sum of squares for the linear model
+  lm.anova <- anova(linear.model)
+  #' Calculate the total sum of squares
+  tss <- sum(lm.anova$'Sum Sq')
+  # Calculate the predictive R^2
+  pred.r.squared <- 1-PRESS(linear.model)/(tss)
+  return(pred.r.squared)
+}
+
+```
+
+```{r}
+PRESS(m)
+```
+
+```{r}
+pred_r_squared(m)
+```
+
 
 ```{r}
 # https://stackoverflow.com/questions/17022553/adding-r2-on-graph-with-facets
@@ -195,8 +250,8 @@ r2_labeller <- function(variable,value){
 
 
 ```{r}
-custom_order <- c("Low scrubland", "Medium scrubland", 
-                  "Dense scrubland", "Stipa dense steppes")
+custom_order <- c("Low-cover shrubland", "Medium-cover shrubland", 
+                  "High-cover shrubland", "High-cover alfa grass steppe")
 
 covertype_plot <- df %>%
   ggplot(aes(x=plant_coverage_field, y=plant_coverage_rpas)) + 
