@@ -8,12 +8,14 @@ bibliography: grateful-refs.bib
 ---
 
 ```{r}
-source('scripts/99-pkgs.R')
+source("scripts/99-pkgs.R")
 ```
 
 ```{r}
-df <- read_excel(path = here::here("data/rpasfield_alcontar.xlsx"),
-                 sheet = "alcontar") 
+df <- read_excel(
+  path = here::here("data/rpasfield_alcontar.xlsx"),
+  sheet = "alcontar"
+)
 ```
 
 ## Aims
@@ -22,41 +24,47 @@ df <- read_excel(path = here::here("data/rpasfield_alcontar.xlsx"),
 
 -   Explore the correlation between plant cover estimated by RPAS (RPAS-estimated vegetation cover) and estimated by field measures (Field-estimated vegetation cover)
 
-- Compute the RMSE (Root Mean Squared Error) and the normalized RMSE 
+-   Compute the RMSE (Root Mean Squared Error) and the normalized RMSE
 
 ```{r}
 #| label: rmse-global
-df.rmse_global <- df %>% 
-  summarise(rmse = round(
-    Metrics::rmse(plant_coverage_field, plant_coverage_rpas),4),
-    min = min(plant_coverage_field), 
+df.rmse_global <- df %>%
+  summarise(
+    rmse = round(
+      Metrics::rmse(plant_coverage_field, plant_coverage_rpas), 4
+    ),
+    min = min(plant_coverage_field),
     max = max(plant_coverage_field),
-    rmsen.minmax = rmse / (max(plant_coverage_field) - min(plant_coverage_field))*100)
+    rmsen.minmax = rmse / (max(plant_coverage_field) - min(plant_coverage_field)) * 100
+  )
 ```
 
 ```{r}
 #| label: tab-rmse-global
 #| tbl-cap: RMSE and normalized RMSE values for the correlation between the vegetation coverage estimates using RPAS *vs* Field measures
-df.rmse_global %>% kbl(
-  col.names = c("RMSE","min","max","norm. RMSE (%)"),
-  digits = 2) %>% 
+df.rmse_global %>%
+  kbl(
+    col.names = c("RMSE", "min", "max", "norm. RMSE (%)"),
+    digits = 2
+  ) %>%
   kable_material()
 ```
 
-- Compute the LM and the PRESS statistics. More info [here](https://tomhopper.me/2014/05/16/can-we-do-better-than-r-squared/). 
+-   Compute the LM and the PRESS statistics. More info [here](https://tomhopper.me/2014/05/16/can-we-do-better-than-r-squared/).
 
 ```{r}
 #| label: tab-lm-global
 #| tbl-cap: Estimates of the regression between RPAS and Field measurement
-m <- lm(plant_coverage_rpas~plant_coverage_field, data = df)
-broom::tidy(m) |> 
-  kbl() |> 
+m <- lm(plant_coverage_rpas ~ plant_coverage_field, data = df)
+broom::tidy(m) |>
+  kbl() |>
   kable_styling()
 ```
 
 ```{r}
-broom::glance(m) |> t() |> 
-  kbl() |> 
+broom::glance(m) |>
+  t() |>
+  kbl() |>
   kable_styling()
 ```
 
@@ -65,9 +73,9 @@ The p-value of the regression is `r broom::glance(m)$p.value`.
 ```{r}
 #| label: press-computation
 
-# https://fhernanb.github.io/libro_regresion/diag2.html#estad%C3%ADstica-press-y-r2-de-predicci%C3%B3n 
+# https://fhernanb.github.io/libro_regresion/diag2.html#estad%C3%ADstica-press-y-r2-de-predicci%C3%B3n
 # https://rpubs.com/RatherBit/102428
-# https://tomhopper.me/2014/05/16/can-we-do-better-than-r-squared/ 
+# https://tomhopper.me/2014/05/16/can-we-do-better-than-r-squared/
 
 PRESS <- function(linear.model) {
   # calculate the predictive residuals
@@ -81,12 +89,11 @@ pred_r_squared <- function(linear.model) {
   #' Use anova() to get the sum of squares for the linear model
   lm.anova <- anova(linear.model)
   #' Calculate the total sum of squares
-  tss <- sum(lm.anova$'Sum Sq')
+  tss <- sum(lm.anova$"Sum Sq")
   # Calculate the predictive R^2
-  pred.r.squared <- 1-PRESS(linear.model)/(tss)
+  pred.r.squared <- 1 - PRESS(linear.model) / (tss)
   return(pred.r.squared)
 }
-
 ```
 
 ```{r}
@@ -97,15 +104,34 @@ PRESS(m)
 pred_r_squared(m)
 ```
 
-
 ```{r}
 # https://stackoverflow.com/questions/17022553/adding-r2-on-graph-with-facets
-lm_eqn = function(df){
-  m = lm(plant_coverage_rpas ~ plant_coverage_field, df);
-  eq <- substitute(r2,
-                   list(r2 = format(summary(m)$r.squared, digits = 3)))
-  as.character(as.expression(eq));                 
+
+lm_r2 <- function(df) {
+  m <- lm(plant_coverage_rpas ~ plant_coverage_field, df)
+  eq <- substitute(
+    r2,
+    list(r2 = format(summary(m)$r.squared, digits = 3))
+  )
+  as.character(as.expression(eq))
 }
+
+
+# lm_eqn = function(df, model){
+#   eq <- substitute(
+#     italic(y) == a + b %.% italic(x) * "," ~  ~pvalue~p,
+#      list(
+#         a = format(coef(model)[1], digits = 3),
+#         b = format(coef(model)[2], digits = 3),
+#         p = ifelse(
+#           summary(m)$coefficients[2,'Pr(>|t|)'] < 0.0001,
+#           "< 0.0001",
+#           "= ~format(summary(m)$coefficients[2,'Pr(>|t|)'])"
+#         )
+#   ))
+#   as.character(as.expression(eq))
+#
+# }
 ```
 
 ```{r}
@@ -114,253 +140,380 @@ verde_oscuro <- "#3e6c62"
 ylab <- "RPAS-estimated"
 xlab <- "Field-estimated"
 
-# See https://stackoverflow.com/questions/65076492/ggplot-size-of-annotate-vs-size-of-element-text 
+# See https://stackoverflow.com/questions/65076492/ggplot-size-of-annotate-vs-size-of-element-text
 
 # Custom theme
-theme_rpas <- function(){
-  theme_bw() %+replace% 
-  theme(
-    plot.title = element_text(size=14, 
-                              margin = margin(0,0,10,0)), 
-    panel.grid = element_blank(),
-    axis.title = element_text(size = 12),
-    # For panels
-    strip.background = element_rect(fill="white"), 
-    strip.text = element_text(size = 10, 
-                              margin = margin(5,0,5,0))
+theme_rpas <- function() {
+  theme_bw() %+replace%
+    theme(
+      plot.title = element_text(
+        size = 14,
+        margin = margin(0, 0, 10, 0)
+      ),
+      panel.grid = element_blank(),
+      axis.title = element_text(size = 12),
+      # For panels
+      strip.background = element_rect(fill = "white"),
+      strip.text = element_text(
+        size = 10,
+        margin = margin(5, 0, 5, 0)
+      )
     )
 }
 ```
 
-
 ```{r}
-general_plot <- df %>% 
-  ggplot(aes(x=plant_coverage_field, y = plant_coverage_rpas)) + 
-  geom_point(size=3, alpha=.5, colour=verde_oscuro) + 
-  geom_abline(slope=1, colour=verde_oscuro) +
-  labs(x = xlab, y = ylab, 
-       title = "Vegetation cover (%)") + 
-  xlim(0,100) + ylim(0,100) + 
-  annotate("text", x= 5, y = 95, 
-           label =paste0("R^2 == ", lm_eqn(df)), 
-           parse = TRUE, 
-           colour = "black", 
-           size = 14/.pt,
-           hjust = 0) +
-  annotate("text", x= 5, y = 85, 
-           label = paste0("RMSE = ", round(df.rmse_global$rmse, 2)),
-           colour = "black", 
-           size = 14/.pt, 
-           hjust = 0) +
-  theme_rpas() 
+formula <- y ~ x
+general_plot <- df %>%
+  ggplot(aes(x = plant_coverage_field, y = plant_coverage_rpas)) +
+  geom_point(size = 3, alpha = .5, colour = verde_oscuro) +
+  geom_abline(slope = 1, colour = verde_oscuro) +
+  labs(
+    x = xlab, y = ylab,
+    title = "Vegetation cover (%)"
+  ) +
+  xlim(0, 100) +
+  ylim(0, 100) +
+  stat_poly_eq(
+    formula = formula,
+    aes(label = paste(
+      after_stat(eq.label), "*\"; \"*",
+      after_stat(adj.rr.label), "*\"; \"*",
+      after_stat(p.value.label), "*\"\"",
+      sep = ""
+    )),
+    rr.digits = 3,
+    colour = "black",
+    size = 8 / .pt
+  ) +
+  annotate("text",
+    x = 0, y = 85,
+    label = paste0("RMSE = ", round(df.rmse_global$rmse, 2)),
+    colour = "black",
+    size = 12 / .pt,
+    hjust = 0
+  ) +
+  annotate("text",
+    x = 0, y = 75,
+    label = paste0(
+      "italic(R)[predic.]^2~'='~",
+      round(pred_r_squared(m), 3)
+    ),
+    colour = "black",
+    parse = TRUE,
+    size = 12 / .pt,
+    hjust = 0
+  ) +
+  theme_rpas() +
+  geom_smooth(method = "lm", col = "gray", se = FALSE, size = 1)
 general_plot
 ```
 
+## Comparison by treatments
 
-## Comparison by treatments 
-
-- Is the estimation different between treatments? 
+-   Is the estimation different between treatments?
 
 ```{r}
 #| label: rmse-treatment
-df.rmse_treatment <- df %>% 
-  group_by(treatment) %>% 
-  summarise(rmse = round(
-    Metrics::rmse(plant_coverage_field, plant_coverage_rpas),4),
-    min = min(plant_coverage_field), 
+df.rmse_treatment <- df %>%
+  group_by(treatment) %>%
+  summarise(
+    rmse = round(
+      Metrics::rmse(plant_coverage_field, plant_coverage_rpas), 4
+    ),
+    min = min(plant_coverage_field),
     max = max(plant_coverage_field),
-    rmsen.minmax = rmse / (max(plant_coverage_field) - min(plant_coverage_field))*100)
-```
+    rmsen.minmax = rmse / (max(plant_coverage_field) - min(plant_coverage_field)) * 100
+) 
 
+# Compute predictive R2
+df.rmse_treatment <- 
+  df.rmse_treatment |> inner_join(
+  df |> group_by(treatment) |> 
+  group_modify(~ data.frame(
+    pred.r2 = pred_r_squared(
+      lm(plant_coverage_rpas ~ plant_coverage_field, data = .x))))
+)
+
+```
 
 ```{r}
 #| label: tab-rmse-treatment
 #| tbl-cap: RMSE and normalized RMSE values for the correlation between the vegetation coverage estimates using RPAS *vs* Field measures. Values by treatment
-df.rmse_treatment %>% kbl(
-  col.names = c("Treatment", "RMSE","min","max","norm. RMSE (%)"),
-  digits = c(0,2,0,0,2)) %>% 
+df.rmse_treatment %>%
+  kbl(
+    col.names = c("Treatment", "RMSE", "min", "max", "norm. RMSE (%)", "pred R2"),
+    digits = c(0, 2, 0, 0, 2,3)
+  ) %>%
   kable_material()
 ```
 
-
 ```{r}
-eqns <- by(df, df$treatment, lm_eqn)
+eqns <- by(df, df$treatment, lm_r2)
 df.label <- data.frame(eq = unclass(eqns), treatment = names(eqns))
-df.label$lab = paste(df.label$treatment, "R^2 =", df.label$eq, sep=" ")
+df.label$lab <- paste(df.label$treatment, "R^2 =", df.label$eq, sep = " ")
 
-r2_labeller <- function(variable,value){
+r2_labeller <- function(variable, value) {
   return(df.label$lab)
 }
 ```
 
-
 ```{r}
-treatment_plot <- df %>% 
-  ggplot(aes(x=plant_coverage_field, y=plant_coverage_rpas)) + 
-  geom_point(size=3, alpha=.5, colour=verde_oscuro) + 
-  geom_abline(slope=1, colour=verde_oscuro) +
+treatment_plot <- df %>%
+  ggplot(aes(x = plant_coverage_field, y = plant_coverage_rpas)) +
+  geom_point(size = 3, alpha = .5, colour = verde_oscuro) +
+  geom_abline(slope = 1, colour = verde_oscuro) +
   facet_wrap(~treatment, labeller = label_value) +
-  labs(x = xlab, y = ylab, title = "Vegetation cover (%)") + 
-  xlim(0,100) + ylim(0,100) +
-  theme_rpas() + 
+  labs(x = xlab, y = ylab, title = "Vegetation cover (%)") +
+  xlim(0, 100) +
+  ylim(0, 100) +
+  theme_rpas() +
   theme(legend.position = "none") +
-   geom_richtext(data = df.rmse_treatment, size=10/.pt,
-            aes(x = 30, y = 90, 
-                label = paste0(
-                  "RMSE<sub>norm.</sub> = ",
-                  round(rmsen.minmax,2), " %")),
-            fill = NA, label.color = NA)
+  geom_richtext(
+    data = df.rmse_treatment, size = 8 / .pt,
+    aes(
+      x = 0, y = 80,
+      label = paste0(
+        "RMSE<sub>norm.</sub> = ",
+        round(rmsen.minmax, 2), " %"
+      ),
+       hjust = 0
+    ),
+    fill = NA, label.color = NA
+  ) +
+  stat_poly_eq(
+    formula = formula,
+    aes(label = paste(
+      after_stat(adj.rr.label), "*\"; \"*",
+      after_stat(p.value.label), "*\"\"",
+      sep = ""
+    )),
+    rr.digits = 3,
+    colour = "black",
+    size = 8 / .pt
+  ) +
+  geom_richtext(
+    data = df.rmse_treatment, size = 8 / .pt,
+    aes(
+      x = 0, y = 70,
+      label = paste0(
+        "*R*<sup>2</sup><sub>predic.</sub> = ",
+        round(pred.r2, 3)
+      ),
+       hjust = 0
+    ),
+    fill = NA, label.color = NA
+  ) + 
+  geom_smooth(method = "lm", col = "gray", se = FALSE, size = 1)
 treatment_plot
 ```
 
-
-## Comparison by cover types 
+## Comparison by cover types
 
 ```{r}
 #| label: rmse-groups
-df.rmse_groups <- df %>% 
-  group_by(cover_type) %>% 
-  summarise(rmse = round(
-    Metrics::rmse(plant_coverage_field, plant_coverage_rpas),4),
-    min = min(plant_coverage_field), 
+df.rmse_groups <- df %>%
+  group_by(cover_type) %>%
+  summarise(
+    rmse = round(
+      Metrics::rmse(plant_coverage_field, plant_coverage_rpas), 4
+    ),
+    min = min(plant_coverage_field),
     max = max(plant_coverage_field),
-    rmsen.minmax = rmse / (max(plant_coverage_field) - min(plant_coverage_field))*100)
-```
+    rmsen.minmax = rmse / (max(plant_coverage_field) - min(plant_coverage_field)) * 100
+  )
 
+
+# Compute predictive R2
+df.rmse_groups <- 
+  df.rmse_groups |> inner_join(
+  df |> group_by(cover_type) |> 
+  group_modify(~ data.frame(
+    pred.r2 = abs(pred_r_squared(
+      lm(plant_coverage_rpas ~ plant_coverage_field, data = .x)))))
+)
+```
 
 ```{r}
 #| label: tab-rmse-groups
 #| tbl-cap: RMSE and normalized RMSE values for the correlation between the vegetation coverage estimates using RPAS *vs* Field measures. Values by cover types
-df.rmse_groups %>% kbl(
-  col.names = c("Cover type", "RMSE","min","max","norm. RMSE (%)"),
-  digits = c(0,2,0,0,2)) %>% 
+df.rmse_groups %>%
+  kbl(
+    col.names = c("Cover type", "RMSE", "min", "max", "norm. RMSE (%)", "pred R2"),
+    digits = c(0, 2, 0, 0, 2,3)
+  ) %>%
   kable_material()
 ```
 
-
 ```{r}
-eqns <- by(df, df$cover_type, lm_eqn)
+eqns <- by(df, df$cover_type, lm_r2)
 df.label <- data.frame(eq = unclass(eqns), treatment = names(eqns))
-df.label$lab = paste(df.label$cover_type, "R^2 =", df.label$eq, sep=" ")
+df.label$lab <- paste(df.label$cover_type, "R^2 =", df.label$eq, sep = " ")
 
-r2_labeller <- function(variable,value){
+r2_labeller <- function(variable, value) {
   return(df.label$lab)
 }
 ```
 
-
 ```{r}
-custom_order <- c("Low-cover shrubland", "Medium-cover shrubland", 
-                  "High-cover shrubland", "High-cover alfa grass steppe")
+custom_order <- c(
+  "Low-cover shrubland", "Medium-cover shrubland",
+  "High-cover shrubland", "High-cover alfa grass steppe"
+)
 
 covertype_plot <- df %>%
-  ggplot(aes(x=plant_coverage_field, y=plant_coverage_rpas)) + 
-  geom_point(size=3, alpha=.5, colour=verde_oscuro) + 
-  geom_abline(slope=1, colour=verde_oscuro) +
-  facet_wrap(~factor(cover_type, custom_order), 
-             labeller = label_value) + 
-  labs(x = xlab, y = ylab, title = "Vegetation cover (%)") + 
-  xlim(0,100) + ylim(0,100) +
-  theme_rpas() + 
+  ggplot(aes(x = plant_coverage_field, y = plant_coverage_rpas)) +
+  geom_point(size = 3, alpha = .5, colour = verde_oscuro) +
+  geom_abline(slope = 1, colour = verde_oscuro) +
+  facet_wrap(~ factor(cover_type, custom_order),
+    labeller = label_value
+  ) +
+  labs(x = xlab, y = ylab, title = "Vegetation cover (%)") +
+  xlim(0, 100) +
+  ylim(0, 100) +
+  theme_rpas() +
   theme(legend.position = "none") +
-   geom_richtext(data = df.rmse_groups, size=10/.pt,
-            aes(x = 30, y = 90, 
-                label = paste0(
-                  "RMSE<sub>norm.</sub> = ",
-                  round(rmsen.minmax,2), " %")),
-            fill = NA, label.color = NA)
+  geom_richtext(
+    data = df.rmse_groups, size = 8 / .pt,
+    aes(
+      x = 0, y = 80,
+      label = paste0(
+        "RMSE<sub>norm.</sub> = ",
+        round(rmsen.minmax, 2), " %"
+      )
+    ),
+     hjust = 0, 
+    fill = NA, label.color = NA
+  ) +
+  stat_poly_eq(
+    formula = formula,
+    aes(label = paste(
+      after_stat(adj.rr.label), "*\"; \"*",
+      after_stat(p.value.label), "*\"\"",
+      sep = ""
+    )),
+    rr.digits = 3,
+    colour = "black",
+    size = 8 / .pt
+  ) +
+  geom_richtext(
+    data = df.rmse_groups, size = 8 / .pt,
+    aes(
+      x = 0, y = 70,
+      label = paste0(
+        "*R*<sup>2</sup><sub>predic.</sub> = ",
+        round(pred.r2, 3)
+      ),
+       hjust = 0
+    ),
+    fill = NA, label.color = NA
+  ) + 
+  geom_smooth(method = "lm", col = "gray", se = FALSE, size = 1)
 covertype_plot
 ```
 
-
 ```{r}
-combined_plot <- covertype_plot / treatment_plot   + 
-  plot_layout(heights = c(2,1)) + 
-  plot_annotation(tag_levels = 'a') &
-  theme(plot.tag = element_text(face= 'bold'))
+combined_plot <- covertype_plot / treatment_plot +
+  plot_layout(heights = c(2, 1)) +
+  plot_annotation(tag_levels = "a") &
+  theme(plot.tag = element_text(face = "bold"))
 ```
 
+## Variance partitioning
 
-## Variance partitioning 
-
-Is the relationship between the vegetation coverage estimated by RPAS and by field measurement uniform across all coverage values? or is the correlation between those two approach homogeneous across all coverage values? 
+Is the relationship between the vegetation coverage estimated by RPAS and by field measurement uniform across all coverage values? or is the correlation between those two approach homogeneous across all coverage values?
 
 ```{r}
-ct <- partykit::ctree(plant_coverage_rpas ~ plant_coverage_field, data=df)
+ct <- partykit::ctree(plant_coverage_rpas ~ plant_coverage_field, data = df)
 ct
-sctest(ct) 
+sctest(ct)
 ```
 
-There are 5 terminal nodes. 
+There are 5 terminal nodes.
 
 ```{r}
-ggparty(ct) + 
+ggparty(ct) +
   geom_edge() +
   geom_edge_label(colour = "grey", size = 4) +
-  geom_node_plot(gglist = list(
-    geom_point(aes(x =plant_coverage_field,y = plant_coverage_rpas)),
-    geom_smooth(aes(x=plant_coverage_field, y=plant_coverage_rpas), method = lm, se = FALSE),
-    geom_abline(slope = 1, colour = "gray"),
-    theme_bw(base_size = 10),
-    xlab(xlab),
-    ylab(ylab) 
+  geom_node_plot(
+    gglist = list(
+      geom_point(aes(x = plant_coverage_field, y = plant_coverage_rpas)),
+      geom_smooth(aes(x = plant_coverage_field, y = plant_coverage_rpas), method = lm, se = FALSE),
+      geom_abline(slope = 1, colour = "gray"),
+      theme_bw(base_size = 10),
+      xlab(xlab),
+      ylab(ylab)
     ),
-                scales = "fixed", 
-                shared_axis_labels = TRUE,
-                shared_legend = TRUE,
-                legend_separator = TRUE, 
-                id = "terminal") +
-   geom_node_label(aes(col = splitvar),
-                  line_list = list(aes(label = paste("Node", id)),
-                                   aes(label = splitvar),
-                                   aes(label = scales::pvalue(p.value, accuracy = 0.001, 
-                                                              decimal.mark = ".", 
-                                                              add_p = TRUE))), 
-                                                     
-          line_gpar = list(list(size = 8, col = "black", fontface = "bold"),
-                                   list(size = 8),
-                                   list(size = 8)),
-                  ids = "inner") + 
+    scales = "fixed",
+    shared_axis_labels = TRUE,
+    shared_legend = TRUE,
+    legend_separator = TRUE,
+    id = "terminal"
+  ) +
+  geom_node_label(aes(col = splitvar),
+    line_list = list(
+      aes(label = paste("Node", id)),
+      aes(label = splitvar),
+      aes(label = scales::pvalue(p.value,
+        accuracy = 0.001,
+        decimal.mark = ".",
+        add_p = TRUE
+      ))
+    ),
+    line_gpar = list(
+      list(size = 8, col = "black", fontface = "bold"),
+      list(size = 8),
+      list(size = 8)
+    ),
+    ids = "inner"
+  ) +
   geom_node_label(aes(label = paste0("Node ", id, ", (n= ", nodesize, ")")),
-                  fontface = "bold",
-                  ids = "terminal",
-                  size = 2, 
-                  nudge_y = 0.01) +
+    fontface = "bold",
+    ids = "terminal",
+    size = 2,
+    nudge_y = 0.01
+  ) +
   theme(legend.position = "none")
 ```
 
-What about the overfitting? 
+What about the overfitting?
 
 ```{r}
-ggplot(df, aes(x=plant_coverage_field, y = plant_coverage_rpas)) +
-  geom_point() + 
-  geom_abline(yintercept = 1) + 
+ggplot(df, aes(x = plant_coverage_field, y = plant_coverage_rpas)) +
+  geom_point() +
+  geom_abline(yintercept = 1) +
   geom_smooth(
-    data = (df %>% filter(plant_coverage_field <=  13)),
-    aes(x=plant_coverage_field, y = plant_coverage_rpas),
-    method = "lm") + 
+    data = (df %>% filter(plant_coverage_field <= 13)),
+    aes(x = plant_coverage_field, y = plant_coverage_rpas),
+    method = "lm"
+  ) +
   geom_smooth(
     data = (df %>% filter(plant_coverage_field > 13 & plant_coverage_field <= 23)),
-    aes(x=plant_coverage_field, y = plant_coverage_rpas),
-    method = "lm") + 
+    aes(x = plant_coverage_field, y = plant_coverage_rpas),
+    method = "lm"
+  ) +
   geom_smooth(
     data = (df %>% filter(plant_coverage_field > 23 & plant_coverage_field <= 36)),
-    aes(x=plant_coverage_field, y = plant_coverage_rpas),
-    method = "lm") + 
+    aes(x = plant_coverage_field, y = plant_coverage_rpas),
+    method = "lm"
+  ) +
   geom_smooth(
     data = (df %>% filter(plant_coverage_field > 36 & plant_coverage_field <= 50)),
-    aes(x=plant_coverage_field, y = plant_coverage_rpas),
-    method = "lm") +
+    aes(x = plant_coverage_field, y = plant_coverage_rpas),
+    method = "lm"
+  ) +
   geom_smooth(
-    data = (df %>% filter(plant_coverage_field >50)),
-    aes(x=plant_coverage_field, y = plant_coverage_rpas),
-    method = "lm")
+    data = (df %>% filter(plant_coverage_field > 50)),
+    aes(x = plant_coverage_field, y = plant_coverage_rpas),
+    method = "lm"
+  )
 ```
 
 ### Find the optimous complexity parameter
+
 ```{r}
 set.seed(123)
-ctrpart <- rpart(plant_coverage_rpas ~ plant_coverage_field, data=df)
+ctrpart <- rpart(plant_coverage_rpas ~ plant_coverage_field, data = df)
 ctrpart
 printcp(ctrpart)
 plotcp(ctrpart)
@@ -368,13 +521,14 @@ plotcp(ctrpart)
 
 ```{r}
 set.seed(123)
-ctrpart2 <- rpart(plant_coverage_rpas ~ plant_coverage_field, data=df, control = 
-               rpart.control(minsplit = 2, cp = .075))
+ctrpart2 <- rpart(plant_coverage_rpas ~ plant_coverage_field,
+  data = df, control =
+    rpart.control(minsplit = 2, cp = .075)
+)
 ctrpart2
 printcp(ctrpart2)
 plotcp(ctrpart2)
 ```
-
 
 ```{r}
 set.seed(123)
@@ -389,11 +543,12 @@ plot_party <- ggparty(ct_ok) +
   geom_edge_label(colour = verde_oscuro, size = 5) +
   geom_node_plot(
     gglist = list(
-      geom_point(aes(
-        x = plant_coverage_field,
-        y = plant_coverage_rpas
-      ),
-      size = 3, alpha = .5, colour = verde_oscuro
+      geom_point(
+        aes(
+          x = plant_coverage_field,
+          y = plant_coverage_rpas
+        ),
+        size = 3, alpha = .5, colour = verde_oscuro
       ),
       geom_smooth(aes(x = plant_coverage_field, y = plant_coverage_rpas),
         method = lm, se = FALSE, colour = "gray"
@@ -422,7 +577,6 @@ plot_party <- ggparty(ct_ok) +
         add_p = TRUE
       ))
     ),
-
     line_gpar = list(
       list(size = 10, col = "black"),
       list(size = 10, col = "black"),
@@ -441,157 +595,167 @@ plot_party <- ggparty(ct_ok) +
 plot_party
 ```
 
-
 ```{r}
-df <- df %>% 
+df <- df %>%
   mutate(cover_vp = case_when(
     plant_coverage_field <= 36 ~ as.character("cob_low"),
     TRUE ~ "cob_high"
   ))
 ```
 
-
 ```{r}
 #| label: rmse-vp
-df.rmse_vp <- df %>% 
-  group_by(cover_vp) %>% 
-  summarise(rmse = round(
-    Metrics::rmse(plant_coverage_field, plant_coverage_rpas),4),
-    min = min(plant_coverage_field), 
+df.rmse_vp <- df %>%
+  group_by(cover_vp) %>%
+  summarise(
+    rmse = round(
+      Metrics::rmse(plant_coverage_field, plant_coverage_rpas), 4
+    ),
+    min = min(plant_coverage_field),
     max = max(plant_coverage_field),
-    rmsen.minmax = rmse / (max(plant_coverage_field) - min(plant_coverage_field))*100)
+    rmsen.minmax = rmse / (max(plant_coverage_field) - min(plant_coverage_field)) * 100
+  )
 ```
-
 
 ```{r}
 #| label: tab-rmse-vp
 #| tbl-cap: RMSE and normalized RMSE values for the correlation between the vegetation coverage estimates using RPAS *vs* Field measures. Values by variance partitioning-groups.
-df.rmse_vp %>% kbl(
-  col.names = c("Groups Variance partitioning", "RMSE","min","max","norm. RMSE (%)"),
-  digits = c(0,2,0,0,2)) %>% 
+df.rmse_vp %>%
+  kbl(
+    col.names = c("Groups Variance partitioning", "RMSE", "min", "max", "norm. RMSE (%)"),
+    digits = c(0, 2, 0, 0, 2)
+  ) %>%
   kable_material()
 ```
 
-
-# Is the the estimation influenced by other variables? 
+# Is the the estimation influenced by other variables?
 
 ```{r}
-m <- lm(plant_coverage_rpas ~ plant_coverage_field, data=df)
-df <- df %>% modelr::add_residuals(m) %>% 
+m <- lm(plant_coverage_rpas ~ plant_coverage_field, data = df)
+df <- df %>%
+  modelr::add_residuals(m) %>%
   mutate(resid.abs = abs(resid))
 
 
-dfres <- df %>% 
-  mutate(abs.Shannon = abs(shannon)) %>% 
+dfres <- df %>%
+  mutate(abs.Shannon = abs(shannon)) %>%
   dplyr::select(
-                Shannon = abs.Shannon, 
-                Richness = richness, Slope = slope, resid, resid.abs) %>% 
-  pivot_longer(cols = c("Shannon","Richness", "Slope")) %>% 
+    Shannon = abs.Shannon,
+    Richness = richness, Slope = slope, resid, resid.abs
+  ) %>%
+  pivot_longer(cols = c("Shannon", "Richness", "Slope")) %>%
   mutate(variable = fct_relevel(name, c("Shannon", "Richness", "Slope")))
-  
-
 ```
-
 
 ```{r}
 p <- ggpubr::ggscatter(dfres,
   x = "value", y = "resid.abs",
   color = verde_oscuro,
   alpha = 0.5,
-  xlab = "", 
-  ylab = expression(paste("|","Residuals","|")),
+  xlab = "",
+  ylab = expression(paste("|", "Residuals", "|")),
   add = "reg.line",
   add.params = list(color = verde_oscuro, fill = verde_claro),
-  conf.int = TRUE, 
+  conf.int = TRUE,
   facet.by = "variable"
-) + 
+) +
   stat_cor(
-    label.y.npc="top", label.x.npc = "left",
+    label.y.npc = "top", label.x.npc = "left",
     aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")),
     color = verde_oscuro, size = 5
-    ) +
-  theme(text=element_text(
-                          colour = verde_oscuro, 
-                          size = 12), 
-        strip.text = element_text( 
-                          colour = verde_oscuro, 
-                          size = 10), 
-        axis.title = element_text(size = 12))
+  ) +
+  theme(
+    text = element_text(
+      colour = verde_oscuro,
+      size = 12
+    ),
+    strip.text = element_text(
+      colour = verde_oscuro,
+      size = 10
+    ),
+    axis.title = element_text(size = 12)
+  )
 
 p.resid <- ggpubr::facet(p,
   facet.by = "variable", scales = "free_x",
   panel.labs.background = list(fill = "white"),
-        panel.background = element_blank(),
-        strip.background = element_blank()
+  panel.background = element_blank(),
+  strip.background = element_blank()
 )
 
 p.resid
 ```
 
-
-
-
-
 ```{r}
 #| echo: false
-#| label: generate-jpg 
+#| label: generate-jpg
 
 ggsave(general_plot,
-       filename = here::here("output/correla_general.jpg"),
-       device = "jpg", height = 10, width = 10, unit="cm", dpi = "print")
+  filename = here::here("output/correla_general.jpg"),
+  device = "jpg", height = 10, width = 10, unit = "cm", dpi = "print"
+)
 
 ggsave(treatment_plot,
-       filename = here::here("output/correla_treatment.jpg"),
-       device = "jpg", height = 10, width = 15, unit="cm", dpi = "print")
+  filename = here::here("output/correla_treatment.jpg"),
+  device = "jpg", height = 10, width = 15, unit = "cm", dpi = "print"
+)
 
 ggsave(covertype_plot,
-       filename = here::here("output/correla_covertype.jpg"),
-       device = "jpg", height = 15, width = 15, unit="cm", dpi = "print")
+  filename = here::here("output/correla_covertype.jpg"),
+  device = "jpg", height = 15, width = 15, unit = "cm", dpi = "print"
+)
 
 ggsave(combined_plot,
-       filename = here::here("output/correla_combined.jpg"),
-       device = "jpg", height = 20, width = 14, unit="cm", dpi = "print")
+  filename = here::here("output/correla_combined.jpg"),
+  device = "jpg", height = 20, width = 14, unit = "cm", dpi = "print"
+)
 
 ggsave(p.resid,
-       filename = here::here("output/residuals.jpg"),
-       device = "jpg", height = 8, width = 20, unit="cm", dpi = "print")
+  filename = here::here("output/residuals.jpg"),
+  device = "jpg", height = 8, width = 20, unit = "cm", dpi = "print"
+)
 
 ggsave(plot_party,
-       filename = here::here("output/correla_partitioning.jpg"),
-       device = "jpg", height = 12, width = 12, unit="cm", dpi = "print", bg = "white")
+  filename = here::here("output/correla_partitioning.jpg"),
+  device = "jpg", height = 12, width = 12, unit = "cm", dpi = "print", bg = "white"
+)
 
 
 
-# PNG devices 
+# PNG devices
 ggsave(general_plot,
-       filename = here::here("output/correla_general_transp.png"),
-       device = "png", height = 10, width = 10, unit="cm", dpi = "print",
-       bg = "transparent")
+  filename = here::here("output/correla_general_transp.png"),
+  device = "png", height = 10, width = 10, unit = "cm", dpi = "print",
+  bg = "transparent"
+)
 
 ggsave(treatment_plot,
-       filename = here::here("output/correla_treatment_transp.png"),
-       device = "png", height = 10, width = 15, unit="cm", dpi = "print",
-       bg = "transparent")
+  filename = here::here("output/correla_treatment_transp.png"),
+  device = "png", height = 10, width = 15, unit = "cm", dpi = "print",
+  bg = "transparent"
+)
 
 ggsave(covertype_plot,
-       filename = here::here("output/correla_covertype_transp.png"),
-       device = "png", height = 15, width = 15, unit="cm", dpi = "print",
-        bg = "transparent")
+  filename = here::here("output/correla_covertype_transp.png"),
+  device = "png", height = 15, width = 15, unit = "cm", dpi = "print",
+  bg = "transparent"
+)
 
 ggsave(combined_plot,
-       filename = here::here("output/correla_combined.png"),
-       device = "png", height = 20, width = 14, unit="cm", dpi = "print",
-       bg = "transparent")
+  filename = here::here("output/correla_combined.png"),
+  device = "png", height = 20, width = 14, unit = "cm", dpi = "print",
+  bg = "transparent"
+)
 
 ggsave(p.resid,
-       filename = here::here("output/residuals.png"),
-       device = "png", height = 8, width = 20, unit="cm", dpi = "print",
-       bg = "transparent")
+  filename = here::here("output/residuals.png"),
+  device = "png", height = 8, width = 20, unit = "cm", dpi = "print",
+  bg = "transparent"
+)
 
 ggsave(plot_party,
-       filename = here::here("output/correla_partitioning.jpg"),
-       device = "png", height = 12, width = 12, unit="cm", dpi = "print", 
-       bg = "transparent")
-
+  filename = here::here("output/correla_partitioning.jpg"),
+  device = "png", height = 12, width = 12, unit = "cm", dpi = "print",
+  bg = "transparent"
+)
 ```
-

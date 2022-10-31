@@ -19,7 +19,9 @@ pkg <- c('grateful',
          'tenzing',
          'plotrix',
          'rgbif',
-         'MPV'
+         'MPV',
+         'ggpmisc',
+         'ggtext'
 )
 
 eval(
