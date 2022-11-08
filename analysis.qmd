@@ -16,6 +16,13 @@ df <- read_excel(
   path = here::here("data/rpasfield_alcontar.xlsx"),
   sheet = "alcontar"
 )
+
+df <- df |> 
+  mutate(cover_type = 
+           case_when(cover_type == "Medium-cover shrubland" ~ "Moderate-cover shrubland",
+                     TRUE ~ cover_type
+         ))
+
 ```
 
 ## Aims
@@ -357,7 +364,7 @@ r2_labeller <- function(variable, value) {
 
 ```{r}
 custom_order <- c(
-  "Low-cover shrubland", "Medium-cover shrubland",
+  "Low-cover shrubland", "Moderate-cover shrubland",
   "High-cover shrubland", "High-cover alfa grass steppe"
 )
 
@@ -595,6 +602,7 @@ plot_party <- ggparty(ct_ok) +
 plot_party
 ```
 
+
 ```{r}
 df <- df %>%
   mutate(cover_vp = case_when(
@@ -615,6 +623,17 @@ df.rmse_vp <- df %>%
     max = max(plant_coverage_field),
     rmsen.minmax = rmse / (max(plant_coverage_field) - min(plant_coverage_field)) * 100
   )
+
+# Compute predictive R2
+df.rmse_vp <- 
+  df.rmse_vp |> inner_join(
+  df |> group_by(cover_vp) |> 
+  group_modify(~ data.frame(
+    pred.r2 = abs(pred_r_squared(
+      lm(plant_coverage_rpas ~ plant_coverage_field, data = .x)))))
+)
+
+
 ```
 
 ```{r}
@@ -622,8 +641,8 @@ df.rmse_vp <- df %>%
 #| tbl-cap: RMSE and normalized RMSE values for the correlation between the vegetation coverage estimates using RPAS *vs* Field measures. Values by variance partitioning-groups.
 df.rmse_vp %>%
   kbl(
-    col.names = c("Groups Variance partitioning", "RMSE", "min", "max", "norm. RMSE (%)"),
-    digits = c(0, 2, 0, 0, 2)
+    col.names = c("Groups Variance partitioning", "RMSE", "min", "max", "norm. RMSE (%)", "pred R2"),
+    digits = c(0, 2, 0, 0, 2,3)
   ) %>%
   kable_material()
 ```
