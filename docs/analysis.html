@@ -480,7 +480,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>verde_claro <span class="ot">&lt;-</span> <span class="st">"#c6ddb3"</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>verde_oscuro <span class="ot">&lt;-</span> <span class="st">"#3e6c62"</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>ylab <span class="ot">&lt;-</span> <span class="st">"RPAS-estimated"</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>ylab <span class="ot">&lt;-</span> <span class="st">"Drone-estimated"</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>xlab <span class="ot">&lt;-</span> <span class="st">"Field-estimated"</span></span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co"># See https://stackoverflow.com/questions/65076492/ggplot-size-of-annotate-vs-size-of-element-text</span></span>
@@ -1233,7 +1233,16 @@ n= 96
 <span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">min =</span> <span class="fu">min</span>(plant_coverage_field),</span>
 <span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">max =</span> <span class="fu">max</span>(plant_coverage_field),</span>
 <span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">rmsen.minmax =</span> rmse <span class="sc">/</span> (<span class="fu">max</span>(plant_coverage_field) <span class="sc">-</span> <span class="fu">min</span>(plant_coverage_field)) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute predictive R2</span></span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>df.rmse_vp <span class="ot">&lt;-</span> </span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a>  df.rmse_vp <span class="sc">|&gt;</span> <span class="fu">inner_join</span>(</span>
+<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">|&gt;</span> <span class="fu">group_by</span>(cover_vp) <span class="sc">|&gt;</span> </span>
+<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_modify</span>(<span class="sc">~</span> <span class="fu">data.frame</span>(</span>
+<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">pred.r2 =</span> <span class="fu">abs</span>(<span class="fu">pred_r_squared</span>(</span>
+<span id="cb42-18"><a href="#cb42-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">lm</span>(plant_coverage_rpas <span class="sc">~</span> plant_coverage_field, <span class="at">data =</span> .x)))))</span>
+<span id="cb42-19"><a href="#cb42-19" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
@@ -1241,8 +1250,8 @@ n= 96
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>df.rmse_vp <span class="sc">%&gt;%</span></span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>(</span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Groups Variance partitioning"</span>, <span class="st">"RMSE"</span>, <span class="st">"min"</span>, <span class="st">"max"</span>, <span class="st">"norm. RMSE (%)"</span>),</span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">digits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>)</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Groups Variance partitioning"</span>, <span class="st">"RMSE"</span>, <span class="st">"min"</span>, <span class="st">"max"</span>, <span class="st">"norm. RMSE (%)"</span>, <span class="st">"pred R2"</span>),</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">digits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>,<span class="dv">3</span>)</span>
 <span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
 <span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_material</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -1256,6 +1265,7 @@ n= 96
    <th style="text-align:right;"> min </th>
    <th style="text-align:right;"> max </th>
    <th style="text-align:right;"> norm. RMSE (%) </th>
+   <th style="text-align:right;"> pred R2 </th>
   </tr>
  </thead>
 <tbody>
@@ -1265,6 +1275,7 @@ n= 96
    <td style="text-align:right;"> 37 </td>
    <td style="text-align:right;"> 87 </td>
    <td style="text-align:right;"> 23.07 </td>
+   <td style="text-align:right;"> 0.595 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> cob_low </td>
@@ -1272,6 +1283,7 @@ n= 96
    <td style="text-align:right;"> 6 </td>
    <td style="text-align:right;"> 36 </td>
    <td style="text-align:right;"> 30.68 </td>
+   <td style="text-align:right;"> 0.370 </td>
   </tr>
 </tbody>
 </table>
@@ -1650,7 +1662,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb46-166"><a href="#cb46-166" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb46-167"><a href="#cb46-167" aria-hidden="true" tabindex="-1"></a>verde_claro <span class="ot">&lt;-</span> <span class="st">"#c6ddb3"</span></span>
 <span id="cb46-168"><a href="#cb46-168" aria-hidden="true" tabindex="-1"></a>verde_oscuro <span class="ot">&lt;-</span> <span class="st">"#3e6c62"</span></span>
-<span id="cb46-169"><a href="#cb46-169" aria-hidden="true" tabindex="-1"></a>ylab <span class="ot">&lt;-</span> <span class="st">"RPAS-estimated"</span></span>
+<span id="cb46-169"><a href="#cb46-169" aria-hidden="true" tabindex="-1"></a>ylab <span class="ot">&lt;-</span> <span class="st">"Drone-estimated"</span></span>
 <span id="cb46-170"><a href="#cb46-170" aria-hidden="true" tabindex="-1"></a>xlab <span class="ot">&lt;-</span> <span class="st">"Field-estimated"</span></span>
 <span id="cb46-171"><a href="#cb46-171" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-172"><a href="#cb46-172" aria-hidden="true" tabindex="-1"></a><span class="co"># See https://stackoverflow.com/questions/65076492/ggplot-size-of-annotate-vs-size-of-element-text</span></span>
@@ -2108,170 +2120,220 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb46-656"><a href="#cb46-656" aria-hidden="true" tabindex="-1"></a>plot_party</span>
 <span id="cb46-657"><a href="#cb46-657" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb46-658"><a href="#cb46-658" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-661"><a href="#cb46-661" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb46-662"><a href="#cb46-662" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
-<span id="cb46-663"><a href="#cb46-663" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">cover_vp =</span> <span class="fu">case_when</span>(</span>
-<span id="cb46-664"><a href="#cb46-664" aria-hidden="true" tabindex="-1"></a>    plant_coverage_field <span class="sc">&lt;=</span> <span class="dv">36</span> <span class="sc">~</span> <span class="fu">as.character</span>(<span class="st">"cob_low"</span>),</span>
-<span id="cb46-665"><a href="#cb46-665" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"cob_high"</span></span>
-<span id="cb46-666"><a href="#cb46-666" aria-hidden="true" tabindex="-1"></a>  ))</span>
-<span id="cb46-667"><a href="#cb46-667" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb46-668"><a href="#cb46-668" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-671"><a href="#cb46-671" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb46-672"><a href="#cb46-672" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: rmse-vp</span></span>
-<span id="cb46-673"><a href="#cb46-673" aria-hidden="true" tabindex="-1"></a>df.rmse_vp <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
-<span id="cb46-674"><a href="#cb46-674" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(cover_vp) <span class="sc">%&gt;%</span></span>
-<span id="cb46-675"><a href="#cb46-675" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb46-676"><a href="#cb46-676" aria-hidden="true" tabindex="-1"></a>    <span class="at">rmse =</span> <span class="fu">round</span>(</span>
-<span id="cb46-677"><a href="#cb46-677" aria-hidden="true" tabindex="-1"></a>      Metrics<span class="sc">::</span><span class="fu">rmse</span>(plant_coverage_field, plant_coverage_rpas), <span class="dv">4</span></span>
-<span id="cb46-678"><a href="#cb46-678" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb46-679"><a href="#cb46-679" aria-hidden="true" tabindex="-1"></a>    <span class="at">min =</span> <span class="fu">min</span>(plant_coverage_field),</span>
-<span id="cb46-680"><a href="#cb46-680" aria-hidden="true" tabindex="-1"></a>    <span class="at">max =</span> <span class="fu">max</span>(plant_coverage_field),</span>
-<span id="cb46-681"><a href="#cb46-681" aria-hidden="true" tabindex="-1"></a>    <span class="at">rmsen.minmax =</span> rmse <span class="sc">/</span> (<span class="fu">max</span>(plant_coverage_field) <span class="sc">-</span> <span class="fu">min</span>(plant_coverage_field)) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb46-682"><a href="#cb46-682" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb46-683"><a href="#cb46-683" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb46-659"><a href="#cb46-659" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-662"><a href="#cb46-662" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb46-663"><a href="#cb46-663" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb46-664"><a href="#cb46-664" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">cover_vp =</span> <span class="fu">case_when</span>(</span>
+<span id="cb46-665"><a href="#cb46-665" aria-hidden="true" tabindex="-1"></a>    plant_coverage_field <span class="sc">&lt;=</span> <span class="dv">36</span> <span class="sc">~</span> <span class="fu">as.character</span>(<span class="st">"cob_low"</span>),</span>
+<span id="cb46-666"><a href="#cb46-666" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"cob_high"</span></span>
+<span id="cb46-667"><a href="#cb46-667" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb46-668"><a href="#cb46-668" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb46-669"><a href="#cb46-669" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-672"><a href="#cb46-672" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb46-673"><a href="#cb46-673" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: rmse-vp</span></span>
+<span id="cb46-674"><a href="#cb46-674" aria-hidden="true" tabindex="-1"></a>df.rmse_vp <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb46-675"><a href="#cb46-675" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(cover_vp) <span class="sc">%&gt;%</span></span>
+<span id="cb46-676"><a href="#cb46-676" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb46-677"><a href="#cb46-677" aria-hidden="true" tabindex="-1"></a>    <span class="at">rmse =</span> <span class="fu">round</span>(</span>
+<span id="cb46-678"><a href="#cb46-678" aria-hidden="true" tabindex="-1"></a>      Metrics<span class="sc">::</span><span class="fu">rmse</span>(plant_coverage_field, plant_coverage_rpas), <span class="dv">4</span></span>
+<span id="cb46-679"><a href="#cb46-679" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb46-680"><a href="#cb46-680" aria-hidden="true" tabindex="-1"></a>    <span class="at">min =</span> <span class="fu">min</span>(plant_coverage_field),</span>
+<span id="cb46-681"><a href="#cb46-681" aria-hidden="true" tabindex="-1"></a>    <span class="at">max =</span> <span class="fu">max</span>(plant_coverage_field),</span>
+<span id="cb46-682"><a href="#cb46-682" aria-hidden="true" tabindex="-1"></a>    <span class="at">rmsen.minmax =</span> rmse <span class="sc">/</span> (<span class="fu">max</span>(plant_coverage_field) <span class="sc">-</span> <span class="fu">min</span>(plant_coverage_field)) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb46-683"><a href="#cb46-683" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb46-684"><a href="#cb46-684" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-687"><a href="#cb46-687" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb46-688"><a href="#cb46-688" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tab-rmse-vp</span></span>
-<span id="cb46-689"><a href="#cb46-689" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: RMSE and normalized RMSE values for the correlation between the vegetation coverage estimates using RPAS *vs* Field measures. Values by variance partitioning-groups.</span></span>
-<span id="cb46-690"><a href="#cb46-690" aria-hidden="true" tabindex="-1"></a>df.rmse_vp <span class="sc">%&gt;%</span></span>
-<span id="cb46-691"><a href="#cb46-691" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>(</span>
-<span id="cb46-692"><a href="#cb46-692" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Groups Variance partitioning"</span>, <span class="st">"RMSE"</span>, <span class="st">"min"</span>, <span class="st">"max"</span>, <span class="st">"norm. RMSE (%)"</span>),</span>
-<span id="cb46-693"><a href="#cb46-693" aria-hidden="true" tabindex="-1"></a>    <span class="at">digits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>)</span>
-<span id="cb46-694"><a href="#cb46-694" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb46-695"><a href="#cb46-695" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_material</span>()</span>
-<span id="cb46-696"><a href="#cb46-696" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb46-697"><a href="#cb46-697" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-698"><a href="#cb46-698" aria-hidden="true" tabindex="-1"></a><span class="fu"># Is the the estimation influenced by other variables?</span></span>
-<span id="cb46-699"><a href="#cb46-699" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-702"><a href="#cb46-702" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb46-703"><a href="#cb46-703" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">lm</span>(plant_coverage_rpas <span class="sc">~</span> plant_coverage_field, <span class="at">data =</span> df)</span>
-<span id="cb46-704"><a href="#cb46-704" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
-<span id="cb46-705"><a href="#cb46-705" aria-hidden="true" tabindex="-1"></a>  modelr<span class="sc">::</span><span class="fu">add_residuals</span>(m) <span class="sc">%&gt;%</span></span>
-<span id="cb46-706"><a href="#cb46-706" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">resid.abs =</span> <span class="fu">abs</span>(resid))</span>
-<span id="cb46-707"><a href="#cb46-707" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-708"><a href="#cb46-708" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-709"><a href="#cb46-709" aria-hidden="true" tabindex="-1"></a>dfres <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
-<span id="cb46-710"><a href="#cb46-710" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">abs.Shannon =</span> <span class="fu">abs</span>(shannon)) <span class="sc">%&gt;%</span></span>
-<span id="cb46-711"><a href="#cb46-711" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(</span>
-<span id="cb46-712"><a href="#cb46-712" aria-hidden="true" tabindex="-1"></a>    <span class="at">Shannon =</span> abs.Shannon,</span>
-<span id="cb46-713"><a href="#cb46-713" aria-hidden="true" tabindex="-1"></a>    <span class="at">Richness =</span> richness, <span class="at">Slope =</span> slope, resid, resid.abs</span>
-<span id="cb46-714"><a href="#cb46-714" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb46-715"><a href="#cb46-715" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="st">"Shannon"</span>, <span class="st">"Richness"</span>, <span class="st">"Slope"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb46-716"><a href="#cb46-716" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">variable =</span> <span class="fu">fct_relevel</span>(name, <span class="fu">c</span>(<span class="st">"Shannon"</span>, <span class="st">"Richness"</span>, <span class="st">"Slope"</span>)))</span>
-<span id="cb46-717"><a href="#cb46-717" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb46-718"><a href="#cb46-718" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-721"><a href="#cb46-721" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb46-722"><a href="#cb46-722" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> ggpubr<span class="sc">::</span><span class="fu">ggscatter</span>(dfres,</span>
-<span id="cb46-723"><a href="#cb46-723" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="st">"value"</span>, <span class="at">y =</span> <span class="st">"resid.abs"</span>,</span>
-<span id="cb46-724"><a href="#cb46-724" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> verde_oscuro,</span>
-<span id="cb46-725"><a href="#cb46-725" aria-hidden="true" tabindex="-1"></a>  <span class="at">alpha =</span> <span class="fl">0.5</span>,</span>
-<span id="cb46-726"><a href="#cb46-726" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">""</span>,</span>
-<span id="cb46-727"><a href="#cb46-727" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"|"</span>, <span class="st">"Residuals"</span>, <span class="st">"|"</span>)),</span>
-<span id="cb46-728"><a href="#cb46-728" aria-hidden="true" tabindex="-1"></a>  <span class="at">add =</span> <span class="st">"reg.line"</span>,</span>
-<span id="cb46-729"><a href="#cb46-729" aria-hidden="true" tabindex="-1"></a>  <span class="at">add.params =</span> <span class="fu">list</span>(<span class="at">color =</span> verde_oscuro, <span class="at">fill =</span> verde_claro),</span>
-<span id="cb46-730"><a href="#cb46-730" aria-hidden="true" tabindex="-1"></a>  <span class="at">conf.int =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb46-731"><a href="#cb46-731" aria-hidden="true" tabindex="-1"></a>  <span class="at">facet.by =</span> <span class="st">"variable"</span></span>
-<span id="cb46-732"><a href="#cb46-732" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
-<span id="cb46-733"><a href="#cb46-733" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_cor</span>(</span>
-<span id="cb46-734"><a href="#cb46-734" aria-hidden="true" tabindex="-1"></a>    <span class="at">label.y.npc =</span> <span class="st">"top"</span>, <span class="at">label.x.npc =</span> <span class="st">"left"</span>,</span>
-<span id="cb46-735"><a href="#cb46-735" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">paste</span>(..rr.label.., ..p.label.., <span class="at">sep =</span> <span class="st">"~`,`~"</span>)),</span>
-<span id="cb46-736"><a href="#cb46-736" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> verde_oscuro, <span class="at">size =</span> <span class="dv">5</span></span>
-<span id="cb46-737"><a href="#cb46-737" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb46-738"><a href="#cb46-738" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb46-739"><a href="#cb46-739" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(</span>
-<span id="cb46-740"><a href="#cb46-740" aria-hidden="true" tabindex="-1"></a>      <span class="at">colour =</span> verde_oscuro,</span>
-<span id="cb46-741"><a href="#cb46-741" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> <span class="dv">12</span></span>
-<span id="cb46-742"><a href="#cb46-742" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb46-743"><a href="#cb46-743" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.text =</span> <span class="fu">element_text</span>(</span>
-<span id="cb46-744"><a href="#cb46-744" aria-hidden="true" tabindex="-1"></a>      <span class="at">colour =</span> verde_oscuro,</span>
-<span id="cb46-745"><a href="#cb46-745" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> <span class="dv">10</span></span>
-<span id="cb46-746"><a href="#cb46-746" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb46-747"><a href="#cb46-747" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>)</span>
-<span id="cb46-748"><a href="#cb46-748" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb46-749"><a href="#cb46-749" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-750"><a href="#cb46-750" aria-hidden="true" tabindex="-1"></a>p.resid <span class="ot">&lt;-</span> ggpubr<span class="sc">::</span><span class="fu">facet</span>(p,</span>
-<span id="cb46-751"><a href="#cb46-751" aria-hidden="true" tabindex="-1"></a>  <span class="at">facet.by =</span> <span class="st">"variable"</span>, <span class="at">scales =</span> <span class="st">"free_x"</span>,</span>
-<span id="cb46-752"><a href="#cb46-752" aria-hidden="true" tabindex="-1"></a>  <span class="at">panel.labs.background =</span> <span class="fu">list</span>(<span class="at">fill =</span> <span class="st">"white"</span>),</span>
-<span id="cb46-753"><a href="#cb46-753" aria-hidden="true" tabindex="-1"></a>  <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb46-754"><a href="#cb46-754" aria-hidden="true" tabindex="-1"></a>  <span class="at">strip.background =</span> <span class="fu">element_blank</span>()</span>
-<span id="cb46-755"><a href="#cb46-755" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb46-756"><a href="#cb46-756" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-757"><a href="#cb46-757" aria-hidden="true" tabindex="-1"></a>p.resid</span>
-<span id="cb46-758"><a href="#cb46-758" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb46-759"><a href="#cb46-759" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-762"><a href="#cb46-762" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb46-763"><a href="#cb46-763" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb46-764"><a href="#cb46-764" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: generate-jpg</span></span>
-<span id="cb46-765"><a href="#cb46-765" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-766"><a href="#cb46-766" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(general_plot,</span>
-<span id="cb46-767"><a href="#cb46-767" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_general.jpg"</span>),</span>
-<span id="cb46-768"><a href="#cb46-768" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"jpg"</span>, <span class="at">height =</span> <span class="dv">10</span>, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span></span>
-<span id="cb46-769"><a href="#cb46-769" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb46-770"><a href="#cb46-770" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-771"><a href="#cb46-771" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(treatment_plot,</span>
-<span id="cb46-772"><a href="#cb46-772" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_treatment.jpg"</span>),</span>
-<span id="cb46-773"><a href="#cb46-773" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"jpg"</span>, <span class="at">height =</span> <span class="dv">10</span>, <span class="at">width =</span> <span class="dv">15</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span></span>
-<span id="cb46-774"><a href="#cb46-774" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb46-775"><a href="#cb46-775" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-776"><a href="#cb46-776" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(covertype_plot,</span>
-<span id="cb46-777"><a href="#cb46-777" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_covertype.jpg"</span>),</span>
-<span id="cb46-778"><a href="#cb46-778" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"jpg"</span>, <span class="at">height =</span> <span class="dv">15</span>, <span class="at">width =</span> <span class="dv">15</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span></span>
-<span id="cb46-779"><a href="#cb46-779" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb46-780"><a href="#cb46-780" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-781"><a href="#cb46-781" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(combined_plot,</span>
-<span id="cb46-782"><a href="#cb46-782" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_combined.jpg"</span>),</span>
-<span id="cb46-783"><a href="#cb46-783" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"jpg"</span>, <span class="at">height =</span> <span class="dv">20</span>, <span class="at">width =</span> <span class="dv">14</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span></span>
-<span id="cb46-784"><a href="#cb46-784" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb46-785"><a href="#cb46-785" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-786"><a href="#cb46-786" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(p.resid,</span>
-<span id="cb46-787"><a href="#cb46-787" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/residuals.jpg"</span>),</span>
-<span id="cb46-788"><a href="#cb46-788" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"jpg"</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">width =</span> <span class="dv">20</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span></span>
-<span id="cb46-789"><a href="#cb46-789" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb46-790"><a href="#cb46-790" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-791"><a href="#cb46-791" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(plot_party,</span>
-<span id="cb46-792"><a href="#cb46-792" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_partitioning.jpg"</span>),</span>
-<span id="cb46-793"><a href="#cb46-793" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"jpg"</span>, <span class="at">height =</span> <span class="dv">12</span>, <span class="at">width =</span> <span class="dv">12</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span>, <span class="at">bg =</span> <span class="st">"white"</span></span>
-<span id="cb46-794"><a href="#cb46-794" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb46-795"><a href="#cb46-795" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-796"><a href="#cb46-796" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-685"><a href="#cb46-685" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute predictive R2</span></span>
+<span id="cb46-686"><a href="#cb46-686" aria-hidden="true" tabindex="-1"></a>df.rmse_vp <span class="ot">&lt;-</span> </span>
+<span id="cb46-687"><a href="#cb46-687" aria-hidden="true" tabindex="-1"></a>  df.rmse_vp <span class="sc">|&gt;</span> <span class="fu">inner_join</span>(</span>
+<span id="cb46-688"><a href="#cb46-688" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">|&gt;</span> <span class="fu">group_by</span>(cover_vp) <span class="sc">|&gt;</span> </span>
+<span id="cb46-689"><a href="#cb46-689" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_modify</span>(<span class="sc">~</span> <span class="fu">data.frame</span>(</span>
+<span id="cb46-690"><a href="#cb46-690" aria-hidden="true" tabindex="-1"></a>    <span class="at">pred.r2 =</span> <span class="fu">abs</span>(<span class="fu">pred_r_squared</span>(</span>
+<span id="cb46-691"><a href="#cb46-691" aria-hidden="true" tabindex="-1"></a>      <span class="fu">lm</span>(plant_coverage_rpas <span class="sc">~</span> plant_coverage_field, <span class="at">data =</span> .x)))))</span>
+<span id="cb46-692"><a href="#cb46-692" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-693"><a href="#cb46-693" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-694"><a href="#cb46-694" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-695"><a href="#cb46-695" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb46-696"><a href="#cb46-696" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-699"><a href="#cb46-699" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb46-700"><a href="#cb46-700" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tab-rmse-vp</span></span>
+<span id="cb46-701"><a href="#cb46-701" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: RMSE and normalized RMSE values for the correlation between the vegetation coverage estimates using RPAS *vs* Field measures. Values by variance partitioning-groups.</span></span>
+<span id="cb46-702"><a href="#cb46-702" aria-hidden="true" tabindex="-1"></a>df.rmse_vp <span class="sc">%&gt;%</span></span>
+<span id="cb46-703"><a href="#cb46-703" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>(</span>
+<span id="cb46-704"><a href="#cb46-704" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Groups Variance partitioning"</span>, <span class="st">"RMSE"</span>, <span class="st">"min"</span>, <span class="st">"max"</span>, <span class="st">"norm. RMSE (%)"</span>, <span class="st">"pred R2"</span>),</span>
+<span id="cb46-705"><a href="#cb46-705" aria-hidden="true" tabindex="-1"></a>    <span class="at">digits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>,<span class="dv">3</span>)</span>
+<span id="cb46-706"><a href="#cb46-706" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb46-707"><a href="#cb46-707" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_material</span>()</span>
+<span id="cb46-708"><a href="#cb46-708" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb46-709"><a href="#cb46-709" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-710"><a href="#cb46-710" aria-hidden="true" tabindex="-1"></a><span class="fu"># Is the the estimation influenced by other variables?</span></span>
+<span id="cb46-711"><a href="#cb46-711" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-714"><a href="#cb46-714" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb46-715"><a href="#cb46-715" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">lm</span>(plant_coverage_rpas <span class="sc">~</span> plant_coverage_field, <span class="at">data =</span> df)</span>
+<span id="cb46-716"><a href="#cb46-716" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb46-717"><a href="#cb46-717" aria-hidden="true" tabindex="-1"></a>  modelr<span class="sc">::</span><span class="fu">add_residuals</span>(m) <span class="sc">%&gt;%</span></span>
+<span id="cb46-718"><a href="#cb46-718" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">resid.abs =</span> <span class="fu">abs</span>(resid))</span>
+<span id="cb46-719"><a href="#cb46-719" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-720"><a href="#cb46-720" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-721"><a href="#cb46-721" aria-hidden="true" tabindex="-1"></a>dfres <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb46-722"><a href="#cb46-722" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">abs.Shannon =</span> <span class="fu">abs</span>(shannon)) <span class="sc">%&gt;%</span></span>
+<span id="cb46-723"><a href="#cb46-723" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(</span>
+<span id="cb46-724"><a href="#cb46-724" aria-hidden="true" tabindex="-1"></a>    <span class="at">Shannon =</span> abs.Shannon,</span>
+<span id="cb46-725"><a href="#cb46-725" aria-hidden="true" tabindex="-1"></a>    <span class="at">Richness =</span> richness, <span class="at">Slope =</span> slope, resid, resid.abs</span>
+<span id="cb46-726"><a href="#cb46-726" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb46-727"><a href="#cb46-727" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="st">"Shannon"</span>, <span class="st">"Richness"</span>, <span class="st">"Slope"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb46-728"><a href="#cb46-728" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">variable =</span> <span class="fu">fct_relevel</span>(name, <span class="fu">c</span>(<span class="st">"Shannon"</span>, <span class="st">"Richness"</span>, <span class="st">"Slope"</span>)))</span>
+<span id="cb46-729"><a href="#cb46-729" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb46-730"><a href="#cb46-730" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-733"><a href="#cb46-733" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb46-734"><a href="#cb46-734" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> ggpubr<span class="sc">::</span><span class="fu">ggscatter</span>(dfres,</span>
+<span id="cb46-735"><a href="#cb46-735" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="st">"value"</span>, <span class="at">y =</span> <span class="st">"resid.abs"</span>,</span>
+<span id="cb46-736"><a href="#cb46-736" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> verde_oscuro,</span>
+<span id="cb46-737"><a href="#cb46-737" aria-hidden="true" tabindex="-1"></a>  <span class="at">alpha =</span> <span class="fl">0.5</span>,</span>
+<span id="cb46-738"><a href="#cb46-738" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">""</span>,</span>
+<span id="cb46-739"><a href="#cb46-739" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"|"</span>, <span class="st">"Residuals"</span>, <span class="st">"|"</span>)),</span>
+<span id="cb46-740"><a href="#cb46-740" aria-hidden="true" tabindex="-1"></a>  <span class="at">add =</span> <span class="st">"reg.line"</span>,</span>
+<span id="cb46-741"><a href="#cb46-741" aria-hidden="true" tabindex="-1"></a>  <span class="at">add.params =</span> <span class="fu">list</span>(<span class="at">color =</span> verde_oscuro, <span class="at">fill =</span> verde_claro),</span>
+<span id="cb46-742"><a href="#cb46-742" aria-hidden="true" tabindex="-1"></a>  <span class="at">conf.int =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb46-743"><a href="#cb46-743" aria-hidden="true" tabindex="-1"></a>  <span class="at">facet.by =</span> <span class="st">"variable"</span></span>
+<span id="cb46-744"><a href="#cb46-744" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb46-745"><a href="#cb46-745" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_cor</span>(</span>
+<span id="cb46-746"><a href="#cb46-746" aria-hidden="true" tabindex="-1"></a>    <span class="at">label.y.npc =</span> <span class="st">"top"</span>, <span class="at">label.x.npc =</span> <span class="st">"left"</span>,</span>
+<span id="cb46-747"><a href="#cb46-747" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">paste</span>(..rr.label.., ..p.label.., <span class="at">sep =</span> <span class="st">"~`,`~"</span>)),</span>
+<span id="cb46-748"><a href="#cb46-748" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> verde_oscuro, <span class="at">size =</span> <span class="dv">5</span></span>
+<span id="cb46-749"><a href="#cb46-749" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb46-750"><a href="#cb46-750" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb46-751"><a href="#cb46-751" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(</span>
+<span id="cb46-752"><a href="#cb46-752" aria-hidden="true" tabindex="-1"></a>      <span class="at">colour =</span> verde_oscuro,</span>
+<span id="cb46-753"><a href="#cb46-753" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> <span class="dv">12</span></span>
+<span id="cb46-754"><a href="#cb46-754" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb46-755"><a href="#cb46-755" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.text =</span> <span class="fu">element_text</span>(</span>
+<span id="cb46-756"><a href="#cb46-756" aria-hidden="true" tabindex="-1"></a>      <span class="at">colour =</span> verde_oscuro,</span>
+<span id="cb46-757"><a href="#cb46-757" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> <span class="dv">10</span></span>
+<span id="cb46-758"><a href="#cb46-758" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb46-759"><a href="#cb46-759" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>)</span>
+<span id="cb46-760"><a href="#cb46-760" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb46-761"><a href="#cb46-761" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-762"><a href="#cb46-762" aria-hidden="true" tabindex="-1"></a>p.resid <span class="ot">&lt;-</span> ggpubr<span class="sc">::</span><span class="fu">facet</span>(p,</span>
+<span id="cb46-763"><a href="#cb46-763" aria-hidden="true" tabindex="-1"></a>  <span class="at">facet.by =</span> <span class="st">"variable"</span>, <span class="at">scales =</span> <span class="st">"free_x"</span>,</span>
+<span id="cb46-764"><a href="#cb46-764" aria-hidden="true" tabindex="-1"></a>  <span class="at">panel.labs.background =</span> <span class="fu">list</span>(<span class="at">fill =</span> <span class="st">"white"</span>),</span>
+<span id="cb46-765"><a href="#cb46-765" aria-hidden="true" tabindex="-1"></a>  <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb46-766"><a href="#cb46-766" aria-hidden="true" tabindex="-1"></a>  <span class="at">strip.background =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb46-767"><a href="#cb46-767" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-768"><a href="#cb46-768" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-769"><a href="#cb46-769" aria-hidden="true" tabindex="-1"></a>p.resid</span>
+<span id="cb46-770"><a href="#cb46-770" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb46-771"><a href="#cb46-771" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-774"><a href="#cb46-774" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb46-775"><a href="#cb46-775" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb46-776"><a href="#cb46-776" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: generate-jpg</span></span>
+<span id="cb46-777"><a href="#cb46-777" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-778"><a href="#cb46-778" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(general_plot,</span>
+<span id="cb46-779"><a href="#cb46-779" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_general.jpg"</span>),</span>
+<span id="cb46-780"><a href="#cb46-780" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"jpg"</span>, <span class="at">height =</span> <span class="dv">10</span>, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span></span>
+<span id="cb46-781"><a href="#cb46-781" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-782"><a href="#cb46-782" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-783"><a href="#cb46-783" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(treatment_plot,</span>
+<span id="cb46-784"><a href="#cb46-784" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_treatment.jpg"</span>),</span>
+<span id="cb46-785"><a href="#cb46-785" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"jpg"</span>, <span class="at">height =</span> <span class="dv">10</span>, <span class="at">width =</span> <span class="dv">15</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span></span>
+<span id="cb46-786"><a href="#cb46-786" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-787"><a href="#cb46-787" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-788"><a href="#cb46-788" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(covertype_plot,</span>
+<span id="cb46-789"><a href="#cb46-789" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_covertype.jpg"</span>),</span>
+<span id="cb46-790"><a href="#cb46-790" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"jpg"</span>, <span class="at">height =</span> <span class="dv">15</span>, <span class="at">width =</span> <span class="dv">15</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span></span>
+<span id="cb46-791"><a href="#cb46-791" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-792"><a href="#cb46-792" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-793"><a href="#cb46-793" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(combined_plot,</span>
+<span id="cb46-794"><a href="#cb46-794" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_combined.jpg"</span>),</span>
+<span id="cb46-795"><a href="#cb46-795" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"jpg"</span>, <span class="at">height =</span> <span class="dv">20</span>, <span class="at">width =</span> <span class="dv">14</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span></span>
+<span id="cb46-796"><a href="#cb46-796" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb46-797"><a href="#cb46-797" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-798"><a href="#cb46-798" aria-hidden="true" tabindex="-1"></a><span class="co"># PNG devices</span></span>
-<span id="cb46-799"><a href="#cb46-799" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(general_plot,</span>
-<span id="cb46-800"><a href="#cb46-800" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_general_transp.png"</span>),</span>
-<span id="cb46-801"><a href="#cb46-801" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"png"</span>, <span class="at">height =</span> <span class="dv">10</span>, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span>,</span>
-<span id="cb46-802"><a href="#cb46-802" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> <span class="st">"transparent"</span></span>
-<span id="cb46-803"><a href="#cb46-803" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb46-804"><a href="#cb46-804" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-805"><a href="#cb46-805" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(treatment_plot,</span>
-<span id="cb46-806"><a href="#cb46-806" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_treatment_transp.png"</span>),</span>
-<span id="cb46-807"><a href="#cb46-807" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"png"</span>, <span class="at">height =</span> <span class="dv">10</span>, <span class="at">width =</span> <span class="dv">15</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span>,</span>
-<span id="cb46-808"><a href="#cb46-808" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> <span class="st">"transparent"</span></span>
-<span id="cb46-809"><a href="#cb46-809" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb46-810"><a href="#cb46-810" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-811"><a href="#cb46-811" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(covertype_plot,</span>
-<span id="cb46-812"><a href="#cb46-812" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_covertype_transp.png"</span>),</span>
-<span id="cb46-813"><a href="#cb46-813" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"png"</span>, <span class="at">height =</span> <span class="dv">15</span>, <span class="at">width =</span> <span class="dv">15</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span>,</span>
-<span id="cb46-814"><a href="#cb46-814" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> <span class="st">"transparent"</span></span>
-<span id="cb46-815"><a href="#cb46-815" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb46-816"><a href="#cb46-816" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-817"><a href="#cb46-817" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(combined_plot,</span>
-<span id="cb46-818"><a href="#cb46-818" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_combined.png"</span>),</span>
-<span id="cb46-819"><a href="#cb46-819" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"png"</span>, <span class="at">height =</span> <span class="dv">20</span>, <span class="at">width =</span> <span class="dv">14</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span>,</span>
-<span id="cb46-820"><a href="#cb46-820" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> <span class="st">"transparent"</span></span>
-<span id="cb46-821"><a href="#cb46-821" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb46-822"><a href="#cb46-822" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-823"><a href="#cb46-823" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(p.resid,</span>
-<span id="cb46-824"><a href="#cb46-824" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/residuals.png"</span>),</span>
-<span id="cb46-825"><a href="#cb46-825" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"png"</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">width =</span> <span class="dv">20</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span>,</span>
-<span id="cb46-826"><a href="#cb46-826" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> <span class="st">"transparent"</span></span>
-<span id="cb46-827"><a href="#cb46-827" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb46-828"><a href="#cb46-828" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-829"><a href="#cb46-829" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(plot_party,</span>
-<span id="cb46-830"><a href="#cb46-830" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_partitioning.jpg"</span>),</span>
-<span id="cb46-831"><a href="#cb46-831" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"png"</span>, <span class="at">height =</span> <span class="dv">12</span>, <span class="at">width =</span> <span class="dv">12</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span>,</span>
-<span id="cb46-832"><a href="#cb46-832" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> <span class="st">"transparent"</span></span>
-<span id="cb46-833"><a href="#cb46-833" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb46-834"><a href="#cb46-834" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb46-798"><a href="#cb46-798" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(p.resid,</span>
+<span id="cb46-799"><a href="#cb46-799" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/residuals.jpg"</span>),</span>
+<span id="cb46-800"><a href="#cb46-800" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"jpg"</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">width =</span> <span class="dv">20</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span></span>
+<span id="cb46-801"><a href="#cb46-801" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-802"><a href="#cb46-802" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-803"><a href="#cb46-803" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(plot_party,</span>
+<span id="cb46-804"><a href="#cb46-804" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_partitioning.jpg"</span>),</span>
+<span id="cb46-805"><a href="#cb46-805" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"jpg"</span>, <span class="at">height =</span> <span class="dv">12</span>, <span class="at">width =</span> <span class="dv">12</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span>, <span class="at">bg =</span> <span class="st">"white"</span></span>
+<span id="cb46-806"><a href="#cb46-806" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-807"><a href="#cb46-807" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-808"><a href="#cb46-808" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(plot_party,</span>
+<span id="cb46-809"><a href="#cb46-809" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_partitioning.svg"</span>),</span>
+<span id="cb46-810"><a href="#cb46-810" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"svg"</span>, <span class="at">height =</span> <span class="dv">12</span>, <span class="at">width =</span> <span class="dv">12</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span>, <span class="at">bg =</span> <span class="st">"white"</span></span>
+<span id="cb46-811"><a href="#cb46-811" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-812"><a href="#cb46-812" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-813"><a href="#cb46-813" aria-hidden="true" tabindex="-1"></a><span class="co"># PNG devices</span></span>
+<span id="cb46-814"><a href="#cb46-814" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(general_plot,</span>
+<span id="cb46-815"><a href="#cb46-815" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_general_transp.png"</span>),</span>
+<span id="cb46-816"><a href="#cb46-816" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"png"</span>, <span class="at">height =</span> <span class="dv">10</span>, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span>,</span>
+<span id="cb46-817"><a href="#cb46-817" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> <span class="st">"transparent"</span></span>
+<span id="cb46-818"><a href="#cb46-818" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-819"><a href="#cb46-819" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-820"><a href="#cb46-820" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(treatment_plot,</span>
+<span id="cb46-821"><a href="#cb46-821" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_treatment_transp.png"</span>),</span>
+<span id="cb46-822"><a href="#cb46-822" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"png"</span>, <span class="at">height =</span> <span class="dv">10</span>, <span class="at">width =</span> <span class="dv">15</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span>,</span>
+<span id="cb46-823"><a href="#cb46-823" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> <span class="st">"transparent"</span></span>
+<span id="cb46-824"><a href="#cb46-824" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-825"><a href="#cb46-825" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-826"><a href="#cb46-826" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(covertype_plot,</span>
+<span id="cb46-827"><a href="#cb46-827" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_covertype_transp.png"</span>),</span>
+<span id="cb46-828"><a href="#cb46-828" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"png"</span>, <span class="at">height =</span> <span class="dv">15</span>, <span class="at">width =</span> <span class="dv">15</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span>,</span>
+<span id="cb46-829"><a href="#cb46-829" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> <span class="st">"transparent"</span></span>
+<span id="cb46-830"><a href="#cb46-830" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-831"><a href="#cb46-831" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-832"><a href="#cb46-832" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(combined_plot,</span>
+<span id="cb46-833"><a href="#cb46-833" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_combined.png"</span>),</span>
+<span id="cb46-834"><a href="#cb46-834" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"png"</span>, <span class="at">height =</span> <span class="dv">20</span>, <span class="at">width =</span> <span class="dv">14</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span>,</span>
+<span id="cb46-835"><a href="#cb46-835" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> <span class="st">"transparent"</span></span>
+<span id="cb46-836"><a href="#cb46-836" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-837"><a href="#cb46-837" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-838"><a href="#cb46-838" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(p.resid,</span>
+<span id="cb46-839"><a href="#cb46-839" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/residuals.png"</span>),</span>
+<span id="cb46-840"><a href="#cb46-840" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"png"</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">width =</span> <span class="dv">20</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span>,</span>
+<span id="cb46-841"><a href="#cb46-841" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> <span class="st">"transparent"</span></span>
+<span id="cb46-842"><a href="#cb46-842" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-843"><a href="#cb46-843" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-844"><a href="#cb46-844" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-845"><a href="#cb46-845" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(plot_party,</span>
+<span id="cb46-846"><a href="#cb46-846" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_partitioning.jpg"</span>),</span>
+<span id="cb46-847"><a href="#cb46-847" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"png"</span>, <span class="at">height =</span> <span class="dv">12</span>, <span class="at">width =</span> <span class="dv">12</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span>,</span>
+<span id="cb46-848"><a href="#cb46-848" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> <span class="st">"transparent"</span></span>
+<span id="cb46-849"><a href="#cb46-849" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-850"><a href="#cb46-850" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-851"><a href="#cb46-851" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-852"><a href="#cb46-852" aria-hidden="true" tabindex="-1"></a><span class="do">##  SVG</span></span>
+<span id="cb46-853"><a href="#cb46-853" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(general_plot,</span>
+<span id="cb46-854"><a href="#cb46-854" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_general.svg"</span>),</span>
+<span id="cb46-855"><a href="#cb46-855" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"svg"</span>, <span class="at">height =</span> <span class="dv">10</span>, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span></span>
+<span id="cb46-856"><a href="#cb46-856" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-857"><a href="#cb46-857" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-858"><a href="#cb46-858" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(treatment_plot,</span>
+<span id="cb46-859"><a href="#cb46-859" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_treatment.svg"</span>),</span>
+<span id="cb46-860"><a href="#cb46-860" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"svg"</span>, <span class="at">height =</span> <span class="dv">10</span>, <span class="at">width =</span> <span class="dv">15</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span></span>
+<span id="cb46-861"><a href="#cb46-861" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-862"><a href="#cb46-862" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-863"><a href="#cb46-863" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(covertype_plot,</span>
+<span id="cb46-864"><a href="#cb46-864" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_covertype.svg"</span>),</span>
+<span id="cb46-865"><a href="#cb46-865" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"svg"</span>, <span class="at">height =</span> <span class="dv">15</span>, <span class="at">width =</span> <span class="dv">15</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span></span>
+<span id="cb46-866"><a href="#cb46-866" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-867"><a href="#cb46-867" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-868"><a href="#cb46-868" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(combined_plot,</span>
+<span id="cb46-869"><a href="#cb46-869" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_combined.svg"</span>),</span>
+<span id="cb46-870"><a href="#cb46-870" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"svg"</span>, <span class="at">height =</span> <span class="dv">20</span>, <span class="at">width =</span> <span class="dv">14</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span></span>
+<span id="cb46-871"><a href="#cb46-871" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-872"><a href="#cb46-872" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-873"><a href="#cb46-873" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(p.resid,</span>
+<span id="cb46-874"><a href="#cb46-874" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/residuals.svg"</span>),</span>
+<span id="cb46-875"><a href="#cb46-875" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"svg"</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">width =</span> <span class="dv">20</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span></span>
+<span id="cb46-876"><a href="#cb46-876" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-877"><a href="#cb46-877" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-878"><a href="#cb46-878" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(plot_party,</span>
+<span id="cb46-879"><a href="#cb46-879" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"output/correla_partitioning.svg"</span>),</span>
+<span id="cb46-880"><a href="#cb46-880" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"svg"</span>, <span class="at">height =</span> <span class="dv">12</span>, <span class="at">width =</span> <span class="dv">12</span>, <span class="at">unit =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="st">"print"</span>, <span class="at">bg =</span> <span class="st">"white"</span></span>
+<span id="cb46-881"><a href="#cb46-881" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-882"><a href="#cb46-882" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-883"><a href="#cb46-883" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-884"><a href="#cb46-884" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

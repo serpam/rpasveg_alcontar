@@ -144,7 +144,7 @@ lm_r2 <- function(df) {
 ```{r}
 verde_claro <- "#c6ddb3"
 verde_oscuro <- "#3e6c62"
-ylab <- "RPAS-estimated"
+ylab <- "Drone-estimated"
 xlab <- "Field-estimated"
 
 # See https://stackoverflow.com/questions/65076492/ggplot-size-of-annotate-vs-size-of-element-text
@@ -739,7 +739,10 @@ ggsave(plot_party,
   device = "jpg", height = 12, width = 12, unit = "cm", dpi = "print", bg = "white"
 )
 
-
+ggsave(plot_party,
+  filename = here::here("output/correla_partitioning.svg"),
+  device = "svg", height = 12, width = 12, unit = "cm", dpi = "print", bg = "white"
+)
 
 # PNG devices
 ggsave(general_plot,
@@ -772,9 +775,44 @@ ggsave(p.resid,
   bg = "transparent"
 )
 
+
 ggsave(plot_party,
   filename = here::here("output/correla_partitioning.jpg"),
   device = "png", height = 12, width = 12, unit = "cm", dpi = "print",
   bg = "transparent"
 )
+
+
+##  SVG
+ggsave(general_plot,
+  filename = here::here("output/correla_general.svg"),
+  device = "svg", height = 10, width = 10, unit = "cm", dpi = "print"
+)
+
+ggsave(treatment_plot,
+  filename = here::here("output/correla_treatment.svg"),
+  device = "svg", height = 10, width = 15, unit = "cm", dpi = "print"
+)
+
+ggsave(covertype_plot,
+  filename = here::here("output/correla_covertype.svg"),
+  device = "svg", height = 15, width = 15, unit = "cm", dpi = "print"
+)
+
+ggsave(combined_plot,
+  filename = here::here("output/correla_combined.svg"),
+  device = "svg", height = 20, width = 14, unit = "cm", dpi = "print"
+)
+
+ggsave(p.resid,
+  filename = here::here("output/residuals.svg"),
+  device = "svg", height = 8, width = 20, unit = "cm", dpi = "print"
+)
+
+ggsave(plot_party,
+  filename = here::here("output/correla_partitioning.svg"),
+  device = "svg", height = 12, width = 12, unit = "cm", dpi = "print", bg = "white"
+)
+
+
 ```
