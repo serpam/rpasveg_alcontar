@@ -6,6 +6,13 @@
 This repository contains all information and results for the paper 
 *Vegetation cover estimation in semi-arid shrublands after prescribed burning. Field-ground and drone image comparison*. The paper have been published in *Drones*. See the [paper](https://doi.org/10.3390/drones6110370).
 
+## Website
+You can see the website of the repo at: https://serpam.github.io/rpasveg_alcontar 
+
+## Credit software 
+- All the statistical analysis were done with R 4.2.1. 
+- All R packages used are cited [here](https://serpam.github.io/rpasveg_alcontar/about.html) 
+- Website of the repository was generated with Quarto
 
 ## Acknowledgements 
 This study was funded by: 
@@ -22,4 +29,4 @@ This study was funded by:
 Antonio J. Pérez-Luque, María Eugenia Ramos-Font, Mauro J. Tognetti Barbieri, Carlos Tarragona Pérez, Guillermo Calvo Renta, and Ana Belén Robles Cruz. 2022. “Vegetation Cover Estimation in Semi-Arid Shrublands After Prescribed Burning: Field-Ground and Drone Image Comparison.” Drones 6 (11): 370. https://doi.org/10.3390/drones6110370.
 
 ### Repository: 
-Antonio J. Pérez-Luque, María Eugenia Ramos-Font, Mauro J. Tognetti Barbieri, Plant coverage: RPAS-Field comparison Ana Belén Robles Cruz. 2022. “Vegetation Cover Estimation in Semi-Arid Shrublands After Prescribed Burning: Field-Ground and Drone Image Comparison.” Drones 6 (11): 370. https://doi.org/10.3390/drones6110370.
+Antonio J. Pérez-Luque, María Eugenia Ramos-Font, Mauro J. Tognetti Barbieri, Plant coverage: RPAS-Field comparison Ana Belén Robles Cruz. 2022. https://doi.org/10.5281/zenodo.7350714
