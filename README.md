@@ -1,6 +1,6 @@
 ## Vegetation cover estimation in semi-arid shrublands after prescribed burning: field-ground and drone image comparison
 
-[![](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-brightgreen.svg)](https://github.com/serpam/rpasveg_alcontar/commits/master) [![minimal R version](https://img.shields.io/badge/R%3E%3D-4.2.1-brightgreen.svg)](https://cran.r-project.org/) [![Licence](https://img.shields.io/github/license/mashape/apistatus.svg)](http://choosealicense.com/licenses/mit/) [![DOI](https://zenodo.org/badge/541528099.svg)](https://zenodo.org/badge/latestdoi/541528099)
+[![minimal R version](https://img.shields.io/badge/R%3E%3D-4.2.1-brightgreen.svg)](https://cran.r-project.org/) [![Licence](https://img.shields.io/github/license/mashape/apistatus.svg)](http://choosealicense.com/licenses/mit/) [![DOI](https://zenodo.org/badge/541528099.svg)](https://zenodo.org/badge/latestdoi/541528099)
 
 
 This repository contains all information and results for the paper 
