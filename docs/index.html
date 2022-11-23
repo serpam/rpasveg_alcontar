@@ -202,9 +202,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p><a href="https://github.com/serpam/rpasveg_alcontar/commits/master"><img src="https://img.shields.io/badge/last%20change-2022--11--21-brightgreen.svg" class="img-fluid"></a> <a href="https://cran.r-project.org/"><img src="https://img.shields.io/badge/R%3E%3D-4.2.1-brightgreen.svg" class="img-fluid" alt="minimal R version"></a> <a href="http://choosealicense.com/licenses/mit/"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" class="img-fluid" alt="Licence"></a></p>
-<p>This repository contains all information and results for the paper <em>Vegetation cover estimation in semi-arid shrublands after prescribed burning. Field-ground and UAV comparison</em>.</p>
-<p>The paper have been submitted to <em>Drones</em> by Pérez-Luque AJ; Ramos Font ME; Tognetti Barbieri M; Tarragona C; Calvo, G. and Robles Cruz AB.</p>
+<p><a href="https://github.com/serpam/rpasveg_alcontar/commits/master"><img src="https://img.shields.io/badge/last%20change-2022--11--23-brightgreen.svg" class="img-fluid"></a> <a href="https://cran.r-project.org/"><img src="https://img.shields.io/badge/R%3E%3D-4.2.1-brightgreen.svg" class="img-fluid" alt="minimal R version"></a> <a href="http://choosealicense.com/licenses/mit/"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" class="img-fluid" alt="Licence"></a></p>
+<p>This repository contains all information and results for the paper <em>Vegetation cover estimation in semi-arid shrublands after prescribed burning. Field-ground and drone image comparison</em>.</p>
+<p>The paper have been published in <em>Drones</em>. See the <a href="https://doi.org/10.3390/drones6110370">paper</a>.</p>
 <section id="acknowledgements" class="level2">
 <h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
 <p>This study was funded by:</p>
@@ -219,7 +219,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{j.pérez-luque2022,
+  author = {Antonio J. Pérez-Luque and María Eugenia Ramos-Font and
+    Mauro J. Tognetti Barbieri and Carlos Tarragona Pérez and Guillermo
+    Calvo Renta and Ana Belén Robles Cruz},
+  editor = {},
+  title = {Vegetation cover estimation in semi-arid shrublands after
+    prescribed burning: field-ground and drone image comparison},
+  journal = {Drones},
+  volume = {6},
+  number = {11},
+  pages = {370},
+  date = {2022-11-22},
+  url = {https://doi.org/10.3390/drones6110370},
+  doi = {10.3390/drones6110370},
+  langid = {eng}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-j.pérez-luque2022" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Antonio J. Pérez-Luque, María Eugenia Ramos-Font, Mauro J. Tognetti
+Barbieri, Carlos Tarragona Pérez, Guillermo Calvo Renta, and Ana Belén
+Robles Cruz. 2022. <span>“Vegetation cover estimation in semi-arid
+shrublands after prescribed burning: field-ground and drone image
+comparison.”</span> <em>Drones</em> 6 (11): 370. <a href="https://doi.org/10.3390/drones6110370">https://doi.org/10.3390/drones6110370</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -371,26 +393,46 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Plant coverage: RPAS-Field comparison"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">![](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-brightgreen.svg)</span><span class="co">](https://github.com/serpam/rpasveg_alcontar/commits/master)</span> <span class="co">[</span><span class="al">![minimal R version](https://img.shields.io/badge/R%3E%3D-4.2.1-brightgreen.svg)</span><span class="co">](https://cran.r-project.org/)</span> <span class="co">[</span><span class="al">![Licence](https://img.shields.io/github/license/mashape/apistatus.svg)</span><span class="co">](http://choosealicense.com/licenses/mit/)</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>This repository contains all information and results for the paper </span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>*Vegetation cover estimation in semi-arid shrublands after prescribed burning. Field-ground and UAV comparison*. </span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>The paper have been submitted to *Drones* by Pérez-Luque AJ; Ramos Font ME; Tognetti Barbieri M; Tarragona C; Calvo, G. and Robles Cruz AB. </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Acknowledgements </span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>This study was funded by: </span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>MICINN through European Regional Development Fund *SUMHAL, LIFEWATCH-2019-09-CSIC-13, POPE 2014-2020*. More info about the <span class="co">[</span><span class="ot">SUMHAL</span><span class="co">](https://lifewatcheric-sumhal.csic.es/)</span> project (Sustainability for Mediterranean Hotspots in Andalusia integrating LifeWatch ERIC).  </span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Interreg Sudoe Programme, European Regional Development Fund, European-Union, <span class="co">[</span><span class="ot">Open2preserve</span><span class="co">](https://open2preserve.eu/)</span> project (*SOE2/P5/E0804*). </span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Grant *PID2020-116786RB-C32* funded by MCIN/AEI/ 10.13039/501100011033.  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">citation:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  citation-label: "PerezLuque2022"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  type: article-journal</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  title: "Vegetation cover estimation in semi-arid shrublands after prescribed burning: field-ground and drone image comparison" </span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  author: </span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  - Antonio J. Pérez-Luque</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  - María Eugenia Ramos-Font</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  - Mauro J. Tognetti Barbieri</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - Carlos Tarragona Pérez</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - Guillermo Calvo Renta</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">  - Ana Belén Robles Cruz</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">  container-title: "Drones"</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">  doi: "10.3390/drones6110370" </span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">  url: "https://doi.org/10.3390/drones6110370"</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">  volume: "6"</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">  issue: "11"</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">  page: "370"</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">  language: "eng"</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">  issued: "2022-11-22"</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> references.bib</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">![](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-brightgreen.svg)</span><span class="co">](https://github.com/serpam/rpasveg_alcontar/commits/master)</span> <span class="co">[</span><span class="al">![minimal R version](https://img.shields.io/badge/R%3E%3D-4.2.1-brightgreen.svg)</span><span class="co">](https://cran.r-project.org/)</span> <span class="co">[</span><span class="al">![Licence](https://img.shields.io/github/license/mashape/apistatus.svg)</span><span class="co">](http://choosealicense.com/licenses/mit/)</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>This repository contains all information and results for the paper </span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>*Vegetation cover estimation in semi-arid shrublands after prescribed burning. Field-ground and drone image comparison*. </span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>The paper have been published in *Drones*. See the <span class="co">[</span><span class="ot">paper</span><span class="co">](https://doi.org/10.3390/drones6110370)</span>.</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## Acknowledgements </span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>This study was funded by: </span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>MICINN through European Regional Development Fund *SUMHAL, LIFEWATCH-2019-09-CSIC-13, POPE 2014-2020*. More info about the <span class="co">[</span><span class="ot">SUMHAL</span><span class="co">](https://lifewatcheric-sumhal.csic.es/)</span> project (Sustainability for Mediterranean Hotspots in Andalusia integrating LifeWatch ERIC).  </span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Interreg Sudoe Programme, European Regional Development Fund, European-Union, <span class="co">[</span><span class="ot">Open2preserve</span><span class="co">](https://open2preserve.eu/)</span> project (*SOE2/P5/E0804*). </span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Grant *PID2020-116786RB-C32* funded by MCIN/AEI/ 10.13039/501100011033.  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
