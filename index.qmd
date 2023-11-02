@@ -1,5 +1,5 @@
 ---
-title: "Plant coverage: RPAS-Field comparison"
+title: "Vegetation cover estimation in semi-arid shrublands after prescribed burning: field-ground and drone image comparison"
 citation:
   citation-label: "PerezLuque2022"
   type: article-journal
@@ -22,8 +22,7 @@ citation:
 bibliography: references.bib
 ---
 
-
-[![](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-brightgreen.svg)](https://github.com/serpam/rpasveg_alcontar/commits/master) [![minimal R version](https://img.shields.io/badge/R%3E%3D-4.2.1-brightgreen.svg)](https://cran.r-project.org/) [![Licence](https://img.shields.io/github/license/mashape/apistatus.svg)](http://choosealicense.com/licenses/mit/)
+[![minimal R version](https://img.shields.io/badge/R%3E%3D-4.2.1-brightgreen.svg)](https://cran.r-project.org/) [![Licence](https://img.shields.io/github/license/mashape/apistatus.svg)](http://choosealicense.com/licenses/mit/)
 
 
 This repository contains all information and results for the paper 
